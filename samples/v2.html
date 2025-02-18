@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Unrig Concepts</title>
+    <meta name="description" content="Antaeus is a digital agency specializing in campaign strategy. We empower progressive movements with high-performance digital tools and seamless execution.">
+    <meta name="keywords" content="Antaeus, political campaigns, progressive movements">
+    <meta name="author" content="Antaeus">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+            font-family: "DM Sans", sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .title {
+            font-size: clamp(1.8rem, 5vw, 4.85rem);
+            font-weight: 800;
+            max-width: 800px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            margin-top: 40px;
+            line-height: 1.14;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dot-container {
+            width: 40px;
+            height: 40px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 10px;
+            position: relative;
+            border-radius: 50%;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: rgb(45, 45, 43);
+            border-radius: 50%;
+            animation: pulse 9.5s ease infinite;
+        }
+
+        @keyframes pulse {
+          0% {
+            -webkit-box-shadow: 0 0 0 0 rgba(246, 246, 241, 0.779);
+            box-shadow: 0 0 0 0 rgba(246, 246, 241, 0.779);
+        }
+        70% {
+            -webkit-box-shadow: 0 0 0 7px rgba(246, 246, 241, 0.779);
+            box-shadow: 0 0 0 7px rgba(246, 246, 241, 0.779);
+        }
+        100% {
+            -webkit-box-shadow: 0 0 0 0 rgba(246, 246, 241, 1.779);
+            box-shadow: 0 0 0 0 rgba(246, 246, 241, 1.779);
+        }
+        }
+    </style>
+</head>
+<body>
+    <h3 class="mb-4 text-xl/10 font-medium text-gray-950 @md:text-2xl/10 dark:text-white">How many eggs for $5</h3>
+    <div class="circle mb-10">
+        <div class="dot-container" id="dotContainer"></div>
+    </div>
+
+
+
+    <div class="inline-flex rounded-md shadow-xs mt-20">
+      <a href="#" aria-current="page" class="px-4 py-2 text-sm font-medium text-blue-700 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+        Jan
+      </a>
+      <a href="#" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+        Feb
+      </a>
+      <a href="#" class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+        Mar
+      </a>
+    </div>
+
+
+    
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.getElementById("dotContainer");
+
+            for (let i = 0; i < 5; i++) {
+                const dot = document.createElement("div");
+                dot.classList.add("dot");
+                dot.style.animationDelay = `${Math.random() * 1.5}s`; 
+                container.appendChild(dot);
+            }
+        });
+    </script>
+
+</body>
+</html>
