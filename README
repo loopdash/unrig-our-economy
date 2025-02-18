@@ -1,0 +1,45 @@
+# 🛒 Kroger API Usage Guide
+
+This guide provides step-by-step instructions on how to:
+- 🔑 Obtain an **OAuth2 Access Token** from Kroger's API
+- 🏬 Retrieve **store locations**
+- 🛍 Fetch **product details** (requires explicit scope)
+
+📌 **Official Kroger API Documentation:**  
+[Product API Documentation](https://developer.kroger.com/api-products/api/product-api-public#tag/Products/operation/productGet)
+
+---
+
+## **Get an OAuth2 Access Token**
+To interact with Kroger’s API, you need to obtain a **valid access token**.
+Ask merel@loopdash.com for client_id and client_secret
+
+### 🔹 **Basic Token Request**
+Use this command to request an access token **without additional scopes**:
+
+```sh
+curl -X POST \
+  'https://api.kroger.com/v1/connect/oauth2/token' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Authorization: Basic <YOUR_BASE64_ENCODED_CLIENT_ID:CLIENT_SECRET>' \
+  -d 'grant_type=client_credentials'
+```
+Sometimes, you have to specify product scope in the oauth call above
+
+```sh
+curl -X POST \
+  'https://api.kroger.com/v1/connect/oauth2/token' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Authorization: Basic <YOUR_BASE64_ENCODED_CLIENT_ID:CLIENT_SECRET>' \
+  -d 'grant_type=client_credentials&scope=product.compact'
+```
+## **Get Product Data**
+ 
+Example, use Kroger Milk at locationId 01400943
+```sh
+curl -X GET \
+  'https://api.kroger.com/v1/products?filter.term=milk&filter.brand=Kroger&filter.locationId=01400943&filter.limit=10' \                
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer <YOUR_ACCESS_TOKEN>' \
+  --output response-unrig-kroger-milk-location01400943.json
+```
