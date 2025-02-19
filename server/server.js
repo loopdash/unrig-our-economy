@@ -24,4 +24,8 @@ require('dotenv').config();
 console.log('🔑 DB_USER:', process.env.DB_USER);
 
 
-app.listen(5001, () => console.log('🚀 Server running on port 5001'));
+const PORT = 5001;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 Server running on http://0.0.0.0:${PORT}`);
+});
+
