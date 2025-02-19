@@ -5,7 +5,7 @@ import axios from 'axios';
 // const API_URL = 'http://localhost:5001/';
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/';
 
-
+console.log('API URL', API_URL)
 // Get all Kroger products
 export const getKrogerProducts = async () => {
     try {
