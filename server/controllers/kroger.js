@@ -19,7 +19,7 @@ const fetchKrogerData = async () => {
                     const response = await axios.get(url, {
                         headers: {
                             Accept: 'application/json',
-                            Authorization: `Bearer eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vYXBpLmtyb2dlci5jb20vdjEvLndlbGwta25vd24vandrcy5qc29uIiwia2lkIjoiWjRGZDNtc2tJSDg4aXJ0N0xCNWM2Zz09IiwidHlwIjoiSldUIn0.eyJhdWQiOiJ1bnJpZy1wcm9kZW52LTI0MzI2MTI0MzAzNDI0NTA3MTZlNGQ0ZTY3NmY3NzMyNDg0ZDZiNDc2ZTQzNTI3MjYyNjM3YTZkNGY0NjM3NjM3MDRjNDk0YTU1NzE0ZTc0NDc2NzM1NmY2ODRhNWE2ZjczNGM2ZTc2NzE0NjUzMmUzNjYyNTE0NzI0NjgwMDcwMDg3MTY5MjY2IiwiZXhwIjoxNzM5OTkyMDAzLCJpYXQiOjE3Mzk5OTAxOTgsImlzcyI6ImFwaS5rcm9nZXIuY29tIiwic3ViIjoiMWZmZWY1ZGYtMjE0Yy01ODViLTkxNmQtMjZkMTQyNWJlNWE3Iiwic2NvcGUiOiJwcm9kdWN0LmNvbXBhY3QiLCJhdXRoQXQiOjE3Mzk5OTAyMDM2NDU0NjU1NjcsImF6cCI6InVucmlnLXByb2RlbnYtMjQzMjYxMjQzMDM0MjQ1MDcxNmU0ZDRlNjc2Zjc3MzI0ODRkNmI0NzZlNDM1MjcyNjI2MzdhNmQ0ZjQ2Mzc2MzcwNGM0OTRhNTU3MTRlNzQ0NzY3MzU2ZjY4NGE1YTZmNzM0YzZlNzY3MTQ2NTMyZTM2NjI1MTQ3MjQ2ODAwNzAwODcxNjkyNjYifQ.VilLoWnOC3ELD-gnls-KwdM31DOlEC0iVGX8S69Ql6BDywpDnbq0N21tVwAg37E54_zR5ZsM9ycCUVownFJmR-FTVqZhIe3dpTdaXYzKeuUgymg0-Mt89lA_PWCZaXZDA0Ceapu-_AoWEplWEK_fMsJ5L8MF1i1jzWIOrfVNLXg7xEgMHojxF4CnNVNpk0L1CM11OzgishfeSTZG6DRw-rNEZY3JuvzGes3OKqZVoc2UdTnbrCNjYDltQ4D9PMv4hD83H664Ri9nxxS2NS2lYIutfU6As8Wujt6zXNZuKf0U6ckhbg27w0eRmZa_WcIsCDSA4vvoiWoDhjnJoK9wfA`
+                            Authorization: `Bearer ${process.env.KROGER_API_TOKEN}`
                         }
                     });
 
