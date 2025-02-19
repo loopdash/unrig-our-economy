@@ -1,21 +1,33 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+// client/src/App.js
+import React, { useEffect, useState } from 'react';
+import { getKrogerProducts  } from './services/api';
 
 function App() {
-    const [data, setData] = useState([]);
+    const [krogerProducts, setKrogerProducts] = useState([]);
 
+    // Fetch products
     useEffect(() => {
-        axios.get('/api/data')  // Proxy will redirect this to backend
-            .then(response => setData(response.data))
-            .catch(error => console.error(error));
+        fetchKrogerProducts();
     }, []);
 
+    const fetchKrogerProducts = async () => {
+        try {
+            const response = await getKrogerProducts();
+            setKrogerProducts(response.data);
+        } catch (error) {
+            console.error('Failed to fetch products:', error);
+        }
+    };
+
+   
     return (
         <div>
-            <h1>MySQL Data</h1>
+            <h1>Product List</h1>
             <ul>
-                {data.map((item, index) => (
-                    <li key={index}>{JSON.stringify(item)}</li>
+                {krogerProducts.map(product => (
+                    <li key={product.id}>
+                        {product.name} - ${product.price}
+                    </li>
                 ))}
             </ul>
         </div>

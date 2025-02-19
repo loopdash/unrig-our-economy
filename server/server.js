@@ -1,37 +1,27 @@
 require('dotenv').config();
 const express = require('express');
-const mysql = require('mysql2');
 const cors = require('cors');
+const cron = require('node-cron');
+const { fetchKrogerData } = require('./controllers/kroger');
 
 const app = express();
+app.use(cors({ origin: '*' }));  // Allow all origins
 app.use(express.json());
-app.use(cors());
 
-const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME
+// API Endpoint for manual scraping
+app.use('/api/kroger', require('./routes/kroger'));
+app.use('/api/products', require('./routes/products'));
+
+
+// Cron job to run daily at 2:00 AM
+cron.schedule('0 2 * * *', async () => {
+    console.log('🚀 Running daily Kroger product scrape...');
+    await fetchKrogerData();
+    console.log('✅ Daily scrape completed.');
 });
 
-db.connect(err => {
-    if (err) {
-        console.error('Database connection error:', err);
-        return;
-    }
-    console.log('Connected to MySQL database');
-});
+require('dotenv').config();
+console.log('🔑 DB_USER:', process.env.DB_USER);
 
-app.get('/api/data', (req, res) => {
-    db.query('SELECT * FROM your_table', (err, results) => {
-        if (err) {
-            res.status(500).send(err);
-            return;
-        }
-        res.json(results);
-    });
-});
 
-app.listen(process.env.PORT, () => {
-    console.log(`🚀 Server running on port ${process.env.PORT}`);
-});
+app.listen(5001, () => console.log('🚀 Server running on port 5001'));
