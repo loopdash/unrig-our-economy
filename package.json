@@ -1,0 +1,15 @@
+{
+  "name": "unrig-our-economy",
+  "version": "1.0.0",
+  "description": "This guide provides step-by-step instructions on how to: - 🔑 Obtain an **OAuth2 Access Token** from Kroger's API - 🏬 Retrieve **store locations** - 🛍 Fetch **product details** (requires explicit scope)",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/server.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
