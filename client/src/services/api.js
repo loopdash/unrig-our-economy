@@ -1,8 +1,8 @@
 // client/src/services/api.js
 import axios from 'axios';
 
-// Set API base URL from environment variable or fallback to the Droplet's IP
-const API_URL = process.env.REACT_APP_API_URL || 'http://67.205.175.21:5001/';
+const API_URL = 'http://localhost:5001/'; // Update with your actual IP
+
 
 // Get all Kroger products
 export const getKrogerProducts = async () => {
@@ -15,7 +15,6 @@ export const getKrogerProducts = async () => {
     }
 };
 
-// Get product scrapings
 export const getProductScrapings = async () => {
     try {
         const response = await axios.get(`${API_URL}api/products/scrapes`);
@@ -25,3 +24,4 @@ export const getProductScrapings = async () => {
         throw error;
     }
 };
+
