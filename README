@@ -1,3 +1,9 @@
+# On droplet, in root directory unrig_our_economy
+```
+git pull
+npm run deploy
+```
+
 # 🛒 Kroger API Usage Guide
 
 This guide provides step-by-step instructions on how to:

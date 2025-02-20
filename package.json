@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "server": "cd server && npm start",
-    "client": "cd client && npm start",
-    "deploy": "concurrently \"npm run build-client\" \"npm run start-api\"",
-    "build-client": "cd client && npm run build && serve -s build -l 3000",
-    "start-api": "cd server && npm start"
+    "server": "pm2 start server/server.js --name unrig-api",
+    "client": "pm2 serve client/build 3000 --name unrig-client",
+    "deploy": "npm run build-client && npm run start-api && npm run start-client",
+    "build-client": "cd client && npm run build",
+    "start-api": "pm2 start server/server.js --name unrig-api",
+    "start-client": "pm2 serve client/build 3000 --name unrig-client",
+    "stop": "pm2 stop unrig-api && pm2 stop unrig-client",
+    "restart": "pm2 restart unrig-api && pm2 restart unrig-client",
+    "logs": "pm2 logs"
   },
   "keywords": [],
   "author": "",
