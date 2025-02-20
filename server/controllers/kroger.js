@@ -1,13 +1,42 @@
 // server/controllers/kroger.js
 const axios = require('axios');
 const mysql = require('mysql2/promise');
-const db = require('../config/db')
+const db = require('../config/db');
 
+// Get a new Kroger API token
+const getKrogerToken = async () => {
+    try {
+        const clientId = process.env.KROGER_CLIENT_ID;
+        const clientSecret = process.env.KROGER_CLIENT_SECRET;
+
+        const base64Credentials = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
+
+        const response = await axios.post(
+            'https://api.kroger.com/v1/connect/oauth2/token',
+            'grant_type=client_credentials&scope=product.compact',
+            {
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Authorization': `Basic ${base64Credentials}`,
+                },
+            }
+        );
+
+        const newToken = response.data.access_token;
+        process.env.KROGER_API_TOKEN = newToken;
+        console.log('✅ New Kroger API Token acquired!');
+        return newToken;
+    } catch (error) {
+        console.error('❌ Failed to get Kroger API Token:', error.response?.data || error.message);
+        throw error;
+    }
+};
 
 // Fetch and save Kroger product data
 const fetchKrogerData = async () => {
+    const token = await getKrogerToken();  // Ensure fresh token before scraping
+
     try {
-        // Get locations and products from DB
         const [locations] = await db.query('SELECT location_id, name, city, state FROM kroger_locations');
         const [products] = await db.query('SELECT name, kroger_id FROM kroger_products');
 
@@ -19,7 +48,7 @@ const fetchKrogerData = async () => {
                     const response = await axios.get(url, {
                         headers: {
                             Accept: 'application/json',
-                            Authorization: `Bearer ${process.env.KROGER_API_TOKEN}`
+                            Authorization: `Bearer ${token}`
                         }
                     });
 
@@ -30,7 +59,6 @@ const fetchKrogerData = async () => {
                         const productLink = `https://www.kroger.com${item.productPageURI}`;
                         const productPrice = item.items?.[0]?.price?.regular || 0;
 
-                        // Insert into product_scraping table
                         await db.query(
                             `INSERT INTO product_scraping 
                              (product_name, product_link, product_location_id, origin_product_id, product_price, product_source)
@@ -51,7 +79,6 @@ const fetchKrogerData = async () => {
 };
 
 
-
 const fetchKrogerProductData = async () => {
     try {
         const [results] = await db.query(`SELECT * FROM kroger_products`);
@@ -64,4 +91,4 @@ const fetchKrogerProductData = async () => {
 };
 
 
-module.exports = { fetchKrogerData, fetchKrogerProductData };
+module.exports = { fetchKrogerData, fetchKrogerProductData, getKrogerToken };
