@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start-dev": "concurrently \"npm run server-dev\" \"npm run client-dev\"",
     "server": "pm2 start server/server.js --name unrig-api",
     "client": "pm2 serve client/build 3000 --name unrig-client",
+    "server-dev": "cd server && npm start",
+    "client-dev": "cd client && npm start",
     "deploy": "npm run build-client && npm run start-api && npm run start-client",
     "build-client": "cd client && npm run build",
     "start-api": "pm2 start server/server.js --name unrig-api",

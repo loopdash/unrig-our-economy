@@ -16,8 +16,12 @@ app.use('/api/products', require('./routes/products'));
 // Cron job to run daily at 2:00 AM
 cron.schedule('0 2 * * *', async () => {
     console.log('🚀 Running daily Kroger product scrape...');
-    await fetchKrogerData();
-    console.log('✅ Daily scrape completed.');
+    try {
+        await fetchKrogerData();
+        console.log('✅ Daily scrape completed.');
+    } catch (error) {
+        console.error('❌ Daily scrape failed:', error.message);
+    }
 });
 
 require('dotenv').config();
