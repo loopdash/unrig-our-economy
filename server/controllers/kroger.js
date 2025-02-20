@@ -6,10 +6,6 @@ const db = require('../config/db');
 // Get a new Kroger API token
 const getKrogerToken = async () => {
     try {
-        const clientId = process.env.KROGER_CLIENT_ID;
-        const clientSecret = process.env.KROGER_CLIENT_SECRET;
-
-        const base64Credentials = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
 
         const response = await axios.post(
             'https://api.kroger.com/v1/connect/oauth2/token',
@@ -17,7 +13,7 @@ const getKrogerToken = async () => {
             {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
-                    'Authorization': `Basic ${base64Credentials}`,
+                    'Authorization': `Basic ${process.env.KROGER_BASE_CODE}`,
                 },
             }
         );
