@@ -13,7 +13,7 @@
     "deploy": "npm run build-client && npm run start-api && npm run start-client",
     "build-client": "cd client && npm run build",
     "start-api": "pm2 start server/server.js --name unrig-api -f",
-    "start-client": "pm2 serve client/build 3000 --name unrig-client",
+    "start-client": "pm2 serve client/build 3000 --name unrig-client --spa",
     "stop": "pm2 stop unrig-api && pm2 stop unrig-client",
     "restart": "pm2 restart unrig-api && pm2 restart unrig-client",
     "logs": "pm2 logs"
