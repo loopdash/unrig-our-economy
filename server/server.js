@@ -11,7 +11,7 @@ app.use(express.json());
 // API Endpoint for manual scraping
 app.use('/api/kroger', require('./routes/kroger'));
 app.use('/api/products', require('./routes/products'));
-
+app.use('/api/errors', require('./routes/errors'));
 
 // Cron job to run daily at 2:00 AM
 cron.schedule('0 2 * * *', async () => {

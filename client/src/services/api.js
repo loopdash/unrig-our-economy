@@ -27,3 +27,15 @@ export const getProductScrapings = async () => {
         throw error;
     }
 };
+
+// Get all error logs
+export const getErrorLogs = async () => {
+    try {
+        const response = await axios.get(`${API_URL}api/errors`); // Adjust port if needed
+        console.log(response)
+        return response.data;
+    } catch (error) {
+        console.error('Failed to fetch error logs from front end:', error);
+        throw error;
+    }
+};

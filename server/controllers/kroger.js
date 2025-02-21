@@ -2,6 +2,7 @@
 const axios = require('axios');
 const mysql = require('mysql2/promise');
 const db = require('../config/db');
+const { logError } = require('./errors');
 
 // Get a new Kroger API token
 const getKrogerToken = async () => {
@@ -20,10 +21,11 @@ const getKrogerToken = async () => {
 
         const newToken = response.data.access_token;
         process.env.KROGER_API_TOKEN = newToken;
-        console.log('✅ New Kroger API Token acquired!');
+        console.log('New Kroger API Token acquired!');
         return newToken;
     } catch (error) {
-        console.error('❌ Failed to get Kroger API Token:', error.response?.data || error.message);
+        console.error('Failed to get Kroger API Token:', error.response?.data || error.message);
+        await logError(error.message, error.stack, 'getKrogerToken');
         throw error;
     }
 };
@@ -62,15 +64,16 @@ const fetchKrogerData = async () => {
                             [productName, productLink, location.location_id, product.kroger_id, productPrice, 'Kroger']
                         );
 
-                        console.log(`✅ Saved: ${productName} - $${productPrice} for ${location.city}, ${location.state}`);
+                        console.log(`Saved: ${productName} - $${productPrice} for ${location.city}, ${location.state}`);
                     }
-                } catch (err) {
-                    console.error(`❌ Error fetching ${product.name} at ${location.name}:`, err.response?.data || err.message);
+                } catch (error) {
+                    console.error(`Error fetching ${product.name} at ${location.name}:`, err.response?.data || err.message);
+                    await logError(error.message, error.stack, 'fetchKrogerData');
                 }
             }
         }
     } catch (error) {
-        console.error('⚠️ Failed to fetch Kroger data:', error.message);
+        console.error('Failed to fetch Kroger data:', error.message);
     }
 };
 
@@ -81,7 +84,8 @@ const fetchKrogerProductData = async () => {
         console.log('Kroger products fetched successfully:', results);
         return results;
     } catch (error) {
-        console.error('⚠️ Failed to fetch Kroger data:', error.message);
+        console.error('Failed to fetch Kroger data:', error.message);
+        await logError(error.message, error.stack, 'fetchKrogerProductData');
         throw error;
     }
 };
