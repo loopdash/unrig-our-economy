@@ -52,22 +52,32 @@ const fetchKrogerData = async () => {
 
                     const item = response.data.data?.[0];
 
+                    // ✅ Skip product if no data was returned
+                    if (!item) {
+                        console.log(`⚠️ No data found for ${product.name} at ${location.city}, ${location.state}. Skipping...`);
+                        continue;  // Move to the next product without logging anything to the DB
+                    }
+
                     if (item) {
                         const productName = item.description || product.name;
                         const productLink = `https://www.kroger.com${item.productPageURI}`;
                         const productPrice = item.items?.[0]?.price?.regular || 0;
 
-                        await db.query(
-                            `INSERT INTO product_scraping 
-                             (product_name, product_link, product_location_id, origin_product_id, product_price, product_source)
-                             VALUES (?, ?, ?, ?, ?, ?)`,
-                            [productName, productLink, location.location_id, product.kroger_id, productPrice, 'Kroger']
-                        );
-
-                        console.log(`Saved: ${productName} - $${productPrice} for ${location.city}, ${location.state}`);
+                        if (productPrice > 0) {
+                            await db.query(
+                                `INSERT INTO product_scraping 
+                                 (product_name, product_link, product_location_id, origin_product_id, product_price, product_source)
+                                 VALUES (?, ?, ?, ?, ?, ?)`,
+                                [productName, productLink, location.location_id, product.kroger_id, productPrice, 'Kroger']
+                            );
+    
+                            console.log(`Saved: ${productName} - $${productPrice} for ${location.city}, ${location.state}`);
+                        } else {
+                            console.log(`Product Skipped: ${productName} - $${productPrice} for ${location.city}, ${location.state} - Price is $0`);
+                        }
                     }
                 } catch (error) {
-                    console.error(`Error fetching ${product.name} at ${location.name}:`, err.response?.data || err.message);
+                    console.error(`Error fetching ${product.name} at ${location.name}:`, error.response?.data || error.message);
                     await logError(error.message, error.stack, 'fetchKrogerData');
                 }
             }
