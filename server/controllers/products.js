@@ -15,5 +15,4 @@ const getProductScrapeData = async () => {
     }
 };
 
-
 module.exports = { getProductScrapeData };
