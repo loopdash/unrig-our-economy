@@ -1,28 +1,22 @@
 const fs = require('fs');
 const path = require('path');
-const db = require('../config/db'); // Ensure this points to your database connection
 const { logError } = require('../controllers/errors');
 
 // Path to the JSON file
 const filePath = path.join(__dirname, '../../response-unrig-locations.json');
+// Path to save the SQL file
+const sqlFilePath = path.join(__dirname, '../../kroger_locations.sql');
 
 const scrapeLocationData = async () => {
     try {
+        let sqlStatements = [];
         console.log('📊 Extracting location data from file...');
 
         // Read and parse the JSON file
         const rawData = fs.readFileSync(filePath, 'utf-8');
         const locations = JSON.parse(rawData).data;
 
-        // Prepare the SQL insert statement
-        const query = `
-            INSERT INTO kroger_locations (location_id, city, state, zip_code, name)
-            VALUES (?, ?, ?, ?, ?)
-            ON DUPLICATE KEY UPDATE city = VALUES(city), state = VALUES(state), zip_code = VALUES(zip_code), name = VALUES(name);
-        `;
-
         for (const loc of locations) {
-            // Extract values
             const locationId = loc.locationId;
             const city = loc.address.city;
             const state = loc.address.state;
@@ -35,14 +29,28 @@ const scrapeLocationData = async () => {
                 continue;
             }
 
-            // Execute insert query
-            await db.query(query, [locationId, city, state, zip, name]);
-            console.log(`✅ Inserted: ${city}, ${state} (ID: ${locationId})`);
+            // Format SQL INSERT statement with alias to avoid VALUES() deprecation
+            const query = `
+                INSERT INTO kroger_locations (location_id, city, state, zipcode, name)
+                VALUES ('${locationId}', '${city.replace(/'/g, "''")}', '${state}', '${zip}', '${name.replace(/'/g, "''")}')
+                AS new
+                ON DUPLICATE KEY UPDATE 
+                    city = new.city, 
+                    state = new.state, 
+                    zipcode = new.zipcode, 
+                    name = new.name;
+            `;
+
+            // Add to SQL file content
+            sqlStatements.push(query);
         }
 
-        console.log('✅ Location data updated successfully.');
+        // Write to SQL file
+        fs.writeFileSync(sqlFilePath, sqlStatements.join('\n'), 'utf-8');
+        console.log(`✅ SQL file saved: ${sqlFilePath}`);
+
     } catch (error) {
-        console.error('❌ Error updating location data:', error.message);
+        console.error('❌ Error generating SQL file:', error.message);
         await logError(error.message, error.stack, 'scrapeLocationData');
     }
 };
