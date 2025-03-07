@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { getProductAverages } from '../services/api';
+import React, { useEffect, useState } from "react";
+import { getProductAverages } from "../services/api";
+import ProductAveragesGraph from "../components/ProductAveragesGraph";
 
 function Home() {
     const [productAverages, setProductAverages] = useState([]);
@@ -12,50 +13,61 @@ function Home() {
     const fetchProductAverages = async () => {
         try {
             const data = await getProductAverages();
-            console.log(data);
+            console.log("Fetched Data:", data);
             setProductAverages(data);
         } catch (error) {
-            console.error('Failed to fetch product averages:', error);
+            console.error("Failed to fetch product averages:", error);
         }
     };
 
-    // Group by state and date
-    const groupedByStateAndDate = productAverages.reduce((acc, product) => {
-        const { record_day, state } = product;
-        const key = `${record_day} - ${state}`; // Create a unique key for each day-state combo
+    // ✅ Group by state
+    const groupedByState = productAverages.reduce((acc, product) => {
+        const { state, record_day, product_category, average_price } = product;
 
-        if (!acc[key]) {
-            acc[key] = [];
+        if (!acc[state]) {
+            acc[state] = [];
         }
-        acc[key].push(product);
+        acc[state].push({
+            record_day,
+            product_category,
+            average_price: parseFloat(average_price),
+        });
         return acc;
     }, {});
 
     return (
         <div>
-            <h2>Product Averages by Day</h2>
+            <h2>Product Averages by State</h2>
+
+            {/* Render Data Table */}
             <table border="1">
                 <thead>
                     <tr>
                         <th>Date</th>
                         <th>State</th>
-                        <th>Category</th>
-                        <th>Avg Price</th>
+                        <th>Product Category</th>
+                        <th>Average Price</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {Object.keys(groupedByStateAndDate).map((key, index) => (
-                        groupedByStateAndDate[key].map((row, subIndex) => (
-                            <tr key={`${index}-${subIndex}`}>
-                                <td>{row.record_day}</td>
-                                <td>{row.state}</td>
-                                <td>{row.product_category}</td>
-                                <td>${parseFloat(row.average_price).toFixed(2)}</td>
-                            </tr>
-                        ))
+                    {productAverages.map((product, index) => (
+                        <tr key={index}>
+                            <td>{product.record_day}</td>
+                            <td>{product.state}</td>
+                            <td>{product.product_category}</td>
+                            <td>${parseFloat(product.average_price).toFixed(2)}</td>
+                        </tr>
                     ))}
                 </tbody>
             </table>
+
+            {/* ✅ Pass Data to Graph Component */}
+            {Object.keys(groupedByState).map((state) => (
+                <div key={state} style={{ marginBottom: "50px" }}>
+                    <h3>{state}</h3>
+                    <ProductAveragesGraph state={state} data={groupedByState[state]} />
+                </div>
+            ))}
         </div>
     );
 }

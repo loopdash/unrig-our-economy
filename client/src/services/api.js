@@ -2,8 +2,8 @@
 import axios from 'axios';
 
 // Set API base URL from environment variable or fallback to the Droplet's IP
-// const API_URL = 'http://localhost:5001/';
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/';
+const API_URL = 'http://localhost:5001/';
+// const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/';
 
 console.log('API URL', API_URL)
 // Get all Kroger products
