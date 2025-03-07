@@ -10,19 +10,18 @@
     "client": "pm2 serve client/build 3000 --name unrig-client --spa",
     "server-dev": "cd server && npm start",
     "client-dev": "cd client && npm start",
-    
     "deploy": "npm run build-client && npm run restart-api && npm run restart-client",
-
     "build-client": "cd client && npm run build",
-    
     "restart-api": "pm2 delete unrig-api || true && pm2 start server/server.js --name unrig-api",
     "restart-client": "pm2 delete unrig-client || true && pm2 serve client/build 3000 --name unrig-client --spa",
-    
     "stop": "pm2 stop unrig-api && pm2 stop unrig-client",
     "restart": "pm2 restart unrig-api && pm2 restart unrig-client",
     "logs": "pm2 logs"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-cron": "^3.0.3"
+  }
 }
