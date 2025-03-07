@@ -28,6 +28,17 @@ export const getProductScrapings = async () => {
     }
 };
 
+
+// Get product Averages
+export const getProductAverages = async () => {
+    try {
+        const response = await axios.get(`${API_URL}api/products/averages`);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching product averages:', error);
+        throw error;
+    }
+};
 // Get all error logs
 export const getErrorLogs = async () => {
     try {

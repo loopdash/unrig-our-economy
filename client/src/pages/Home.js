@@ -1,41 +1,33 @@
 // client/src/Home.js
 import React, { useEffect, useState } from 'react';
-import { getKrogerProducts, getProductScrapings  } from '../services/api';
+import { getProductAverages  } from '../services/api';
 
 function Home() {
-    const [krogerProducts, setKrogerProducts] = useState([]);
-    const [productScraping, setProductScrapings] = useState([]);
+    // const [krogerProducts, setKrogerProducts] = useState([]);
+    const [productAverages, setProductAverages] = useState([]);
 
     // Fetch products
     useEffect(() => {
-        fetchKrogerProducts();
-        fetchProductScrapings();
+        fetchProductAverages();
     }, []);
 
-    const fetchKrogerProducts = async () => {
-        try {
-            const response = await getKrogerProducts();
-            setKrogerProducts(response.data);
-        } catch (error) {
-            console.error('Failed to fetch products:', error);
-        }
-    };
-
-    const fetchProductScrapings = async () => {
+    const fetchProductAverages = async () => {
       try {
-          const data = await getProductScrapings();
-          setProductScrapings(data);
+          const data = await getProductAverages();
+          setProductAverages(data);
       } catch (error) {
           console.error('Failed to fetch products:', error);
       }
   };
+
+
     return (
         <div>
-            <h1>Kroger Product List</h1>
+            <h1>Kroger Product Avg List</h1>
             <ul>
-                {productScraping.map(product => (
+                {productAverages.map(product => (
                     <li key={product.id}>
-                        {product.product_name} - ${product.product_price}
+                        {product.product_category} - ${product.avg_price}
                     </li>
                 ))}
             </ul>

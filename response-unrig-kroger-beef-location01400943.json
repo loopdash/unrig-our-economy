@@ -1,0 +1,1325 @@
+{
+  "data": [
+    {
+      "productId": "0001111034567",
+      "upc": "0001111034567",
+      "productPageURI": "/p/kroger-beef-shaved-steak/0001111034567?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "9",
+          "description": "MEAT",
+          "number": "101",
+          "numberOfFacings": "3",
+          "side": "L",
+          "shelfNumber": "3",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": [
+        "Meat \u0026 Seafood",
+        "Meat \u0026 Seafood",
+        "Natural \u0026 Organic"
+      ],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Beef Shaved Steak",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111034567"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111034567"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111034567"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111034567"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111034567"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111034567"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111034567"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111034567"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111034567"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111034567"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111034567",
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 6, "promo": 0 },
+          "size": "14 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "8.88", "height": "2.0", "width": "6.88" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111097975",
+      "upc": "0001111097975",
+      "productPageURI": "/p/kroger-93-7-ground-beef-roll-1-lb/0001111097975?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "5",
+          "description": "MEAT",
+          "number": "101",
+          "numberOfFacings": "2",
+          "side": "L",
+          "shelfNumber": "2",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Meat \u0026 Seafood", "Natural \u0026 Organic"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® 93/7 Ground Beef Roll 1 LB",
+      "images": [
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111097975"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111097975"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111097975"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111097975"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111097975"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111097975"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111097975"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111097975"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111097975"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111097975"
+            }
+          ]
+        },
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111097975"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111097975"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111097975"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111097975"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111097975"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111097975"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111097975"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111097975"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111097975"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111097975"
+            }
+          ]
+        },
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111097975"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111097975"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111097975"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111097975"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111097975"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111097975",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 7.99, "promo": 0 },
+          "size": "1 lb",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "2.5", "height": "2.5", "width": "6.5" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111097920",
+      "upc": "0001111097920",
+      "productPageURI": "/p/kroger-73-27-ground-beef-roll-1-lb/0001111097920?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "6",
+          "description": "MEAT",
+          "number": "101",
+          "numberOfFacings": "3",
+          "side": "L",
+          "shelfNumber": "2",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Meat \u0026 Seafood"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® 73/27 Ground Beef Roll 1 LB",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111097920"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111097920"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111097920"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111097920"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111097920"
+            }
+          ]
+        },
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111097920"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111097920"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111097920"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111097920"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111097920"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111097920"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111097920"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111097920"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111097920"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111097920"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111097920"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111097920"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111097920"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111097920"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111097920"
+            }
+          ]
+        },
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111097920"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111097920"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111097920"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111097920"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111097920"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111097920",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 5.29, "promo": 0 },
+          "size": "1 lb",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "6.5", "height": "2.5", "width": "2.5" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111062766",
+      "upc": "0001111062766",
+      "productPageURI": "/p/kroger-beef-shaved-steak/0001111062766?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "9",
+          "description": "MEAT",
+          "number": "101",
+          "numberOfFacings": "2",
+          "side": "L",
+          "shelfNumber": "2",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Meat \u0026 Seafood"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Beef Shaved Steak",
+      "images": [
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111062766"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111062766"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111062766"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111062766"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111062766"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111062766"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111062766"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111062766"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111062766"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111062766"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111062766",
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 10, "promo": 0 },
+          "size": "24 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "8.75", "height": "3.0", "width": "6.72" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111088698",
+      "upc": "0001111088698",
+      "productPageURI": "/p/kroger-smoked-beef-sausage-smokies/0001111088698?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "6",
+          "description": "Packaged Meat",
+          "number": "111",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "7",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Meat \u0026 Seafood"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Smoked Beef Sausage Smokies",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111088698"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111088698"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111088698"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111088698"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111088698"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111088698",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 4.79, "promo": 4.49 },
+          "size": "12 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "1.82", "height": "5.37", "width": "4.45" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0028155350000",
+      "upc": "0028155350000",
+      "productPageURI": "/p/kroger-natural-beef-choice-boneless-top-round-steak/0028155350000?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "8",
+          "description": "MEAT",
+          "number": "101",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "4",
+          "shelfPositionInBay": "3"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Meat \u0026 Seafood", "Natural \u0026 Organic"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Natural Beef Choice Boneless Top Round Steak",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0028155350000"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0028155350000"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0028155350000"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0028155350000"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0028155350000"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0028155350000",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": {
+            "regular": 8.99,
+            "promo": 0,
+            "regularPerUnitEstimate": 7.82
+          },
+          "size": "1 lb",
+          "soldBy": "WEIGHT"
+        }
+      ],
+      "itemInformation": {
+        "depth": "1.62",
+        "height": "6.18",
+        "width": "10.75"
+      },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111096970",
+      "upc": "0001111096970",
+      "productPageURI": "/p/kroger-80-20-ground-beef-tray-3-lb/0001111096970?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "5",
+          "description": "MEAT",
+          "number": "101",
+          "numberOfFacings": "3",
+          "side": "L",
+          "shelfNumber": "3",
+          "shelfPositionInBay": "3"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Meat \u0026 Seafood", "Natural \u0026 Organic"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® 80/20 Ground Beef Tray 3 LB",
+      "images": [
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111096970"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111096970"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111096970"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111096970"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111096970"
+            }
+          ]
+        },
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111096970"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111096970"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111096970"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111096970"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111096970"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111096970"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111096970"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111096970"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111096970"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111096970"
+            }
+          ]
+        },
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111096970"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111096970"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111096970"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111096970"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111096970"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111096970"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111096970"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111096970"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111096970"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111096970"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111096970",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 17.99, "promo": 0 },
+          "size": "3 lb",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "3.4", "height": "3.2", "width": "11.7" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111097972",
+      "upc": "0001111097972",
+      "productPageURI": "/p/kroger-80-20-ground-beef-roll-3-lb/0001111097972?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "5",
+          "description": "MEAT",
+          "number": "101",
+          "numberOfFacings": "4",
+          "side": "L",
+          "shelfNumber": "1",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Meat \u0026 Seafood"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® 80/20 Ground Beef Roll 3 LB",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111097972"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111097972"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111097972"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111097972"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111097972"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111097972"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111097972"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111097972"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111097972"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111097972"
+            }
+          ]
+        },
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111097972"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111097972"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111097972"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111097972"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111097972"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111097972"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111097972"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111097972"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111097972"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111097972"
+            }
+          ]
+        },
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111097972"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111097972"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111097972"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111097972"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111097972"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111097972",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 15.99, "promo": 11.97 },
+          "size": "3 lb",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "11.0", "height": "3.0", "width": "3.0" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111096972",
+      "upc": "0001111096972",
+      "productPageURI": "/p/kroger-80-20-ground-beef-tray-1-lb/0001111096972?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "5",
+          "description": "MEAT",
+          "number": "101",
+          "numberOfFacings": "5",
+          "side": "L",
+          "shelfNumber": "4",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Meat \u0026 Seafood"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® 80/20 Ground Beef Tray 1 LB",
+      "images": [
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111096972"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111096972"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111096972"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111096972"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111096972"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111096972"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111096972"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111096972"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111096972"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111096972"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111096972"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111096972"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111096972"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111096972"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111096972"
+            }
+          ]
+        },
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111096972"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111096972"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111096972"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111096972"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111096972"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111096972"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111096972"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111096972"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111096972"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111096972"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111096972",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 6.49, "promo": 0 },
+          "size": "1 lb",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "5.7", "height": "1.75", "width": "9.35" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111097971",
+      "upc": "0001111097971",
+      "productPageURI": "/p/kroger-80-20-ground-beef-roll-1-lb/0001111097971?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "6",
+          "description": "MEAT",
+          "number": "101",
+          "numberOfFacings": "4",
+          "side": "L",
+          "shelfNumber": "2",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Meat \u0026 Seafood"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® 80/20 Ground Beef Roll 1 LB",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111097971"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111097971"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111097971"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111097971"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111097971"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111097971"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111097971"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111097971"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111097971"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111097971"
+            }
+          ]
+        },
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111097971"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111097971"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111097971"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111097971"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111097971"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111097971"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111097971"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111097971"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111097971"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111097971"
+            }
+          ]
+        },
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111097971"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111097971"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111097971"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111097971"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111097971"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111097971",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 5.99, "promo": 0 },
+          "size": "1 lb",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "2.45", "height": "2.3", "width": "7.05" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    }
+  ],
+  "meta": { "pagination": { "start": 0, "limit": 10, "total": 31 } }
+}

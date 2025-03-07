@@ -15,7 +15,7 @@ const updateStateAverages = async () => {
             FROM product_scraping ps
             JOIN kroger_locations kl ON ps.product_location_id = kl.location_id
             JOIN kroger_products kp ON ps.origin_product_id = kp.kroger_id
-            WHERE kp.category IN ('Milk', 'Bread') -- Change this as needed
+            WHERE kp.category IN ('Milk 1gal', 'Bread 20oz', 'Beef 1lb', 'Egg 12 ct') -- Change this as needed
             AND DATE(ps.scraped_at) = CURRENT_DATE
             GROUP BY kl.state, kp.category;
         `;

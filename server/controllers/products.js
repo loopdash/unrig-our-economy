@@ -15,4 +15,17 @@ const getProductScrapeData = async () => {
     }
 };
 
-module.exports = { getProductScrapeData };
+
+const getProductAveragesData = async () => {
+    try {
+        const [results] = await db.query(`SELECT * FROM state_product_averages`);
+        console.log('Products Averages data fetched successfully:', results);
+        return results;
+    } catch (error) {
+        console.error('⚠️ Failed to fetch Products Averages data:', error.message);
+        await logError(error.message, error.stack, 'getProductAveragesData');
+        throw error;
+    }
+};
+
+module.exports = { getProductScrapeData, getProductAveragesData };
