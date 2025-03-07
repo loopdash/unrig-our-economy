@@ -4,6 +4,15 @@ git pull
 npm run deploy
 ```
 
+### To run fetch and average in terminal
+```
+node 
+const { fetchKrogerData } = require('./server/controllers/kroger');
+const { updateStateAverages } = require('./server/jobs/updateStateAverages');
+fetchKrogerData().then(() => console.log('✅ Kroger Scrape Manual Run Complete')).catch(err => console.error(err));
+updateStateAverages().then(() => console.log('✅ State Averages Manual Run Complete')).catch(err => console.error(err));
+```
+
 # 🛒 Kroger API Usage Guide
 
 This guide provides step-by-step instructions on how to:
