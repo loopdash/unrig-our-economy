@@ -21,18 +21,34 @@ function Home() {
   };
 
 
+    // Group by state
+    const groupedByState = productAverages.reduce((acc, product) => {
+        if (!acc[product.state]) {
+            acc[product.state] = [];
+        }
+        acc[product.state].push(product);
+        return acc;
+    }, {});
+
     return (
         <div>
             <h1>Kroger Product Avg List</h1>
-            <ul>
-                {productAverages.map(product => (
-                    <li key={product.id}>
-                        {product.product_category} - ${product.avg_price}
-                    </li>
-                ))}
-            </ul>
+            {Object.entries(groupedByState).map(([state, products]) => (
+                <div key={state}>
+                    <h2>{state}</h2>
+                    <ul>
+                        {products.map((product, index) => (
+                            <li key={index}>
+                                {product.product_category} - $
+                                {Number(product.average_price).toFixed(2)}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
         </div>
     );
-}
+};
+
 
 export default Home;
