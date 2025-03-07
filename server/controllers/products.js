@@ -20,16 +20,18 @@ const getProductAveragesData = async () => {
     try {
         const query = `
             SELECT 
+                CAST(recorded_at AS DATE) AS record_day, 
                 state, 
                 product_category, 
                 AVG(avg_price) AS average_price
             FROM state_product_averages
-            GROUP BY state, product_category
-            ORDER BY state, product_category;
+            WHERE recorded_at IS NOT NULL
+            GROUP BY record_day, state, product_category
+            ORDER BY record_day DESC, state, product_category;
         `;
 
         const [results] = await db.query(query);
-        console.log('✅ Product Averages Data (Grouped by State & Category):', results);
+        console.log('✅ Product Averages Data:', results);
         return results;
     } catch (error) {
         console.error('⚠️ Failed to fetch Product Averages data:', error.message);
@@ -37,6 +39,7 @@ const getProductAveragesData = async () => {
         throw error;
     }
 };
+
 
 
 module.exports = { getProductScrapeData, getProductAveragesData };

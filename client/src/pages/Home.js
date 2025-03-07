@@ -1,9 +1,7 @@
-// client/src/Home.js
 import React, { useEffect, useState } from 'react';
-import { getProductAverages  } from '../services/api';
+import { getProductAverages } from '../services/api';
 
 function Home() {
-    // const [krogerProducts, setKrogerProducts] = useState([]);
     const [productAverages, setProductAverages] = useState([]);
 
     // Fetch products
@@ -12,43 +10,54 @@ function Home() {
     }, []);
 
     const fetchProductAverages = async () => {
-      try {
-          const data = await getProductAverages();
-          setProductAverages(data);
-      } catch (error) {
-          console.error('Failed to fetch products:', error);
-      }
-  };
-
-
-    // Group by state
-    const groupedByState = productAverages.reduce((acc, product) => {
-        if (!acc[product.state]) {
-            acc[product.state] = [];
+        try {
+            const data = await getProductAverages();
+            console.log(data);
+            setProductAverages(data);
+        } catch (error) {
+            console.error('Failed to fetch product averages:', error);
         }
-        acc[product.state].push(product);
+    };
+
+    // Group by state and date
+    const groupedByStateAndDate = productAverages.reduce((acc, product) => {
+        const { record_day, state } = product;
+        const key = `${record_day} - ${state}`; // Create a unique key for each day-state combo
+
+        if (!acc[key]) {
+            acc[key] = [];
+        }
+        acc[key].push(product);
         return acc;
     }, {});
 
     return (
         <div>
-            <h1>Kroger Product Avg List</h1>
-            {Object.entries(groupedByState).map(([state, products]) => (
-                <div key={state}>
-                    <h2>{state}</h2>
-                    <ul>
-                        {products.map((product, index) => (
-                            <li key={index}>
-                                {product.product_category} - $
-                                {Number(product.average_price).toFixed(2)}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-            ))}
+            <h2>Product Averages by Day</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>State</th>
+                        <th>Category</th>
+                        <th>Avg Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {Object.keys(groupedByStateAndDate).map((key, index) => (
+                        groupedByStateAndDate[key].map((row, subIndex) => (
+                            <tr key={`${index}-${subIndex}`}>
+                                <td>{row.record_day}</td>
+                                <td>{row.state}</td>
+                                <td>{row.product_category}</td>
+                                <td>${parseFloat(row.average_price).toFixed(2)}</td>
+                            </tr>
+                        ))
+                    ))}
+                </tbody>
+            </table>
         </div>
     );
-};
-
+}
 
 export default Home;
