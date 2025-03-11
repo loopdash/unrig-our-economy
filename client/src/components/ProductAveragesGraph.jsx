@@ -6,15 +6,21 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 function ProductAveragesGraph({ state, data }) {
-    // ✅ Prepare Chart Data
-    const labels = [...new Set(data.map((entry) => entry.record_day))];
-    const categories = [...new Set(data.map((entry) => entry.product_category))];
+    // ✅ Ensure `record_day` is in ascending order (earliest dates first)
+    const sortedData = [...data].sort((a, b) => new Date(a.record_day) - new Date(b.record_day));
 
+    // ✅ Get sorted labels (dates)
+    const labels = [...new Set(sortedData.map((entry) => entry.record_day))];
+
+    // ✅ Get unique product categories
+    const categories = [...new Set(sortedData.map((entry) => entry.product_category))];
+
+    // ✅ Ensure datasets match sorted labels
     const datasets = categories.map((category, index) => ({
         label: category,
         data: labels.map(
             (day) =>
-                data.find((entry) => entry.record_day === day && entry.product_category === category)
+                sortedData.find((entry) => entry.record_day === day && entry.product_category === category)
                     ?.average_price || null
         ),
         borderColor: `hsl(${index * 90}, 70%, 50%)`,
@@ -22,6 +28,7 @@ function ProductAveragesGraph({ state, data }) {
         fill: false,
     }));
 
+    // ✅ Define Chart Data
     const chartData = {
         labels,
         datasets,
@@ -38,7 +45,10 @@ function ProductAveragesGraph({ state, data }) {
                         title: { display: true, text: `Product Averages in ${state}` },
                     },
                     scales: {
-                        x: { title: { display: true, text: "Date" } },
+                        x: { 
+                            title: { display: true, text: "Date" },
+                            reverse: false, // Ensures earliest date is closest to y-axis
+                        },
                         y: { title: { display: true, text: "Average Price ($)" } },
                     },
                 }}

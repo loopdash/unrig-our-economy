@@ -27,7 +27,7 @@ const getProductAveragesData = async () => {
             FROM state_product_averages
             WHERE recorded_at IS NOT NULL
             GROUP BY record_day, state, product_category
-            ORDER BY record_day DESC, state, product_category;
+            ORDER BY record_day ASC, state, product_category;
         `;
 
         const [results] = await db.query(query);
