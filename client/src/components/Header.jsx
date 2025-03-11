@@ -5,7 +5,7 @@ function Header() {
     <header className="w-full bg-blue-600 text-white py-4 shadow-lg">
       <div className="container mx-auto flex justify-between items-center px-6">
         {/* Logo */}
-        <div className="text-2xl font-bold">MyWebsite</div>
+        <div className="text-2xl font-bold">Eggconomy</div>
 
         {/* Navigation Menu */}
         <nav className="hidden md:flex space-x-6">
