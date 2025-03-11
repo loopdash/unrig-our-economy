@@ -1,0 +1,1129 @@
+{
+  "data": [
+    {
+      "productId": "0001111009039",
+      "upc": "0001111009039",
+      "productPageURI": "/p/kroger-cage-free-extra-large-grade-aa-white-eggs/0001111009039?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "25",
+          "description": "DAIRY",
+          "number": "100",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "1",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Dairy"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Cage Free Extra Large Grade AA White Eggs",
+      "images": [
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111009039"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111009039"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111009039"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111009039"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111009039"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111009039"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111009039"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111009039"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111009039"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111009039"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111009039"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111009039"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111009039"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111009039"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111009039"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111009039",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 7.69, "promo": 0 },
+          "size": "12 ct",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "4.0", "height": "2.5", "width": "11.69" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111012501",
+      "upc": "0001111012501",
+      "productPageURI": "/p/kroger-cage-free-grade-aa-large-white-eggs/0001111012501?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "24",
+          "description": "DAIRY",
+          "number": "100",
+          "numberOfFacings": "5",
+          "side": "L",
+          "shelfNumber": "2",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Dairy"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Cage Free Grade AA Large White Eggs",
+      "images": [
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111012501"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111012501"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111012501"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111012501"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111012501"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111012501"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111012501"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111012501"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111012501"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111012501"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111012501"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111012501"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111012501"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111012501"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111012501"
+            }
+          ]
+        },
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111012501"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111012501"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111012501"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111012501"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111012501"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111012501",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 33.39, "promo": 0 },
+          "size": "60 ct",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "11.68", "height": "2.5", "width": "4.0" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111003905",
+      "upc": "0001111003905",
+      "productPageURI": "/p/kroger-cage-free-hard-cooked-peeled-eggs/0001111003905?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "23",
+          "description": "DAIRY",
+          "number": "100",
+          "numberOfFacings": "2",
+          "side": "L",
+          "shelfNumber": "5",
+          "shelfPositionInBay": "3"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Dairy"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Cage Free Hard Cooked Peeled Eggs",
+      "images": [
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111003905"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111003905"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111003905"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111003905"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111003905"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111003905"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111003905"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111003905"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111003905"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111003905"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111003905"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111003905"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111003905"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111003905"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111003905"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111003905",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 5.99, "promo": 0 },
+          "size": "6 ct",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "2.56", "height": "6.38", "width": "7.25" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111085126",
+      "upc": "0001111085126",
+      "productPageURI": "/p/kroger-extra-wide-egg-noodles/0001111085126?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "18",
+          "description": "AISLE 14",
+          "number": "14",
+          "numberOfFacings": "3",
+          "side": "L",
+          "shelfNumber": "1",
+          "shelfPositionInBay": "3"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Pasta, Sauces, Grain"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Extra Wide Egg Noodles",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111085126"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111085126"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111085126"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111085126"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111085126"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111085126",
+          "inventory": { "stockLevel": "TEMPORARILY_OUT_OF_STOCK" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 1.69, "promo": 0 },
+          "size": "16 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "7.5", "height": "2.0", "width": "12.0" },
+      "temperature": { "indicator": "Ambient", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111009228",
+      "upc": "0001111009228",
+      "productPageURI": "/p/kroger-cage-free-medium-white-eggs/0001111009228?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "23",
+          "description": "DAIRY",
+          "number": "100",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "2",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Breakfast", "Dairy"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Cage Free Medium White Eggs",
+      "images": [
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111009228"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111009228"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111009228"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111009228"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111009228"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111009228"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111009228"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111009228"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111009228"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111009228"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111009228"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111009228"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111009228"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111009228"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111009228"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111009228",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 7.39, "promo": 0 },
+          "size": "12 ct",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "4.0", "height": "2.7", "width": "11.6" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111090406",
+      "upc": "0001111090406",
+      "productPageURI": "/p/kroger-grade-aa-large-cage-free-white-eggs/0001111090406?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "24",
+          "description": "DAIRY",
+          "number": "100",
+          "numberOfFacings": "2",
+          "side": "L",
+          "shelfNumber": "1",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Breakfast", "Dairy"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Grade AA Large Cage Free White Eggs",
+      "images": [
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111090406"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111090406"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111090406"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111090406"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111090406"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111090406"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111090406"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111090406"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111090406"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111090406"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111090406"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111090406"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111090406"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111090406"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111090406"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111090406",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 7.49, "promo": 0 },
+          "size": "12 ct",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "4.0", "height": "2.75", "width": "11.5" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111008963",
+      "upc": "0001111008963",
+      "productPageURI": "/p/kroger-cage-free-large-white-eggs/0001111008963?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "23",
+          "description": "DAIRY",
+          "number": "100",
+          "numberOfFacings": "3",
+          "side": "L",
+          "shelfNumber": "1",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Breakfast", "Dairy"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Cage Free Large White Eggs",
+      "images": [
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111008963"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111008963"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111008963"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111008963"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111008963"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111008963"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111008963"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111008963"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111008963"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111008963"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111008963"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111008963"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111008963"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111008963"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111008963"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111008963",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 11.19, "promo": 0 },
+          "size": "18 ct",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "6.0", "height": "2.5", "width": "11.69" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111060950",
+      "upc": "0001111060950",
+      "productPageURI": "/p/kroger-medium-white-eggs/0001111060950?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [{ "description": "GROCERY", "number": "0" }],
+      "brand": "Kroger",
+      "categories": ["Dairy", "Breakfast"],
+      "description": "Kroger® Medium White Eggs",
+      "images": [
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111060950"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111060950"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111060950"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111060950"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111060950"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111060950"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111060950"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111060950"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111060950"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111060950"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111060950"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111060950"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111060950"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111060950"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111060950"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111060950"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111060950"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111060950"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111060950"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111060950"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111060950",
+          "inventory": { "stockLevel": "TEMPORARILY_OUT_OF_STOCK" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 5.29, "promo": 0 },
+          "size": "12 ct",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "4.0", "height": "2.75", "width": "11.5" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111012506",
+      "upc": "0001111012506",
+      "productPageURI": "/p/kroger-cage-free-grade-aa-large-eggs/0001111012506?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "25",
+          "description": "DAIRY",
+          "number": "100",
+          "numberOfFacings": "3",
+          "side": "L",
+          "shelfNumber": "5",
+          "shelfPositionInBay": "3"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Dairy"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Cage Free Grade AA Large Eggs",
+      "images": [
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111012506"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111012506"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111012506"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111012506"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111012506"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111012506"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111012506"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111012506"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111012506"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111012506"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111012506",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 5.69, "promo": 0 },
+          "size": "6 ct",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "11.68", "height": "2.5", "width": "4.0" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111012747",
+      "upc": "0001111012747",
+      "productPageURI": "/p/kroger-grade-a-jumbo-eggs/0001111012747?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "25",
+          "description": "DAIRY",
+          "number": "100",
+          "numberOfFacings": "2",
+          "side": "L",
+          "shelfNumber": "2",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Dairy"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Grade A Jumbo Eggs",
+      "images": [
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111012747"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111012747"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111012747"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111012747"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111012747"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111012747"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111012747"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111012747"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111012747"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111012747"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111012747"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111012747"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111012747"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111012747"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111012747"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111012747",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 7.89, "promo": 0 },
+          "size": "12 ct",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "4.3", "height": "3.1", "width": "12.0" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    }
+  ],
+  "meta": { "pagination": { "start": 0, "limit": 10, "total": 275 } }
+}

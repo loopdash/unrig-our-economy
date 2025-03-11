@@ -1,0 +1,1437 @@
+{
+  "data": [
+    {
+      "productId": "0001111008486",
+      "upc": "0001111008486",
+      "productPageURI": "/p/kroger-white-sandwich-bread/0001111008486?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "5",
+          "description": "AISLE 1",
+          "number": "1",
+          "numberOfFacings": "16",
+          "side": "L",
+          "shelfNumber": "5",
+          "shelfPositionInBay": "2"
+        },
+        {
+          "bayNumber": "5",
+          "description": "AISLE 1",
+          "number": "1",
+          "numberOfFacings": "16",
+          "side": "L",
+          "shelfNumber": "4",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Bakery"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® White Sandwich Bread",
+      "images": [
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111008486"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111008486"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111008486"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111008486"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111008486"
+            }
+          ]
+        },
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111008486"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111008486"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111008486"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111008486"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111008486"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111008486"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111008486"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111008486"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111008486"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111008486"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111008486"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111008486"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111008486"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111008486"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111008486"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111008486",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 1.79, "promo": 0 },
+          "size": "20 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "12.38", "height": "3.5", "width": "4.0" },
+      "temperature": { "indicator": "Ambient", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111008485",
+      "upc": "0001111008485",
+      "productPageURI": "/p/kroger-white-bread/0001111008485?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "5",
+          "description": "AISLE 1",
+          "number": "1",
+          "numberOfFacings": "22",
+          "side": "L",
+          "shelfNumber": "3",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Bakery"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® White Bread",
+      "images": [
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111008485"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111008485"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111008485"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111008485"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111008485"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111008485"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111008485"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111008485"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111008485"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111008485"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111008485"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111008485"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111008485"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111008485"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111008485"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111008485"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111008485"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111008485"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111008485"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111008485"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111008485",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 1.79, "promo": 0 },
+          "size": "20 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "12.0", "height": "4.25", "width": "4.33" },
+      "temperature": { "indicator": "Ambient", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111008478",
+      "upc": "0001111008478",
+      "productPageURI": "/p/kroger-soft-wheat-sandwich-bread/0001111008478?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "5",
+          "description": "AISLE 1",
+          "number": "1",
+          "numberOfFacings": "22",
+          "side": "L",
+          "shelfNumber": "6",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Bakery"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Soft Wheat Sandwich Bread",
+      "images": [
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111008478"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111008478"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111008478"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111008478"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111008478"
+            }
+          ]
+        },
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111008478"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111008478"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111008478"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111008478"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111008478"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111008478"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111008478"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111008478"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111008478"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111008478"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111008478"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111008478"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111008478"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111008478"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111008478"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111008478",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 1.79, "promo": 0 },
+          "size": "20 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "12.38", "height": "3.5", "width": "4.0" },
+      "temperature": { "indicator": "Ambient", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111008449",
+      "upc": "0001111008449",
+      "productPageURI": "/p/kroger-honey-wheat-bread/0001111008449?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "5",
+          "description": "AISLE 1",
+          "number": "1",
+          "numberOfFacings": "6",
+          "side": "L",
+          "shelfNumber": "5",
+          "shelfPositionInBay": "1"
+        },
+        {
+          "bayNumber": "5",
+          "description": "AISLE 1",
+          "number": "1",
+          "numberOfFacings": "6",
+          "side": "L",
+          "shelfNumber": "4",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Bakery"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Honey Wheat Bread",
+      "images": [
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111008449"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111008449"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111008449"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111008449"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111008449"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111008449"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111008449"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111008449"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111008449"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111008449"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111008449"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111008449"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111008449"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111008449"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111008449"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111008449"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111008449"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111008449"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111008449"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111008449"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111008449",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 2.49, "promo": 1.89 },
+          "size": "20 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "14.2", "height": "4.8", "width": "6.25" },
+      "temperature": { "indicator": "Ambient", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111005544",
+      "upc": "0001111005544",
+      "productPageURI": "/p/kroger-carbmaster-wheat-bread/0001111005544?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "2",
+          "description": "AISLE 1",
+          "number": "1",
+          "numberOfFacings": "3",
+          "side": "L",
+          "shelfNumber": "4",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Bakery"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® CARBmaster® Wheat Bread",
+      "images": [
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111005544"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111005544"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111005544"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111005544"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111005544"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111005544"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111005544"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111005544"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111005544"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111005544"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111005544"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111005544"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111005544"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111005544"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111005544"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111005544"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111005544"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111005544"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111005544"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111005544"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111005544",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 5.49, "promo": 4.99 },
+          "size": "20 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": {
+        "depth": "12.38",
+        "height": "4.25",
+        "width": "4.69"
+      },
+      "temperature": { "indicator": "Ambient", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111008450",
+      "upc": "0001111008450",
+      "productPageURI": "/p/kroger-soft-wheat-bread/0001111008450?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "5",
+          "description": "AISLE 1",
+          "number": "1",
+          "numberOfFacings": "12",
+          "side": "L",
+          "shelfNumber": "7",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Bakery"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Soft Wheat Bread",
+      "images": [
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111008450"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111008450"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111008450"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111008450"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111008450"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111008450"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111008450"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111008450"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111008450"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111008450"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111008450"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111008450"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111008450"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111008450"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111008450"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111008450"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111008450"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111008450"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111008450"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111008450"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111008450",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 1.79, "promo": 0 },
+          "size": "20 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "12.0", "height": "4.25", "width": "4.33" },
+      "temperature": { "indicator": "Ambient", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111008729",
+      "upc": "0001111008729",
+      "productPageURI": "/p/kroger-texas-toast-bread/0001111008729?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "5",
+          "description": "AISLE 1",
+          "number": "1",
+          "numberOfFacings": "6",
+          "side": "L",
+          "shelfNumber": "2",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Bakery"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Texas Toast Bread",
+      "images": [
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111008729"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111008729"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111008729"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111008729"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111008729"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111008729"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111008729"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111008729"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111008729"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111008729"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111008729"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111008729"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111008729"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111008729"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111008729"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111008729"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111008729"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111008729"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111008729"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111008729"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111008729",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 2.99, "promo": 0 },
+          "size": "20 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "12.0", "height": "4.25", "width": "4.33" },
+      "temperature": { "indicator": "Ambient", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111009072",
+      "upc": "0001111009072",
+      "productPageURI": "/p/kroger-carbmaster-white-bread/0001111009072?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "2",
+          "description": "AISLE 1",
+          "number": "1",
+          "numberOfFacings": "3",
+          "side": "L",
+          "shelfNumber": "1",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Bakery"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® CARBmaster® White Bread",
+      "images": [
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111009072"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111009072"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111009072"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111009072"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111009072"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111009072"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111009072"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111009072"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111009072"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111009072"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111009072"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111009072"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111009072"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111009072"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111009072"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111009072"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111009072"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111009072"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111009072"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111009072"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111009072",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 5.49, "promo": 4.99 },
+          "size": "20 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "12.0", "height": "4.25", "width": "4.69" },
+      "temperature": { "indicator": "Ambient", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111008480",
+      "upc": "0001111008480",
+      "productPageURI": "/p/kroger-100-whole-wheat-bread/0001111008480?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "6",
+          "description": "AISLE 1",
+          "number": "1",
+          "numberOfFacings": "7",
+          "side": "L",
+          "shelfNumber": "7",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Bakery"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® 100% Whole Wheat Bread",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111008480"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111008480"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111008480"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111008480"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111008480"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111008480"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111008480"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111008480"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111008480"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111008480"
+            }
+          ]
+        },
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111008480"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111008480"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111008480"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111008480"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111008480"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111008480"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111008480"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111008480"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111008480"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111008480"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111008480",
+          "inventory": { "stockLevel": "LOW" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 2.49, "promo": 0 },
+          "size": "24 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "12.63", "height": "3.7", "width": "4.13" },
+      "temperature": { "indicator": "Ambient", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111008529",
+      "upc": "0001111008529",
+      "productPageURI": "/p/kroger-100-whole-wheat-bread/0001111008529?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "6",
+          "description": "AISLE 1",
+          "number": "1",
+          "numberOfFacings": "3",
+          "side": "L",
+          "shelfNumber": "7",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Bakery"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® 100% Whole Wheat Bread",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111008529"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111008529"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111008529"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111008529"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111008529"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111008529"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111008529"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111008529"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111008529"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111008529"
+            }
+          ]
+        },
+        {
+          "perspective": "right",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/right/0001111008529"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/right/0001111008529"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/right/0001111008529"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/right/0001111008529"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/right/0001111008529"
+            }
+          ]
+        },
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111008529"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111008529"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111008529"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111008529"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111008529"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111008529",
+          "inventory": { "stockLevel": "TEMPORARILY_OUT_OF_STOCK" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 2.19, "promo": 0 },
+          "size": "16 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "9.0", "height": "4.25", "width": "4.33" },
+      "temperature": { "indicator": "Ambient", "heatSensitive": false }
+    }
+  ],
+  "meta": { "pagination": { "start": 0, "limit": 10, "total": 74 } }
+}
