@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === 'DEV') {
     API_URL = process.env.REACT_APP_API_URL
 }
 
-console.log('API URL', API_URL)
+// console.log('API URL', API_URL)
 // Get all Kroger products
 export const getKrogerProducts = async () => {
     try {
