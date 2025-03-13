@@ -65,7 +65,7 @@ const fetchKrogerData = async () => {
     try {
         const locations = await getLocationsByState(db); // Pull rotated locations
         const [products] = await db.query('SELECT name, kroger_id FROM kroger_products');
-
+        
         for (const location of locations) {
             for (const product of products) {
                 const url = `https://api.kroger.com/v1/products?filter.productId=${product.kroger_id}&filter.locationId=${location.location_id}`;
