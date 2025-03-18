@@ -74,7 +74,7 @@ async function getLatestDate(category) {
  */
 async function getPrices(seriesID, category) {
     try {
-        const API_KEY = "08b47ceb3cb0ccb30ce164d11c0603c6";
+        const FRED_API_KEY = process.env.FRED_API_KEY;
         const BASE_URL = 'https://api.stlouisfed.org/fred/series/observations';
 
         const latestDate = await getLatestDate(category);
