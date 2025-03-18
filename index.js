@@ -39,10 +39,10 @@ async function getPrices(seriesID, fileName) {
 // https://fred.stlouisfed.org/series/seriesID
 const series = [
   { id: 'APU0000708111', name: 'egg' },      // Eggs
-  { id: 'APU0000FF1101', name: 'chicken' },  // Chicken
+  { id: 'APU0000703112', name: 'beef' },    // Beef
   { id: 'APU0000709112', name: 'milk' },     // Milk
   { id: 'APU0000702111', name: 'bread' },    // Bread
-  { id: 'APU0000FS1101', name: 'butter' },   // Butter
+  { id: 'APU0000717311', name: 'coffee' },   // Coffee
 ];
 
 // Iterate over the array and call getPrices for each

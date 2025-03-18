@@ -1,25 +1,20 @@
 import React from "react";
+import unrigLogo from "../assets/unrig-logo.png";
 
 function Header() {
   return (
-    <header className="w-full bg-blue-600 text-white py-4 shadow-lg">
-      <div className="container mx-auto flex justify-between items-center px-6">
+<header className="w-full text-white py-4 shadow-lg" style={{ backgroundColor: "#F0F3FF" }}>
+  <div className="container mx-auto flex justify-between items-center px-6 text-black">
         {/* Logo */}
-        <div className="text-2xl font-bold">Eggconomy</div>
+        <div className="flex flex-row">
+          <img src={unrigLogo} alt="Unrig Logo" className="h-10 mr-2" />
+          <div className="text-2xl font-bold ">Eggconomy</div>
+        </div>
 
         {/* Navigation Menu */}
         <nav className="hidden md:flex space-x-6">
           <a href="#" className="hover:underline">
             Home
-          </a>
-          <a href="#" className="hover:underline">
-            About
-          </a>
-          <a href="#" className="hover:underline">
-            Services
-          </a>
-          <a href="#" className="hover:underline">
-            Contact
           </a>
         </nav>
 

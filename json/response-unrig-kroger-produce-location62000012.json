@@ -1,1 +1,963 @@
-{"data":[{"productId":"0001111091472","upc":"0001111091472","productPageURI":"/p/kroger-carrots-celery-broccoli-ranch-dip-snack-tray/0001111091472?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261","aisleLocations":[{"bayNumber":"1","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"4","shelfPositionInBay":"2"},{"bayNumber":"3","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"4","shelfPositionInBay":"2"}],"brand":"Kroger","categories":["Produce","Snacks"],"countryOrigin":"UNITED STATES","description":"Kroger® Carrots Celery Broccoli \u0026 Ranch Dip Snack Tray","images":[{"perspective":"back","sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/back/0001111091472"},{"size":"large","url":"https://www.kroger.com/product/images/large/back/0001111091472"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/back/0001111091472"},{"size":"small","url":"https://www.kroger.com/product/images/small/back/0001111091472"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/back/0001111091472"}]},{"perspective":"front","featured":true,"sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/front/0001111091472"},{"size":"large","url":"https://www.kroger.com/product/images/large/front/0001111091472"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/front/0001111091472"},{"size":"small","url":"https://www.kroger.com/product/images/small/front/0001111091472"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/front/0001111091472"}]}],"items":[{"itemId":"0001111091472","inventory":{"stockLevel":"TEMPORARILY_OUT_OF_STOCK"},"favorite":false,"fulfillment":{"curbside":true,"delivery":true,"inStore":true,"shipToHome":false},"price":{"regular":2.29,"promo":0},"size":"6.75 oz","soldBy":"UNIT"}],"itemInformation":{"depth":"5.3","height":"1.4","width":"7.15"},"temperature":{"indicator":"Refrigerated","heatSensitive":false}},{"productId":"0001111063788","upc":"0001111063788","productPageURI":"/p/kroger-veggie-chips-buffalo-dip/0001111063788?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261","aisleLocations":[{"bayNumber":"3","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"1","shelfPositionInBay":"3"},{"bayNumber":"1","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"1","shelfPositionInBay":"3"}],"brand":"Kroger","categories":["Produce","Produce"],"countryOrigin":"UNITED STATES","description":"Kroger® Veggie Chips \u0026 Buffalo Dip","images":[{"perspective":"front","featured":true,"sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/front/0001111063788"},{"size":"large","url":"https://www.kroger.com/product/images/large/front/0001111063788"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/front/0001111063788"},{"size":"small","url":"https://www.kroger.com/product/images/small/front/0001111063788"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/front/0001111063788"}]}],"items":[{"itemId":"0001111063788","inventory":{"stockLevel":"TEMPORARILY_OUT_OF_STOCK"},"favorite":false,"fulfillment":{"curbside":true,"delivery":true,"inStore":true,"shipToHome":false},"price":{"regular":6.49,"promo":5},"size":"16 oz","soldBy":"UNIT"}],"itemInformation":{"depth":"10.29","height":"2.25","width":"6.87"},"temperature":{"indicator":"Refrigerated","heatSensitive":false}},{"productId":"0001111018245","upc":"0001111018245","productPageURI":"/p/kroger-washed-and-trimmed-single-leaf-lettuce-boats/0001111018245?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261","aisleLocations":[{"bayNumber":"15","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"4","shelfPositionInBay":"4"},{"bayNumber":"16","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"2","shelfPositionInBay":"4"}],"brand":"Kroger","categories":["Produce"],"countryOrigin":"UNITED STATES","description":"Kroger® Washed and Trimmed Single Leaf Lettuce Boats","images":[{"perspective":"front","featured":true,"sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/front/0001111018245"},{"size":"large","url":"https://www.kroger.com/product/images/large/front/0001111018245"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/front/0001111018245"},{"size":"small","url":"https://www.kroger.com/product/images/small/front/0001111018245"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/front/0001111018245"}]}],"items":[{"itemId":"0001111018245","inventory":{"stockLevel":"HIGH"},"favorite":false,"fulfillment":{"curbside":true,"delivery":true,"inStore":true,"shipToHome":false},"price":{"regular":3.49,"promo":0},"size":"7 oz","soldBy":"UNIT"}],"itemInformation":{"depth":"3.34","height":"9.11","width":"7.34"},"temperature":{"indicator":"Refrigerated","heatSensitive":false}},{"productId":"0001111062697","upc":"0001111062697","productPageURI":"/p/kroger-cut-peeled-carrot-sticks/0001111062697?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261","aisleLocations":[{"bayNumber":"4","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"5","shelfPositionInBay":"1"}],"brand":"Kroger","categories":["Produce"],"countryOrigin":"UNITED STATES","description":"Kroger® Cut \u0026 Peeled Carrot Sticks","images":[{"perspective":"front","featured":true,"sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/front/0001111062697"},{"size":"large","url":"https://www.kroger.com/product/images/large/front/0001111062697"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/front/0001111062697"},{"size":"small","url":"https://www.kroger.com/product/images/small/front/0001111062697"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/front/0001111062697"}]},{"perspective":"back","sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/back/0001111062697"},{"size":"large","url":"https://www.kroger.com/product/images/large/back/0001111062697"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/back/0001111062697"},{"size":"small","url":"https://www.kroger.com/product/images/small/back/0001111062697"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/back/0001111062697"}]}],"items":[{"itemId":"0001111062697","inventory":{"stockLevel":"HIGH"},"favorite":false,"fulfillment":{"curbside":true,"delivery":true,"inStore":true,"shipToHome":false},"price":{"regular":1.99,"promo":0},"size":"12 oz","soldBy":"UNIT"}],"itemInformation":{"depth":"6.3","height":"1.2","width":"5.55"},"temperature":{"indicator":"Refrigerated","heatSensitive":false}},{"productId":"0001111061236","upc":"0001111061236","productPageURI":"/p/kroger-brussel-sprouts-halves/0001111061236?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261","aisleLocations":[{"bayNumber":"25","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"5","shelfPositionInBay":"5"}],"brand":"Kroger","categories":["Produce","Produce"],"countryOrigin":"UNITED STATES","description":"Kroger® Brussel Sprouts Halves","images":[{"perspective":"front","featured":true,"sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/front/0001111061236"},{"size":"large","url":"https://www.kroger.com/product/images/large/front/0001111061236"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/front/0001111061236"},{"size":"small","url":"https://www.kroger.com/product/images/small/front/0001111061236"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/front/0001111061236"}]},{"perspective":"back","sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/back/0001111061236"},{"size":"large","url":"https://www.kroger.com/product/images/large/back/0001111061236"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/back/0001111061236"},{"size":"small","url":"https://www.kroger.com/product/images/small/back/0001111061236"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/back/0001111061236"}]}],"items":[{"itemId":"0001111061236","inventory":{"stockLevel":"LOW"},"favorite":false,"fulfillment":{"curbside":true,"delivery":true,"inStore":true,"shipToHome":false},"price":{"regular":3.79,"promo":0},"size":"12 oz","soldBy":"UNIT"}],"itemInformation":{"depth":"2.0","height":"7.0","width":"9.5"},"temperature":{"indicator":"Refrigerated","heatSensitive":false}},{"productId":"0001111061385","upc":"0001111061385","productPageURI":"/p/kroger-brand-snow-peas/0001111061385?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261","aisleLocations":[{"bayNumber":"25","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"5","shelfPositionInBay":"2"}],"brand":"Kroger","categories":["Produce"],"countryOrigin":"UNITED STATES","description":"Kroger® Brand Snow Peas","images":[{"perspective":"left","sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/left/0001111061385"},{"size":"large","url":"https://www.kroger.com/product/images/large/left/0001111061385"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/left/0001111061385"},{"size":"small","url":"https://www.kroger.com/product/images/small/left/0001111061385"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/left/0001111061385"}]},{"perspective":"back","sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/back/0001111061385"},{"size":"large","url":"https://www.kroger.com/product/images/large/back/0001111061385"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/back/0001111061385"},{"size":"small","url":"https://www.kroger.com/product/images/small/back/0001111061385"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/back/0001111061385"}]},{"perspective":"front","featured":true,"sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/front/0001111061385"},{"size":"large","url":"https://www.kroger.com/product/images/large/front/0001111061385"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/front/0001111061385"},{"size":"small","url":"https://www.kroger.com/product/images/small/front/0001111061385"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/front/0001111061385"}]}],"items":[{"itemId":"0001111061385","inventory":{"stockLevel":"HIGH"},"favorite":false,"fulfillment":{"curbside":true,"delivery":true,"inStore":true,"shipToHome":false},"price":{"regular":2.99,"promo":0},"size":"8 oz","soldBy":"UNIT"}],"itemInformation":{"depth":"2.0","height":"8.75","width":"7.0"},"temperature":{"indicator":"Refrigerated","heatSensitive":false}},{"productId":"0001111002970","upc":"0001111002970","productPageURI":"/p/kroger-sweet-apples-caramel-snack-tray/0001111002970?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261","aisleLocations":[{"bayNumber":"3","description":"PRODUCE","number":"105","numberOfFacings":"2","side":"L","shelfNumber":"3","shelfPositionInBay":"2"},{"bayNumber":"1","description":"PRODUCE","number":"105","numberOfFacings":"2","side":"L","shelfNumber":"3","shelfPositionInBay":"2"}],"brand":"Kroger","categories":["Produce","Snacks"],"countryOrigin":"UNITED STATES","description":"Kroger® Sweet Apples \u0026 Caramel Snack Tray","images":[{"perspective":"front","featured":true,"sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/front/0001111002970"},{"size":"large","url":"https://www.kroger.com/product/images/large/front/0001111002970"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/front/0001111002970"},{"size":"small","url":"https://www.kroger.com/product/images/small/front/0001111002970"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/front/0001111002970"}]},{"perspective":"back","sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/back/0001111002970"},{"size":"large","url":"https://www.kroger.com/product/images/large/back/0001111002970"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/back/0001111002970"},{"size":"small","url":"https://www.kroger.com/product/images/small/back/0001111002970"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/back/0001111002970"}]}],"items":[{"itemId":"0001111002970","inventory":{"stockLevel":"TEMPORARILY_OUT_OF_STOCK"},"favorite":false,"fulfillment":{"curbside":true,"delivery":true,"inStore":true,"shipToHome":false},"price":{"regular":1.5,"promo":0},"size":"2.75 oz","soldBy":"UNIT"}],"itemInformation":{"depth":"1.59","height":"7.07","width":"3.1"},"temperature":{"indicator":"Refrigerated","heatSensitive":false}},{"productId":"0001111079548","upc":"0001111079548","productPageURI":"/p/kroger-vegetable-medley-big-deal-/0001111079548?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261","aisleLocations":[{"bayNumber":"25","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"2","shelfPositionInBay":"6"}],"brand":"Kroger","categories":["Produce","Produce"],"countryOrigin":"UNITED STATES","description":"Kroger® Vegetable Medley BIG Deal!","images":[{"perspective":"top","sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/top/0001111079548"},{"size":"large","url":"https://www.kroger.com/product/images/large/top/0001111079548"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/top/0001111079548"},{"size":"small","url":"https://www.kroger.com/product/images/small/top/0001111079548"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/top/0001111079548"}]},{"perspective":"back","sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/back/0001111079548"},{"size":"large","url":"https://www.kroger.com/product/images/large/back/0001111079548"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/back/0001111079548"},{"size":"small","url":"https://www.kroger.com/product/images/small/back/0001111079548"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/back/0001111079548"}]},{"perspective":"front","featured":true,"sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/front/0001111079548"},{"size":"large","url":"https://www.kroger.com/product/images/large/front/0001111079548"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/front/0001111079548"},{"size":"small","url":"https://www.kroger.com/product/images/small/front/0001111079548"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/front/0001111079548"}]}],"items":[{"itemId":"0001111079548","inventory":{"stockLevel":"LOW"},"favorite":false,"fulfillment":{"curbside":true,"delivery":true,"inStore":true,"shipToHome":false},"price":{"regular":6.49,"promo":0},"size":"32 oz","soldBy":"UNIT"}],"itemInformation":{"depth":"8.45","height":"3.3","width":"12.6"},"temperature":{"indicator":"Refrigerated","heatSensitive":false}},{"productId":"0001111091653","upc":"0001111091653","productPageURI":"/p/kroger-petite-carrots-snack-pack/0001111091653?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261","aisleLocations":[{"bayNumber":"4","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"3","shelfPositionInBay":"3"},{"bayNumber":"4","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"3","shelfPositionInBay":"4"}],"brand":"Kroger","categories":["Produce","Produce"],"description":"Kroger® Petite Carrots Snack Pack","images":[{"perspective":"front","featured":true,"sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/front/0001111091653"},{"size":"large","url":"https://www.kroger.com/product/images/large/front/0001111091653"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/front/0001111091653"},{"size":"small","url":"https://www.kroger.com/product/images/small/front/0001111091653"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/front/0001111091653"}]},{"perspective":"back","sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/back/0001111091653"},{"size":"large","url":"https://www.kroger.com/product/images/large/back/0001111091653"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/back/0001111091653"},{"size":"small","url":"https://www.kroger.com/product/images/small/back/0001111091653"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/back/0001111091653"}]}],"items":[{"itemId":"0001111091653","inventory":{"stockLevel":"HIGH"},"favorite":false,"fulfillment":{"curbside":true,"delivery":true,"inStore":true,"shipToHome":false},"price":{"regular":2.29,"promo":0},"size":"4 ct / 3 oz","soldBy":"UNIT"}],"itemInformation":{"depth":"1.5","height":"5.5","width":"6.85"},"temperature":{"indicator":"Refrigerated","heatSensitive":false}},{"productId":"0001111060319","upc":"0001111060319","productPageURI":"/p/kroger-brand-broccoli-florets/0001111060319?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261","aisleLocations":[{"bayNumber":"25","description":"PRODUCE","number":"105","numberOfFacings":"1","side":"L","shelfNumber":"2","shelfPositionInBay":"2"}],"brand":"Kroger","categories":["Produce"],"countryOrigin":"UNITED STATES","description":"Kroger® Brand Broccoli Florets","images":[{"perspective":"front","featured":true,"sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/front/0001111060319"},{"size":"large","url":"https://www.kroger.com/product/images/large/front/0001111060319"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/front/0001111060319"},{"size":"small","url":"https://www.kroger.com/product/images/small/front/0001111060319"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/front/0001111060319"}]},{"perspective":"back","sizes":[{"size":"xlarge","url":"https://www.kroger.com/product/images/xlarge/back/0001111060319"},{"size":"large","url":"https://www.kroger.com/product/images/large/back/0001111060319"},{"size":"medium","url":"https://www.kroger.com/product/images/medium/back/0001111060319"},{"size":"small","url":"https://www.kroger.com/product/images/small/back/0001111060319"},{"size":"thumbnail","url":"https://www.kroger.com/product/images/thumbnail/back/0001111060319"}]}],"items":[{"itemId":"0001111060319","inventory":{"stockLevel":"HIGH"},"favorite":false,"fulfillment":{"curbside":true,"delivery":true,"inStore":true,"shipToHome":false},"price":{"regular":3.29,"promo":0},"size":"12 oz","soldBy":"UNIT"}],"itemInformation":{"depth":"2.04","height":"9.08","width":"6.0"},"temperature":{"indicator":"Refrigerated","heatSensitive":false}}],"meta":{"pagination":{"start":0,"limit":10,"total":34}}}
+{
+  "data": [
+    {
+      "productId": "0001111091472",
+      "upc": "0001111091472",
+      "productPageURI": "/p/kroger-carrots-celery-broccoli-ranch-dip-snack-tray/0001111091472?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "1",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "4",
+          "shelfPositionInBay": "2"
+        },
+        {
+          "bayNumber": "3",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "4",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Produce", "Snacks"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Carrots Celery Broccoli \u0026 Ranch Dip Snack Tray",
+      "images": [
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111091472"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111091472"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111091472"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111091472"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111091472"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111091472"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111091472"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111091472"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111091472"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111091472"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111091472",
+          "inventory": { "stockLevel": "TEMPORARILY_OUT_OF_STOCK" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 2.29, "promo": 0 },
+          "size": "6.75 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "5.3", "height": "1.4", "width": "7.15" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111063788",
+      "upc": "0001111063788",
+      "productPageURI": "/p/kroger-veggie-chips-buffalo-dip/0001111063788?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "3",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "1",
+          "shelfPositionInBay": "3"
+        },
+        {
+          "bayNumber": "1",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "1",
+          "shelfPositionInBay": "3"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Produce", "Produce"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Veggie Chips \u0026 Buffalo Dip",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111063788"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111063788"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111063788"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111063788"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111063788"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111063788",
+          "inventory": { "stockLevel": "TEMPORARILY_OUT_OF_STOCK" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 6.49, "promo": 5 },
+          "size": "16 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": {
+        "depth": "10.29",
+        "height": "2.25",
+        "width": "6.87"
+      },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111018245",
+      "upc": "0001111018245",
+      "productPageURI": "/p/kroger-washed-and-trimmed-single-leaf-lettuce-boats/0001111018245?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "15",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "4",
+          "shelfPositionInBay": "4"
+        },
+        {
+          "bayNumber": "16",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "2",
+          "shelfPositionInBay": "4"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Produce"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Washed and Trimmed Single Leaf Lettuce Boats",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111018245"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111018245"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111018245"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111018245"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111018245"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111018245",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 3.49, "promo": 0 },
+          "size": "7 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "3.34", "height": "9.11", "width": "7.34" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111062697",
+      "upc": "0001111062697",
+      "productPageURI": "/p/kroger-cut-peeled-carrot-sticks/0001111062697?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "4",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "5",
+          "shelfPositionInBay": "1"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Produce"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Cut \u0026 Peeled Carrot Sticks",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111062697"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111062697"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111062697"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111062697"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111062697"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111062697"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111062697"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111062697"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111062697"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111062697"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111062697",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 1.99, "promo": 0 },
+          "size": "12 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "6.3", "height": "1.2", "width": "5.55" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111061236",
+      "upc": "0001111061236",
+      "productPageURI": "/p/kroger-brussel-sprouts-halves/0001111061236?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "25",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "5",
+          "shelfPositionInBay": "5"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Produce", "Produce"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Brussel Sprouts Halves",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111061236"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111061236"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111061236"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111061236"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111061236"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111061236"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111061236"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111061236"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111061236"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111061236"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111061236",
+          "inventory": { "stockLevel": "LOW" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 3.79, "promo": 0 },
+          "size": "12 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "2.0", "height": "7.0", "width": "9.5" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111061385",
+      "upc": "0001111061385",
+      "productPageURI": "/p/kroger-brand-snow-peas/0001111061385?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "25",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "5",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Produce"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Brand Snow Peas",
+      "images": [
+        {
+          "perspective": "left",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/left/0001111061385"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/left/0001111061385"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/left/0001111061385"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/left/0001111061385"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/left/0001111061385"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111061385"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111061385"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111061385"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111061385"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111061385"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111061385"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111061385"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111061385"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111061385"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111061385"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111061385",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 2.99, "promo": 0 },
+          "size": "8 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "2.0", "height": "8.75", "width": "7.0" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111002970",
+      "upc": "0001111002970",
+      "productPageURI": "/p/kroger-sweet-apples-caramel-snack-tray/0001111002970?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "3",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "2",
+          "side": "L",
+          "shelfNumber": "3",
+          "shelfPositionInBay": "2"
+        },
+        {
+          "bayNumber": "1",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "2",
+          "side": "L",
+          "shelfNumber": "3",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Produce", "Snacks"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Sweet Apples \u0026 Caramel Snack Tray",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111002970"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111002970"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111002970"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111002970"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111002970"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111002970"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111002970"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111002970"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111002970"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111002970"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111002970",
+          "inventory": { "stockLevel": "TEMPORARILY_OUT_OF_STOCK" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 1.5, "promo": 0 },
+          "size": "2.75 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "1.59", "height": "7.07", "width": "3.1" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111079548",
+      "upc": "0001111079548",
+      "productPageURI": "/p/kroger-vegetable-medley-big-deal-/0001111079548?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "25",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "2",
+          "shelfPositionInBay": "6"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Produce", "Produce"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Vegetable Medley BIG Deal!",
+      "images": [
+        {
+          "perspective": "top",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/top/0001111079548"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/top/0001111079548"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/top/0001111079548"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/top/0001111079548"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/top/0001111079548"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111079548"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111079548"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111079548"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111079548"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111079548"
+            }
+          ]
+        },
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111079548"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111079548"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111079548"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111079548"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111079548"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111079548",
+          "inventory": { "stockLevel": "LOW" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 6.49, "promo": 0 },
+          "size": "32 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "8.45", "height": "3.3", "width": "12.6" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111091653",
+      "upc": "0001111091653",
+      "productPageURI": "/p/kroger-petite-carrots-snack-pack/0001111091653?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "4",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "3",
+          "shelfPositionInBay": "3"
+        },
+        {
+          "bayNumber": "4",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "3",
+          "shelfPositionInBay": "4"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Produce", "Produce"],
+      "description": "Kroger® Petite Carrots Snack Pack",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111091653"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111091653"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111091653"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111091653"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111091653"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111091653"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111091653"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111091653"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111091653"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111091653"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111091653",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 2.29, "promo": 0 },
+          "size": "4 ct / 3 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "1.5", "height": "5.5", "width": "6.85" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    },
+    {
+      "productId": "0001111060319",
+      "upc": "0001111060319",
+      "productPageURI": "/p/kroger-brand-broccoli-florets/0001111060319?cid=dis.api.tpi_products-api_20240521_b:all_c:p_t:unrig-prodenv-243261",
+      "aisleLocations": [
+        {
+          "bayNumber": "25",
+          "description": "PRODUCE",
+          "number": "105",
+          "numberOfFacings": "1",
+          "side": "L",
+          "shelfNumber": "2",
+          "shelfPositionInBay": "2"
+        }
+      ],
+      "brand": "Kroger",
+      "categories": ["Produce"],
+      "countryOrigin": "UNITED STATES",
+      "description": "Kroger® Brand Broccoli Florets",
+      "images": [
+        {
+          "perspective": "front",
+          "featured": true,
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/front/0001111060319"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/front/0001111060319"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/front/0001111060319"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/front/0001111060319"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/front/0001111060319"
+            }
+          ]
+        },
+        {
+          "perspective": "back",
+          "sizes": [
+            {
+              "size": "xlarge",
+              "url": "https://www.kroger.com/product/images/xlarge/back/0001111060319"
+            },
+            {
+              "size": "large",
+              "url": "https://www.kroger.com/product/images/large/back/0001111060319"
+            },
+            {
+              "size": "medium",
+              "url": "https://www.kroger.com/product/images/medium/back/0001111060319"
+            },
+            {
+              "size": "small",
+              "url": "https://www.kroger.com/product/images/small/back/0001111060319"
+            },
+            {
+              "size": "thumbnail",
+              "url": "https://www.kroger.com/product/images/thumbnail/back/0001111060319"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "itemId": "0001111060319",
+          "inventory": { "stockLevel": "HIGH" },
+          "favorite": false,
+          "fulfillment": {
+            "curbside": true,
+            "delivery": true,
+            "inStore": true,
+            "shipToHome": false
+          },
+          "price": { "regular": 3.29, "promo": 0 },
+          "size": "12 oz",
+          "soldBy": "UNIT"
+        }
+      ],
+      "itemInformation": { "depth": "2.04", "height": "9.08", "width": "6.0" },
+      "temperature": { "indicator": "Refrigerated", "heatSensitive": false }
+    }
+  ],
+  "meta": { "pagination": { "start": 0, "limit": 10, "total": 34 } }
+}

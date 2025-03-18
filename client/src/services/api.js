@@ -44,6 +44,17 @@ export const getProductAverages = async () => {
         throw error;
     }
 };
+
+// Get product Averages
+export const getFredData = async () => {
+    try {
+        const response = await axios.get(`${API_URL}api/products/fred`);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching product fred:', error);
+        throw error;
+    }
+};
 // Get all error logs
 export const getErrorLogs = async () => {
     try {

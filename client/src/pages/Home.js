@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { getProductAverages } from "../services/api";
 import ProductAveragesGraph from "../components/ProductAveragesGraph";
+import HeaderCTA from "../components/HeaderCTA";
+import DailyTicker from "../components/DailyTicker";
+import FredDataGraph from "../components/FredDataGraph";
 
 function Home() {
     const [productAverages, setProductAverages] = useState([]);
@@ -13,7 +16,7 @@ function Home() {
     const fetchProductAverages = async () => {
         try {
             const data = await getProductAverages();
-            console.log("Fetched Data:", data);
+            console.log("Fetched Kroger Data:", data);
             setProductAverages(data);
         } catch (error) {
             console.error("Failed to fetch product averages:", error);
@@ -37,29 +40,10 @@ function Home() {
 
     return (
         <div>
+            <HeaderCTA  state={"California"} percentage={7.5}/>
+            <DailyTicker />
+            <FredDataGraph />
             <h2>Product Averages by State</h2>
-
-            {/* Render Data Table */}
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>State</th>
-                        <th>Product Category</th>
-                        <th>Average Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {productAverages.map((product, index) => (
-                        <tr key={index}>
-                            <td>{product.record_day}</td>
-                            <td>{product.state}</td>
-                            <td>{product.product_category}</td>
-                            <td>${parseFloat(product.average_price).toFixed(2)}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
 
             {/* ✅ Pass Data to Graph Component */}
             {Object.keys(groupedByState).map((state) => (
