@@ -5,6 +5,7 @@ const cron = require('node-cron');
 const { fetchKrogerData } = require('./controllers/kroger');
 const { updateStateAverages } = require('./jobs/updateStateAverages');
 const { logError } = require('./controllers/errors');
+const { scrapeFredDataMonthly } = require('./controllers/products');
 
 const app = express();
 app.use(cors({ origin: '*' }));  // Allow all origins
@@ -41,6 +42,17 @@ cron.schedule('0 3 * * *', async () => {
     }
 });
 
+// 🕑 **Cron job: Scrape Fred Data monthly on the 2nd day of the month at 3:00 AM**
+cron.schedule('0 3 2 * *', async () => {
+    console.log('📊 Running monthly Scrape Fred Data calculation (2nd day of the month)...');
+    try {
+        await scrapeFredDataMonthly();
+        console.log('✅ Scrape Fred Data Monthly updated.');
+    } catch (error) {
+        console.error('❌ Fred monthly update failed:', error.message);
+        await logError(error.message, error.stack, 'Cron Job Fred Monthly');
+    }
+});
 require('dotenv').config();
 console.log('🔑 DB_USER:', process.env.DB_USER);
 
