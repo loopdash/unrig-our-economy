@@ -6,14 +6,14 @@ function Header() {
 <header className="w-full text-white py-4 shadow-lg" style={{ backgroundColor: "#F0F3FF" }}>
   <div className="container mx-auto flex justify-between items-center px-6 text-black">
         {/* Logo */}
-        <div className="flex flex-row">
-          <img src={unrigLogo} alt="Unrig Logo" className="h-10 mr-2" />
-          <div className="text-2xl font-bold ">Eggconomy</div>
-        </div>
+          <a className="flex flex-row" href="/">
+            <img src={unrigLogo} alt="Unrig Logo" className="h-10 mr-2" />
+            <div className="text-2xl font-bold ">Eggconomy</div>
+          </a>
 
         {/* Navigation Menu */}
         <nav className="hidden md:flex space-x-6">
-          <a href="#" className="hover:underline">
+          <a href="/" className="hover:underline">
             Home
           </a>
         </nav>

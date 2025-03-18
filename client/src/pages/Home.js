@@ -6,52 +6,21 @@ import DailyTicker from "../components/DailyTicker";
 import FredDataGraph from "../components/FredDataGraph";
 
 function Home() {
-    const [productAverages, setProductAverages] = useState([]);
 
-    // Fetch products
-    useEffect(() => {
-        fetchProductAverages();
-    }, []);
-
-    const fetchProductAverages = async () => {
-        try {
-            const data = await getProductAverages();
-            console.log("Fetched Kroger Data:", data);
-            setProductAverages(data);
-        } catch (error) {
-            console.error("Failed to fetch product averages:", error);
-        }
-    };
-
-    // ✅ Group by state
-    const groupedByState = productAverages.reduce((acc, product) => {
-        const { state, record_day, product_category, average_price } = product;
-
-        if (!acc[state]) {
-            acc[state] = [];
-        }
-        acc[state].push({
-            record_day,
-            product_category,
-            average_price: parseFloat(average_price),
-        });
-        return acc;
-    }, {});
 
     return (
         <div>
             <HeaderCTA  state={"California"} percentage={7.5}/>
             <DailyTicker />
-            <FredDataGraph />
-            <h2>Product Averages by State</h2>
-
-            {/* ✅ Pass Data to Graph Component */}
-            {Object.keys(groupedByState).map((state) => (
-                <div key={state} style={{ marginBottom: "50px" }}>
-                    <h3>{state}</h3>
-                    <ProductAveragesGraph state={state} data={groupedByState[state]} />
+            <section className="flex flex-row items-center justify-center space-x-6">
+                <FredDataGraph />
+                <div className="flex flex-col items-start justify-center p-6 rounded-lg" 
+                    style={{ backgroundColor: "#5371FF1A", maxWidth: "400px" }}>
+                    <h2 className="text-lg font-bold mb-2">Fact</h2>
+                    <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum.</p>
+                    <button className="px-4 py-2 bg-black text-white rounded">Main Homepage CTA goes here</button>
                 </div>
-            ))}
+            </section>
         </div>
     );
 }
