@@ -65,9 +65,9 @@ function HeaderCTA() {
         <div className="w-full h-[347px] gap-[10px] pt-[50px] pr-[100px] pb-[50px] pl-[100px]">
             <h1 className="font-barlow font-semibold text-[75px] leading-[103%] tracking-[0%]">
                 The price of 🥚 eggs in 
-                <span className="ml-2">
+                <span className="ml-2 ">
                     <select
-                        className="border p-2 rounded bg-white text-black"
+                        className="border p-2 rounded bg-white text-black border-dashed border-blue-400 mt-2"
                         value={selectedState}
                         onChange={(e) => setSelectedState(e.target.value)}
                     >
@@ -76,7 +76,7 @@ function HeaderCTA() {
                         <option value="VA">Virginia</option>
                     </select>
                 </span> 
-                has gone {direction} {percentageChange}% over the last month.
+                has gone {direction} <span className="px-2 bg-[#E8EA58]"> {percentageChange}%</span> over the last month.
             </h1>
 
             <section className="flex flex-row space-x-2 ">
