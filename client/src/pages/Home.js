@@ -58,11 +58,11 @@ function Home() {
                 virginiaPrice={prices.VA}
             />
 
-            <section className="flex flex-col items-center justify-center space-x-6 mt-5 sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
+            <section className="flex flex-col items-center justify-center space-x-6 mt-5 sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 p-6">
 
                 <FredDataGraph />
                 <div
-                    className="flex flex-col items-start justify-center p-6 rounded-[38px]"
+                    className="flex flex-col items-start justify-center rounded-[38px]  w-full sm:min-w-[40vw] bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3"
                     style={{ backgroundColor: "#5371FF1A", maxWidth: "400px" }}
                 >
                     <h2 className="text-lg font-bold mb-2 text-[#4D5440] font-normal italic">Fact</h2>

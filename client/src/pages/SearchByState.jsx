@@ -28,6 +28,8 @@ const fullToAbbr = Object.fromEntries(
 function SearchByState() {
     const [productAverages, setProductAverages] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
+    const [loading, setLoading] = useState(true);
+
 
     useEffect(() => {
         fetchProductAverages();
@@ -38,6 +40,7 @@ function SearchByState() {
             const data = await getProductAverages();
             console.log("Fetched Kroger Data:", data);
             setProductAverages(data);
+            setLoading(false)
         } catch (error) {
             console.error("Failed to fetch product averages:", error);
         }
@@ -95,18 +98,25 @@ function SearchByState() {
         />
     </div>
 
-    {/* ✅ Display Graphs in 2x2 Grid */}
+    {loading ? (
+  <p className="mt-4">Collecting data...</p>
+) : (
+  <>
     {filteredStates.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
-            {filteredStates.map((state) => (
-                <div key={state}>
-                    <ProductAveragesGraph state={state} data={groupedByState[state]} />
-                </div>
-            ))}
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl mx-auto">
+        {filteredStates.map((state) => (
+          <div key={state}>
+            <ProductAveragesGraph state={state} data={groupedByState[state]} />
+          </div>
+        ))}
+      </div>
     ) : (
-        <p className="mt-4">Oops, looks like we don't have any shoppers in that state!</p>
+      <p className="mt-4">Oops, looks like we don't have any shoppers in that state!</p>
     )}
+  </>
+)}
+
+
 </div>
 
     );

@@ -72,7 +72,7 @@ function FredDataGraph() {
     }));
 
     return (
-<div className="relative w-[40vw] bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 border border-gray-200 border-black">
+<div className="relative w-full sm:min-w-[40vw] bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 border border-gray-200 border-black">
 
             {/* Top Row - Title & Category Selector */}
             <div className="flex justify-between items-center">
