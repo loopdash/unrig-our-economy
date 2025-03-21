@@ -143,8 +143,13 @@ function ProductAveragesGraph({ state, data }) {
                                         return `Date: ${date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`;
                                     },
                                     label: function(tooltipItem) {
-                                        return `$${tooltipItem.raw.toFixed(2)}`;
+                                        const dataset = tooltipItem.dataset;
+                                        const category = dataset.label;
+                                        const icon = categoryIcons[category] || "🥚";
+                                        const price = tooltipItem.raw?.toFixed(2);
+                                        return `${icon} ${category}: $${price}`;
                                     }
+                                    
                                 }
                             }
                         },

@@ -5,8 +5,8 @@ import directionArrow from "../assets/direction-arrow.png";
 
 function DailyTicker({ texasPrice, californiaPrice, virginiaPrice }) {
   return (
-    <div className="w-full h-[74px] gap-[10px] pt-[20px] pr-[100px] pb-[20px] pl-[100px] flex flex-row space-x-6 justify-center items-center" style={{ backgroundColor: "#F5F2F2" }}>
-      <p style={{color: "#4D5440"}}>Today</p>
+<div className="w-full px-4 py-4 sm:px-10 md:px-[100px] flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0 justify-center items-center bg-[#F5F2F2]">
+<p style={{color: "#4D5440"}}>Today</p>
 
       <div className="flex items-center space-x-1">
         <span>Eggs in Texas ${Number(texasPrice).toFixed(2)}</span>

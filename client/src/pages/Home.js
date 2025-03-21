@@ -58,7 +58,8 @@ function Home() {
                 virginiaPrice={prices.VA}
             />
 
-            <section className="flex flex-row items-center justify-center space-x-6">
+            <section className="flex flex-col items-center justify-center space-x-6 mt-5 sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
+
                 <FredDataGraph />
                 <div
                     className="flex flex-col items-start justify-center p-6 rounded-[38px]"

@@ -80,13 +80,13 @@ function SearchByState() {
     </div>
 
     {/* ✅ Search Bar */}
-    <div className="relative w-full max-w-md mt-10 mb-6">
+    <div className="relative max-w-6xl mt-10 mb-6 w-full min-w-6xl">
         <input
             type="text"
             placeholder="Search your state..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="border p-2 pr-10 rounded w-full rounded-[40px] border-black p-[20px]"
+            className="border p-2 pr-10 rounded w-full rounded-[40px] border-black p-[20px] "
         />
         <img
             src={searchArrow}

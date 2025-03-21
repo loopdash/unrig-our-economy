@@ -62,8 +62,9 @@ function HeaderCTA() {
     }, [selectedState]); // ✅ Re-fetch when state changes
 
     return (
-        <div className="w-full h-[347px] gap-[10px] pt-[50px] pr-[100px] pb-[50px] pl-[100px]">
-            <h1 className="font-barlow font-semibold text-[75px] leading-[103%] tracking-[0%]">
+<div className="w-full h-auto gap-4 p-6 sm:p-10 md:p-16">
+    <h1 className="font-barlow font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[75px] leading-tight tracking-normal">
+
                 The price of 🥚 eggs in 
                 <span className="ml-2 ">
                     <select
@@ -79,8 +80,8 @@ function HeaderCTA() {
                 has gone {direction} <span className="px-2 bg-[#E8EA58]"> {percentageChange}%</span> over the last month.
             </h1>
 
-            <section className="flex flex-row space-x-2 ">
-                <p className="text-[#4D5440]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, end of first sentence.</p>
+            <section className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
+            <p className="text-[#4D5440]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, end of first sentence.</p>
                 <a 
                     href="#" 
                     className="text-blue-500 underline cursor-pointer text-[#4D5440]"

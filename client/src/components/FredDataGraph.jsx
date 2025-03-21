@@ -9,12 +9,12 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 
 function FredDataGraph() {
     const [groupedData, setGroupedData] = useState({});
-    const [selectedCategories, setSelectedCategories] = useState(["eggs"]);
+    const [selectedCategories, setSelectedCategories] = useState(["egg"]);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     // ✅ Define category icons
     const categoryIcons = {
-        "eggs": "🥚",
+        "egg": "🥚",
         "milk": "🥛",
         "bread": "🍞",
         "beef": "🥩",
@@ -72,12 +72,12 @@ function FredDataGraph() {
     }));
 
     return (
-        <div className="relative bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 border border-gray-200">
+<div className="relative w-[40vw] bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 border border-gray-200 border-black">
+
             {/* Top Row - Title & Category Selector */}
             <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-black rounded-full"></div> {/* National Indicator */}
-                    <h3 className="text-gray-800 font-medium">National</h3>
+                    <h3 className="text-[#5371FF] font-medium">National</h3><h4>Grocery Prices</h4>
                 </div>
 
                 {/* ✅ Category Dropdown */}
@@ -108,36 +108,41 @@ function FredDataGraph() {
             </div>
 
             {/* ✅ Line Chart */}
-            <div className="h-20">
-                <Line
-                    data={{ labels, datasets }}
-                    options={{
-                        responsive: true,
-                        maintainAspectRatio: false,
-                        plugins: { 
-                            legend: { display: false },
-                            tooltip: { 
-                                enabled: true,
-                                callbacks: {
-                                    title: function(tooltipItem) {
-                                        return `Date: ${tooltipItem[0].label}`;
-                                    },
-                                    label: function(tooltipItem) {
-                                        return `$${tooltipItem.raw?.toFixed(2)}`;
-                                    }
-                                }
-                            }
-                        },
-                        scales: {
-                            x: { display: false },
-                            y: { display: false },
-                        },
-                        elements: {
-                            line: { tension: 0.4 },
-                            point: { radius: 3, backgroundColor: "black" },
-                        },
-                    }}
-                />
+            <div className="h-[400px]">
+            <Line
+  data={{ labels, datasets }}
+  options={{
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { 
+      legend: { display: false },
+      tooltip: { 
+        enabled: true,
+        callbacks: {
+          title: function(tooltipItem) {
+            return `Date: ${tooltipItem[0].label}`;
+          },
+          label: function(tooltipItem) {
+            const dataset = tooltipItem.dataset;
+            const category = dataset.label;
+            const icon = categoryIcons[category] || "🥚";
+            const price = tooltipItem.raw?.toFixed(2);
+            return `${icon} ${category.charAt(0).toUpperCase() + category.slice(1)}: $${price}`;
+          }
+        }
+      }
+    },
+    scales: {
+      x: { display: false },
+      y: { display: false },
+    },
+    elements: {
+      line: { tension: 0.4 },
+      point: { radius: 3, backgroundColor: "black" },
+    },
+  }}
+/>
+
             </div>
 
             {/* Bottom Dashed Line */}
