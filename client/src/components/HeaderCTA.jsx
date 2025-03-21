@@ -6,7 +6,7 @@ function HeaderCTA() {
     const [selectedState, setSelectedState] = useState("CA"); // Default to California
     const [statePrice, setStatePrice] = useState(null);
     const [percentageChange, setPercentageChange] = useState(0);
-    const [direction, setDirection] = useState("up");
+    const [direction, setDirection] = useState("down");
     const [isModalOpen, setModalOpen] = useState(false);
 
     useEffect(() => {
@@ -79,19 +79,20 @@ function HeaderCTA() {
                 has gone {direction} {percentageChange}% over the last month.
             </h1>
 
-            <section className="flex flex-row space-x-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, end of first sentence.</p>
+            <section className="flex flex-row space-x-2 ">
+                <p className="text-[#4D5440]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, end of first sentence.</p>
                 <a 
                     href="#" 
-                    className="text-blue-500 underline cursor-pointer"
+                    className="text-blue-500 underline cursor-pointer text-[#4D5440]"
                     onClick={(e) => {
-                        e.preventDefault();
-                        setModalOpen(true);
+                    e.preventDefault();
+                    setModalOpen(true);
                     }}
                 >
                     How did we arrive at this number?
                 </a>
-            </section>
+                </section>
+
 
             {/* ✅ Render the modal if open */}
             <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />

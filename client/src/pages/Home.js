@@ -61,14 +61,14 @@ function Home() {
             <section className="flex flex-row items-center justify-center space-x-6">
                 <FredDataGraph />
                 <div
-                    className="flex flex-col items-start justify-center p-6 rounded-lg"
+                    className="flex flex-col items-start justify-center p-6 rounded-[38px]"
                     style={{ backgroundColor: "#5371FF1A", maxWidth: "400px" }}
                 >
-                    <h2 className="text-lg font-bold mb-2">Fact</h2>
+                    <h2 className="text-lg font-bold mb-2 text-[#4D5440] font-normal italic">Fact</h2>
                     <p className="mb-4">
                         Nationally, you can see the trends of grocery prices here, for every month since 1980! Thanks, FRED.
                     </p>
-                    <button className="px-4 py-2 bg-black text-white rounded">
+                    <button className="px-4 py-2 bg-black text-white rounded-[100px]">
                         Main Homepage CTA goes here
                     </button>
                 </div>

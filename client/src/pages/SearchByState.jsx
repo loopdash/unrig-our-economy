@@ -74,30 +74,33 @@ function SearchByState() {
     const filteredStates = Object.keys(groupedByState).filter((state) => searchKeys.has(state));
 
     return (
-        <div>
-            <h2>Product Averages by State</h2>
+<div className="flex flex-col items-center w-full px-4">
+    <h2 className="text-xl font-semibold mb-4">Product Averages by State</h2>
 
-            {/* ✅ Search Bar */}
-            <input
-                type="text"
-                placeholder="Search yout state..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="border p-2 rounded w-full max-w-md mb-4"
-            />
+    {/* ✅ Search Bar */}
+    <input
+        type="text"
+        placeholder="Search your state..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        className="border p-2 rounded w-full max-w-md mb-6"
+    />
 
-            {/* ✅ Display Graphs for Filtered States */}
-            {filteredStates.length > 0 ? (
-                filteredStates.map((state) => (
-                    <div key={state} style={{ marginBottom: "50px" }}>
-                        <h3>{stateAbbreviations[state] || state}</h3>
-                        <ProductAveragesGraph state={state} data={groupedByState[state]} />
-                    </div>
-                ))
-            ) : (
-                <p>Oops, looks like we don't have any shoppers in that state!</p>
-            )}
+    {/* ✅ Display Graphs in 2x2 Grid */}
+    {filteredStates.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
+            {filteredStates.map((state) => (
+                <div key={state} className="p-4 border rounded shadow text-center">
+                    <h3 className="text-lg font-medium mb-2">{stateAbbreviations[state] || state}</h3>
+                    <ProductAveragesGraph state={state} data={groupedByState[state]} />
+                </div>
+            ))}
         </div>
+    ) : (
+        <p className="mt-4">Oops, looks like we don't have any shoppers in that state!</p>
+    )}
+</div>
+
     );
 }
 
