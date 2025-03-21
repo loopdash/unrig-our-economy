@@ -58,7 +58,7 @@ function Home() {
                 virginiaPrice={prices.VA}
             />
 
-            <section className="flex flex-col items-center justify-center space-x-6 mt-5 sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 p-6">
+            <section className="flex flex-col items-center justify-center mt-5 sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 p-6">
 
                 <FredDataGraph />
                 <div
