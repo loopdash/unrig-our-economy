@@ -1,5 +1,6 @@
 import React from "react";
 import unrigLogo from "../assets/unrig-logo.png";
+import Button from "./Button";
 
 function Header() {
   return (
@@ -13,16 +14,7 @@ function Header() {
 
         {/* Navigation Menu */}
         <nav className="hidden md:flex space-x-6">
-        <a
-  href="/"
-  className="inline-block w-[131px] h-[40px] bg-[#5371FF] text-white text-center leading-[40px] uppercase shadow-[-4px_4px_0_0_#5371FF] border-solid border-[#F0F3FF] border-[3px]"
->
-  Join Us
-</a>
-
-
-
-
+          <Button href={"/"} text={"Join Us"} color={"#F0F3FF"} bgColor={"#5371FF"}/>
         </nav>
 
         {/* Mobile Menu Button */}
