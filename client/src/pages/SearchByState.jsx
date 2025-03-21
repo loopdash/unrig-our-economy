@@ -99,8 +99,7 @@ function SearchByState() {
     {filteredStates.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
             {filteredStates.map((state) => (
-                <div key={state} className="p-4 border rounded shadow text-center bg-white">
-                    <h3 className="text-lg font-medium mb-2">{stateAbbreviations[state] || state}</h3>
+                <div key={state}>
                     <ProductAveragesGraph state={state} data={groupedByState[state]} />
                 </div>
             ))}
