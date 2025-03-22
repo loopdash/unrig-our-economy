@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import ErrorLogs from './pages/ErrorLogs';
 import Header from './components/Header';
 import SearchByState from './pages/SearchByState';
+import ProtectedRoute from './components/ProtectedRoute'
 
 function App() {
     return (
@@ -12,7 +13,12 @@ function App() {
         <Header/>
         <Router>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" 
+                    element={
+                    <ProtectedRoute>
+                        <Home />
+                    </ProtectedRoute>} 
+                />
                 <Route path="/search-by-state" element={<SearchByState />} />
                 <Route path="/errors/get" element={<ErrorLogs />} />
             </Routes>
