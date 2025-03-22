@@ -39,7 +39,7 @@ function SearchByState() {
         try {
             const data = await getProductAverages();
             console.log("Fetched Kroger Data:", data);
-            console.log(data.filter(d => d.record_day.includes("2024-03-22")));
+            console.log('march 22', data.filter(d => d.record_day.includes("2025-03-22")));
             setProductAverages(data);
             setLoading(false)
         } catch (error) {
