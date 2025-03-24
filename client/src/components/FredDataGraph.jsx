@@ -29,7 +29,7 @@ function FredDataGraph() {
     const fetchFredData = async () => {
         try {
             const rawData = await getFredData();
-            console.log("Fetched Data:", rawData);
+            // console.log("Fetched Data:", rawData);
 
             // ✅ Group data by category
             const grouped = {};

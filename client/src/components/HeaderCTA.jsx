@@ -84,7 +84,7 @@ function HeaderCTA() {
             <p className="text-[#4D5440]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, end of first sentence.</p>
                 <a 
                     href="#" 
-                    className="text-blue-500 underline cursor-pointer text-[#4D5440]"
+                    className="underline cursor-pointer text-[#4D5440]"
                     onClick={(e) => {
                     e.preventDefault();
                     setModalOpen(true);

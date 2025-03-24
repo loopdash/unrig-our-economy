@@ -6,6 +6,8 @@ import ErrorLogs from './pages/ErrorLogs';
 import Header from './components/Header';
 import SearchByState from './pages/SearchByState';
 import ProtectedRoute from './components/ProtectedRoute'
+import Footer from './components/Footer';
+import Subscribe from './components/Subscribe';
 
 function App() {
     return (
@@ -23,6 +25,8 @@ function App() {
                 <Route path="/errors/get" element={<ErrorLogs />} />
             </Routes>
         </Router>
+        <Subscribe/>
+        <Footer/>
         </>
     );
 }

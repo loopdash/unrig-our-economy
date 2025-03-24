@@ -29,6 +29,7 @@ function SearchByState() {
     const [productAverages, setProductAverages] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
     const [loading, setLoading] = useState(true);
+    const [visibleCount, setVisibleCount] = useState(6);
 
 
     useEffect(() => {
@@ -47,6 +48,10 @@ function SearchByState() {
         }
     };
 
+    const handleLoadMore = () => {
+      setVisibleCount((prev) => prev + 6); // or whatever increment you'd like
+    };
+    
     // ✅ Group by state abbreviation
     const groupedByState = productAverages.reduce((acc, product) => {
         const { state, record_day, product_category, average_price } = product;
@@ -78,8 +83,8 @@ function SearchByState() {
     const filteredStates = Object.keys(groupedByState).filter((state) => searchKeys.has(state));
 
     return (
-<div className="flex flex-col items-center w-full px-4">
-    <div className="bg-[#F5F2F2] absolute top-0 right-0 left-0 h-[40vh]" style={{ zIndex: -1 }}>
+<div className="flex flex-col items-center w-full px-4 mb-6">
+    <div className="bg-[#E8EA58] absolute top-0 right-0 left-0 h-[40vh]" style={{ zIndex: -1 }}>
     {/* Blank Space */}
     </div>
 
@@ -105,7 +110,7 @@ function SearchByState() {
   <>
     {filteredStates.length > 0 ? (
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl mx-auto">
-        {filteredStates.map((state) => (
+        {filteredStates.slice(0, visibleCount).map((state) => (
           <div key={state}>
             <ProductAveragesGraph state={state} data={groupedByState[state]} />
           </div>
@@ -114,6 +119,15 @@ function SearchByState() {
     ) : (
       <p className="mt-4">Oops, looks like we don't have any shoppers in that state!</p>
     )}
+    {filteredStates.length > visibleCount && (
+  <button
+    onClick={handleLoadMore}
+    className="mt-6 px-6 py-3 bg-black text-white hover:bg-gray-800 transition uppercase"
+  >
+    Load More
+  </button>
+)}
+
   </>
 )}
 

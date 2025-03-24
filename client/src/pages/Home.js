@@ -4,6 +4,8 @@ import ProductAveragesGraph from "../components/ProductAveragesGraph";
 import HeaderCTA from "../components/HeaderCTA";
 import DailyTicker from "../components/DailyTicker";
 import FredDataGraph from "../components/FredDataGraph";
+import Button from "../components/Button";
+import CTA from "../components/CTA";
 
 function Home() {
     const [prices, setPrices] = useState({
@@ -60,20 +62,23 @@ function Home() {
 
             <section className="flex flex-col items-center justify-center mt-5 sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 p-6">
 
-                <FredDataGraph />
                 <div
-                    className="flex flex-col items-start justify-center rounded-[38px]  w-full sm:min-w-[40vw] bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3"
-                    style={{ backgroundColor: "#5371FF1A", maxWidth: "400px" }}
+                    className="flex flex-col items-start justify-center rounded-[38px]  w-full sm:min-w-[40vw] bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 min-h-[70vh]" 
+                    style={{ backgroundColor: "#E8EA58", maxWidth: "400px" }}
                 >
-                    <h2 className="text-lg font-bold mb-2 text-[#4D5440] font-normal italic">Fact</h2>
-                    <p className="mb-4">
-                        Nationally, you can see the trends of grocery prices here, for every month since 1980! Thanks, FRED.
+                    <h2 className="text-lg font-bold mb-2 text-[#4D5440] font-normal">Fact</h2>
+                    <p className="mb-4 font-normal text-[30px] leading-[125%] tracking-[0] pb-4">
+                       Grocery prices have been rising rapidly, nationwide.
                     </p>
-                    <button className="px-4 py-2 bg-black text-white rounded-[100px]">
+                    {/* <button className="px-4 py-2 bg-black text-white rounded-[100px]">
                         Main Homepage CTA goes here
-                    </button>
+                    </button> */}
+                    <Button href={"/search-by-state"} text={"See State-level grocery prices"} color={"black"} bgColor={"black"}/>
+
                 </div>
+                <FredDataGraph />
             </section>
+            <CTA/>
         </div>
     );
 }

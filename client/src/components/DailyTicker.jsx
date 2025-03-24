@@ -6,7 +6,7 @@ import directionArrow from "../assets/direction-arrow.png";
 function DailyTicker({ texasPrice, californiaPrice, virginiaPrice }) {
   return (
 <div className="w-full px-4 py-4 sm:px-10 md:px-[100px] flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0 justify-center items-center bg-[#F5F2F2]">
-<p style={{color: "#4D5440"}}>Today</p>
+<p style={{color: "#4D5440"}}>TODAY</p>
 
       {texasPrice !== null && (
         <div className="flex items-center space-x-1">
