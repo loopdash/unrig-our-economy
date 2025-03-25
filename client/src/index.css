@@ -14,3 +14,33 @@ body {
 code {
   font-family: "Barlow", sans-serif;
 }
+
+/* FOR EMBEDDED EVERY ACTION FORM */
+.at-title, .fastAction, .at-legend, #NVSignupForm1226316-ContactInformation-SmsLegalDisclaimer {
+  display: none !important;
+}
+
+.at-text {
+  font-family: "Barlow", sans-serif !important;
+  text-transform: uppercase;
+
+}
+
+#NVSignupForm1226316-ContactInformation, .at-form-submit {
+  background-color: #F0F3FF !important;
+}
+
+.at-submit {
+  background-color: black !important;
+}
+
+.at-submit {
+  background-color: black !important;
+  text-transform: uppercase;
+   color: white; border: 3px solid black !important; box-shadow: black -4px 4px 0px 0px !important;
+   border-radius: 0 !important;
+}
+
+.updateMyProfileSection span {
+  display: none;
+}

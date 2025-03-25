@@ -63,7 +63,7 @@ function Home() {
             <section className="flex flex-col items-center justify-center mt-5 sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 p-6">
 
                 <div
-                    className="flex flex-col items-start justify-center rounded-[38px]  w-full sm:min-w-[40vw] bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 min-h-[70vh]" 
+                    className="flex flex-col items-start justify-center rounded-[38px] w-full sm:min-w-[40vw] bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 min-h-[70vh]" 
                     style={{ backgroundColor: "#E8EA58", maxWidth: "400px" }}
                 >
                     <h2 className="text-lg font-bold mb-2 text-[#4D5440] font-normal">Fact</h2>

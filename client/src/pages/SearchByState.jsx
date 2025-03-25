@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getProductAverages } from "../services/api";
 import ProductAveragesGraph from "../components/ProductAveragesGraph";
 import searchArrow from "../assets/search-arrow.png";
+
 // ✅ State Abbreviation Mapping
 const stateAbbreviations = {
     AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas",

@@ -1,7 +1,18 @@
-import React from 'react'
-import Button from './Button'
+import React, { useEffect } from 'react'
 
 function Subscribe() {
+  useEffect(() => {
+    // Only load the script if it's not already loaded
+    if (!document.querySelector('script[src="https://static.everyaction.com/ea-actiontag/at.js"]')) {
+      const script = document.createElement('script')
+      script.src = 'https://static.everyaction.com/ea-actiontag/at.js'
+      script.crossOrigin = 'anonymous'
+      script.async = true
+      document.body.appendChild(script)
+    }
+  }, [])
+  
+
   return (
     <div className="bg-[#F0F3FF] text-black px-6 py-12">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10">
@@ -14,32 +25,17 @@ function Subscribe() {
         </div>
 
         {/* Right Side Form */}
-        <div className="flex-1 flex flex-col items-start gap-4 w-full max-w-md">
-          <div className="flex flex-col sm:flex-row gap-4 w-full">
-            <input
-              type="text"
-              placeholder="First name"
-              className="flex-1 border border-gray-300 px-4 py-2 rounded bg-transparent border-b border-black border-t-0 border-l-0 border-r-0 focus:outline-none"
-            />
-            <input
-              type="text"
-              placeholder="Last name"
-              className="flex-1 border border-gray-300 px-4 py-2 rounded bg-transparent border-b border-black border-t-0 border-l-0 border-r-0 focus:outline-none"
-            />
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 w-full">
-            <input
-              type="text"
-              placeholder="US ZIP Code"
-              className="flex-1 border border-gray-300 px-4 py-2 rounded bg-transparent border-b border-black border-t-0 border-l-0 border-r-0 focus:outline-none"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="flex-1 border border-gray-300 px-4 py-2 rounded bg-transparent border-b border-black border-t-0 border-l-0 border-r-0 focus:outline-none"
-            />
-          </div>
-          <Button href="/" text="Subscribe" color="black" bgColor="black" />
+        <div className="flex-1 w-full max-w-md">
+          <div
+            className="ngp-form"
+            data-form-url="https://secure.everyaction.com/v1/Forms/VclP0zEJRkOLk5uvhfgaAw2"
+            data-fastaction-endpoint="https://fastaction.ngpvan.com"
+            data-inline-errors="true"
+            data-fastaction-nologin="true"
+            data-databag-endpoint="https://profile.ngpvan.com"
+            data-databag="everybody"
+            data-mobile-autofocus="false"
+          ></div>
         </div>
         
       </div>
