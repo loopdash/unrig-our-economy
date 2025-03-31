@@ -64,6 +64,7 @@ const fetchKrogerData = async () => {
     const token = await getKrogerToken(); // Ensure fresh token
     try {
         const locations = await getLocationsByState(db); // Pull rotated locations
+
         const [products] = await db.query('SELECT name, kroger_id FROM kroger_products');
         
         for (const location of locations) {

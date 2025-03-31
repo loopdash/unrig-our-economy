@@ -83,11 +83,12 @@ async function getPrices(seriesID, category) {
         const response = await axios.get(BASE_URL, {
             params: {
                 series_id: seriesID,
-                api_key: API_KEY,
+                api_key: FRED_API_KEY,
                 file_type: "json",
             },
         });
 
+        console.log('FRED response: ', response)
         const observations = response.data.observations || [];
 
         // Filter new data only (dates after the latest stored date)
@@ -135,6 +136,10 @@ async function insertFredData(data) {
     }
 }
 
+// For testing in NODE:
+// const { scrapeFredDataMonthly } = require('./server/controllers/products');
+// scrapeFredDataMonthly().then(() => console.log('✅ Fred scrape and log')).catch(err => console.error(err));
+
 /**
  * Main function to scrape FRED data and update the database.
  */
@@ -153,6 +158,7 @@ const scrapeFredDataMonthly = async () => {
     try {
         for (const { id, category } of series) {
             const newData = await getPrices(id, category);
+            console.log("New data for FRED log: ", newData);
             await insertFredData(newData);
         }
         console.log("✅ FRED Data Scrape Completed.");
