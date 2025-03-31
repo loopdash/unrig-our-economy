@@ -1,0 +1,196 @@
+import React, { useEffect, useState } from "react";
+import { getProductAverages } from "../services/api";
+import { Line } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+} from "chart.js";
+import shoppingCart from "../assets/shopping-cart.svg";
+
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+
+const categoryIcons = {
+  "Egg 12ct": "🥚",
+  "Milk 1gal": "🥛",
+  "Bread 20oz": "🍞",
+  "Beef 1lb": "🥩",
+  "Coffee 11 oz": "☕"
+};
+
+function SingleStateGraph({ state = "CA" }) {
+  const [productAverages, setProductAverages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedCategories, setSelectedCategories] = useState(["Egg 12ct"]);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    fetchProductAverages();
+  }, []);
+
+  const fetchProductAverages = async () => {
+    try {
+      const data = await getProductAverages();
+      setProductAverages(data);
+      setLoading(false);
+    } catch (error) {
+      console.error("Failed to fetch product averages:", error);
+    }
+  };
+
+  const groupedByState = productAverages.reduce((acc, product) => {
+    const { state, record_day, product_category, average_price } = product;
+    if (!acc[state]) acc[state] = [];
+    acc[state].push({
+      record_day,
+      product_category,
+      average_price: parseFloat(average_price)
+    });
+    return acc;
+  }, {});
+
+  const stateData = groupedByState[state] || [];
+  const sortedData = [...stateData].sort((a, b) => new Date(a.record_day) - new Date(b.record_day));
+  const labels = [...new Set(sortedData.map((entry) => entry.record_day))];
+  const categories = [...new Set(sortedData.map((entry) => entry.product_category))];
+
+  const toggleCategory = (category) => {
+    setSelectedCategories((prev) =>
+      prev.includes(category) ? prev.filter((c) => c !== category) : [...prev, category]
+    );
+  };
+
+  const categoryStats = selectedCategories.map((category) => {
+    const categoryData = sortedData.filter((entry) => entry.product_category === category);
+    const latest = categoryData[categoryData.length - 1];
+    const previous = categoryData.length > 1 ? categoryData[categoryData.length - 2] : latest;
+
+    const latestPrice = latest?.average_price || 0;
+    const previousPrice = previous?.average_price || latestPrice;
+
+    const percentageChange =
+      previousPrice > 0 ? ((latestPrice - previousPrice) / previousPrice * 100).toFixed(2) : 0;
+
+    const latestDate = new Date(latest?.record_day);
+    const previousDate = new Date(previous?.record_day);
+    const timeDiff = Math.abs(latestDate - previousDate);
+    const daysAgo = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+    const timeAgoText = daysAgo === 1 ? "since yesterday" : `from ${daysAgo} days ago`;
+
+    return { category, latestPrice, percentageChange, timeAgoText };
+  });
+
+  return (
+    <div className="flex flex-col items-center w-full h-full min-h-[60vh] px-4">
+      {loading ? (
+        <p className="mt-4">Collecting data...</p>
+      ) : stateData.length > 0 ? (
+        <div className="w-full sm:min-w-[40vw] bg-[#f6f8ff] rounded-xl shadow-lg p-4 border border-black flex flex-col justify-between min-h-[60vh]">
+          {/* Header */}
+          <div className="flex justify-between items-center mb-4">
+            <div className="flex items-center space-x-2">
+              <h3 className="text-[#5371FF] font-medium">California</h3>
+              <h4>Daily Tracker</h4>
+            </div>
+  
+            <div className="relative">
+              <button
+                className="w-7 h-7 bg-gray-200 rounded-full flex items-center justify-center"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
+                <img src={shoppingCart} alt="Toggle Categories" className="w-4 h-4" />
+              </button>
+  
+              {dropdownOpen && (
+                <div className="absolute top-10 right-0 bg-white shadow-lg rounded-md p-2 border border-gray-300 z-20">
+                  {categories.map((category) => (
+                    <button
+                      key={category}
+                      className={`flex items-center justify-center p-2 rounded-md transition ${
+                        selectedCategories.includes(category)
+                          ? "bg-blue-100"
+                          : "hover:bg-gray-100"
+                      }`}
+                      onClick={() => toggleCategory(category)}
+                    >
+                      <span className="text-lg">{categoryIcons[category] || "🥚"}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+  
+          {/* Chart Section */}
+          <div className="flex-1 flex flex-col justify-end">
+            <div className="h-20">
+              <Line
+                data={{
+                  labels,
+                  datasets: selectedCategories.map((category, index) => ({
+                    label: category,
+                    data: labels.map(
+                      (day) =>
+                        sortedData.find(
+                          (entry) =>
+                            entry.record_day === day &&
+                            entry.product_category === category
+                        )?.average_price || null
+                    ),
+                    borderColor: `hsl(${index * 90}, 70%, 50%)`,
+                    borderWidth: 2,
+                    fill: false
+                  }))
+                }}
+                options={{
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                      callbacks: {
+                        title: (tooltipItems) =>
+                          `Date: ${new Date(
+                            tooltipItems[0].label
+                          ).toLocaleDateString()}`,
+                        label: (tooltipItem) => {
+                          const cat = tooltipItem.dataset.label;
+                          const icon = categoryIcons[cat] || "🥚";
+                          const price = tooltipItem.raw?.toFixed(2);
+                          return `${icon} ${cat}: $${price}`;
+                        }
+                      }
+                    }
+                  },
+                  scales: {
+                    x: { display: false },
+                    y: { display: false }
+                  },
+                  elements: {
+                    line: { tension: 0.4 },
+                    point: { radius: 3, backgroundColor: "black" }
+                  }
+                }}
+              />
+            </div>
+  
+            {/* Dashed Line at Bottom */}
+            <div className="w-full border-t-2 border-dashed border-blue-400 mt-4"></div>
+          </div>
+        </div>
+      ) : (
+        <p className="mt-4">
+          Oops, looks like we don't have any shoppers in {state}!
+        </p>
+      )}
+    </div>
+  );
+  
+}
+
+export default SingleStateGraph;

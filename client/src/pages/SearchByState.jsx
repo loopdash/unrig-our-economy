@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getProductAverages } from "../services/api";
 import ProductAveragesGraph from "../components/ProductAveragesGraph";
 import searchArrow from "../assets/search-arrow.png";
+import SearchAnotherState from "../components/SearchAnotherState";
 
 // ✅ State Abbreviation Mapping
 const stateAbbreviations = {
@@ -131,7 +132,7 @@ function SearchByState() {
 
   </>
 )}
-
+<SearchAnotherState/>
 
 </div>
 
