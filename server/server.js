@@ -6,6 +6,8 @@ const { fetchKrogerData } = require('./controllers/kroger');
 const { updateStateAverages } = require('./jobs/updateStateAverages');
 const { logError } = require('./controllers/errors');
 const { scrapeFredDataMonthly } = require('./controllers/products');
+const fs = require('fs');
+const path = require('path');
 
 const app = express();
 app.use(cors({ origin: '*' }));  // Allow all origins
@@ -44,12 +46,21 @@ cron.schedule('0 3 * * *', async () => {
 
 // 🕑 **Cron job: Scrape Fred Data monthly on the 2nd day of the month at 3:00 AM**
 cron.schedule('0 3 2 * *', async () => {
+    const logPath = path.join(__dirname, 'fred_cron.log');
+    const log = (msg) => fs.appendFileSync(logPath, `[${new Date().toISOString()}] ${msg}\n`);
+    log('📊 Running monthly Scrape Fred Data calculation (2nd day of the month)...');
+
+
     console.log('📊 Running monthly Scrape Fred Data calculation (2nd day of the month)...');
     try {
         await scrapeFredDataMonthly();
+
+        log('✅ Scrape Fred Data Monthly updated.');
         console.log('✅ Scrape Fred Data Monthly updated.');
     } catch (error) {
+        log(`❌ Fred monthly update failed: ${error.message}`);
         console.error('❌ Fred monthly update failed:', error.message);
+        
         await logError(error.message, error.stack, 'Cron Job Fred Monthly');
     }
 });
