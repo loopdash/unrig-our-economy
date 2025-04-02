@@ -69,11 +69,11 @@ function Home() {
           className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 min-h-[70vh] rounded-3xl text-white mx-auto"
           style={{ backgroundColor: "#E8EA58" }}
         >
-          <h2 className="text-lg font-bold mb-2 text-[#4D5440] font-normal">
-            Fact
+          <h2 className="text-lg font-bold mb-2 text-[#4D5440] font-normal uppercase">
+            Rising prices, shrinking wallets
           </h2>
           <p className="mb-4 font-normal text-lg leading-[125%] tracking-[0] pb-4 text-black">
-          The cost of living for hardworking Americans continues to climb. Eggs, bread, tomatoes, meat, and coffee—some of the most essential items in your grocery cart—have seen dramatic price increases. While families are struggling to make ends meet, corporations are reaping the rewards. This page breaks down how these prices have changed under the Trump administration and what policies have contributed to the rising costs.
+          The cost of living for hardworking Americans continues to climb. Eggs, bread, milk, meat, and coffee — some of the most essential items in your grocery cart — have seen dramatic price increases. While families are struggling to make ends meet, corporations are reaping the rewards. This page breaks down how these prices have changed under the Trump administration and what policies have contributed to the rising costs.
                     </p>
           {/* <button className="px-4 py-2 bg-black text-white rounded-[100px]">
                         Main Homepage CTA goes here
@@ -103,7 +103,7 @@ function Home() {
           <h2 className="font-semibold uppercase tracking-wider ">
             Daily Tracker
           </h2>
-          <p className="mb-4 font-normal text-[30px] leading-[125%] tracking-[0] pb-4">
+          <p className="mb-4 font-normal text-md leading-[125%] tracking-[0] pb-4">
           How the prices of eggs, milk, meat, bread, and coffee have soared under his watch.
                     </p>
           {/* <button className="px-4 py-2 bg-black text-white rounded-[100px]">

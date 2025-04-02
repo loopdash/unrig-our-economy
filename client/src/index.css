@@ -28,6 +28,7 @@ code {
 
 #NVSignupForm1226316-ContactInformation, .at-form-submit {
   background-color: #F0F3FF !important;
+  padding-bottom: 0px;
 }
 
 .at-submit {
@@ -39,8 +40,66 @@ code {
   text-transform: uppercase;
    color: white; border: 3px solid black !important; box-shadow: black -4px 4px 0px 0px !important;
    border-radius: 0 !important;
+   width: 92.5% !important;
 }
 
 .updateMyProfileSection span {
   display: none;
 }
+/* 
+  .at-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .at-row.MobilePhone,
+  .SmsLegalDisclaimer,
+  .SmsSubscribeMobilePhone {
+    display: none !important;
+  }
+
+
+  .at-text input {
+    width: 100%;
+  } */
+
+
+  .at-row,
+  .at-text {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .at-text label,
+  .at-text input,
+  .at-text small {
+    margin: 0;
+    padding: 0;
+  }
+
+  form, fieldset {
+    width: 100%;
+  }
+  
+  .at-text input {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .at-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+  }
+#NVSignupForm1226316-ContactInformation-MobilePhone {
+  display: none !important;
+}
+  .at-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .at-row.FirstName.LastName,
+  .at-row.PostalCode,
+  .at-row.EmailAddress {
+    display: contents;
+  }

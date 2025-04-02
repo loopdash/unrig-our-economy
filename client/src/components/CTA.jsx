@@ -11,7 +11,7 @@ function CTA() {
       The Cost of Living Under Trump. 
       </h2>
       <p className="text-base text-white/90 max-w-3xl">
-      The cost of living for hardworking Americans continues to climb. Eggs, bread, tomatoes, meat, and coffee—some of the most essential items in your grocery cart—have seen dramatic price increases. While families are struggling to make ends meet, corporations are reaping the rewards. This page breaks down how these prices have changed under the Trump administration and what policies have contributed to the rising costs.
+      Since President Trump took office, the cost of everyday essentials has risen. What used to be affordable has now become a financial burden for many families. This site dives into how these price increases can affect your life, focusing on the impact of key good s— eggs, bread, milk, meat, and coffee. We’ll show you who’s responsible for these rising prices and how these costs are taking a bigger bite out of American paychecks.
       </p>
       <Link to="/search-by-state" className="underline">
           See data in my state.
