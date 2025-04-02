@@ -81,7 +81,7 @@ function HeaderCTA() {
             </h1>
 
             <section className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 mt-2">
-            <p className="text-[#4D5440]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, end of first sentence.</p>
+            <p className="text-[#4D5440]">The Big Picture: Rising Prices, Shrinking Wallets</p>
                 <a 
                     href="#" 
                     className="underline cursor-pointer text-[#4D5440]"

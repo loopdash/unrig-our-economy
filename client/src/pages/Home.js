@@ -72,9 +72,9 @@ function Home() {
           <h2 className="text-lg font-bold mb-2 text-[#4D5440] font-normal">
             Fact
           </h2>
-          <p className="mb-4 font-normal text-[30px] leading-[125%] tracking-[0] pb-4">
-            Grocery prices have been rising rapidly, nationwide.
-          </p>
+          <p className="mb-4 font-normal text-lg leading-[125%] tracking-[0] pb-4 text-black">
+          The cost of living for hardworking Americans continues to climb. Eggs, bread, tomatoes, meat, and coffee—some of the most essential items in your grocery cart—have seen dramatic price increases. While families are struggling to make ends meet, corporations are reaping the rewards. This page breaks down how these prices have changed under the Trump administration and what policies have contributed to the rising costs.
+                    </p>
           {/* <button className="px-4 py-2 bg-black text-white rounded-[100px]">
                         Main Homepage CTA goes here
                     </button> */}
@@ -104,8 +104,8 @@ function Home() {
             Daily Tracker
           </h2>
           <p className="mb-4 font-normal text-[30px] leading-[125%] tracking-[0] pb-4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum. 
-          </p>
+          How the prices of eggs, milk, meat, bread, and coffee have soared under his watch.
+                    </p>
           {/* <button className="px-4 py-2 bg-black text-white rounded-[100px]">
                         Main Homepage CTA goes here
                     </button> */}

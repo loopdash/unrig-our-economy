@@ -8,18 +8,14 @@ function CTA() {
         It’s time to unrig our economy
       </p>
       <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-        Grocery prices in America<br />
-        have been rising over the last<br />
-        xx months data point here!
+      The Cost of Living Under Trump. 
       </h2>
       <p className="text-base text-white/90 max-w-3xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget gravida leo.
-        Mauris nec massa volutpat lacus egestas fringilla ac vitae lacus. Nullam ut sagittis nisl.
-        Sed convallis molestie ultricies.{' '}
-        <Link to="/search-by-state" className="underline">
+      The cost of living for hardworking Americans continues to climb. Eggs, bread, tomatoes, meat, and coffee—some of the most essential items in your grocery cart—have seen dramatic price increases. While families are struggling to make ends meet, corporations are reaping the rewards. This page breaks down how these prices have changed under the Trump administration and what policies have contributed to the rising costs.
+      </p>
+      <Link to="/search-by-state" className="underline">
           See data in my state.
         </Link>
-      </p>
     </div>
   )
 }
