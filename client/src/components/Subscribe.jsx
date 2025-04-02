@@ -15,11 +15,11 @@ function Subscribe() {
 
   return (
     <div className="bg-[#F0F3FF] text-black px-6 py-12">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10">
+      <div className="max-w-6xl mx-2 sm:mx-auto flex flex-col lg:flex-row justify-between items-center gap-10">
         
         {/* Left Side Content */}
         <div className="flex-1">
-          <h2 className="text-4xl font-bold leading-tight mb-4">
+          <h2 className="text-4xl font-bold md:text-5xl font-bold mb-6 leading-tight">
             Sign up for the Unrig Our Economy email list.
           </h2>
         </div>

@@ -62,7 +62,7 @@ function HeaderCTA() {
     }, [selectedState]); // ✅ Re-fetch when state changes
 
     return (
-<div className="w-full h-auto gap-4 p-6 sm:p-10 md:p-16">
+<div className="w-full h-auto gap-4 p-6 sm:p-10 md:p-16 max-w-6xl mx-auto">
     <h1 className="font-barlow font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[75px] leading-tight tracking-normal">
 
                 The price of 🥚 eggs in 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function CTA() {
   return (
-    <div className="bg-[#F0643C] rounded-3xl px-6 py-10 text-white max-w-5xl mx-auto mt-10 mb-10">
+    <div className="bg-[#F0643C] rounded-3xl px-6 py-10 text-white max-w-6xl mx-2 sm:mx-auto mt-10 mb-10">
       <p className="text-sm font-semibold uppercase tracking-wider mb-4">
         It’s time to unrig our economy
       </p>

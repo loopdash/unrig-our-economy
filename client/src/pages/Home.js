@@ -64,7 +64,7 @@ function Home() {
         virginiaPrice={prices.VA}
       />
 
-      <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 p-6">
+      <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 pt-8 max-w-6xl justify-center items-center mx-2 sm:mx-auto">
         <div
           className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 min-h-[70vh] rounded-3xl text-white mx-auto"
           style={{ backgroundColor: "#E8EA58" }}
@@ -87,13 +87,13 @@ function Home() {
         </div>
         <FredDataGraph />
       </section>
-      <div className="p-6">
+      <div className="">
         <TopStories />
         <CTA />
       </div>
 
 
-      <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 p-6">
+      <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 pb-6 mx-2 sm:mx-auto max-w-6xl">
       <SingleStateData state="CA"/>
 
         <div

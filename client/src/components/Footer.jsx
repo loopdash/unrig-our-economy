@@ -11,11 +11,11 @@ import tictok from "../assets/tictok.png"
 function Footer() {
   return (
     <footer className="bg-[#E8EA58] text-black px-6 py-12">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10">
         
         {/* Left Side Content */}
         <div className="flex-1">
-          <h2 className="text-4xl font-bold leading-tight mb-4">
+          <h2 className="text-4xl font-bold md:text-5xl font-bold mb-6 leading-tight">
             Our Eggconomy is Rigged.
           </h2>
           <p className="mb-6 max-w-md text-lg">
