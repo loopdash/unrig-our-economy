@@ -9,18 +9,26 @@ import {
   LineElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
 } from "chart.js";
 import shoppingCart from "../assets/shopping-cart.svg";
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const categoryIcons = {
   "Egg 12ct": "🥚",
   "Milk 1gal": "🥛",
   "Bread 20oz": "🍞",
   "Beef 1lb": "🥩",
-  "Coffee 11 oz": "☕"
+  "Coffee 11 oz": "☕",
 };
 
 function SingleStateGraph({ state = "CA" }) {
@@ -49,38 +57,50 @@ function SingleStateGraph({ state = "CA" }) {
     acc[state].push({
       record_day,
       product_category,
-      average_price: parseFloat(average_price)
+      average_price: parseFloat(average_price),
     });
     return acc;
   }, {});
 
   const stateData = groupedByState[state] || [];
-  const sortedData = [...stateData].sort((a, b) => new Date(a.record_day) - new Date(b.record_day));
+  const sortedData = [...stateData].sort(
+    (a, b) => new Date(a.record_day) - new Date(b.record_day)
+  );
   const labels = [...new Set(sortedData.map((entry) => entry.record_day))];
-  const categories = [...new Set(sortedData.map((entry) => entry.product_category))];
+  const categories = [
+    ...new Set(sortedData.map((entry) => entry.product_category)),
+  ];
 
   const toggleCategory = (category) => {
     setSelectedCategories((prev) =>
-      prev.includes(category) ? prev.filter((c) => c !== category) : [...prev, category]
+      prev.includes(category)
+        ? prev.filter((c) => c !== category)
+        : [...prev, category]
     );
   };
 
   const categoryStats = selectedCategories.map((category) => {
-    const categoryData = sortedData.filter((entry) => entry.product_category === category);
+    const categoryData = sortedData.filter(
+      (entry) => entry.product_category === category
+    );
     const latest = categoryData[categoryData.length - 1];
-    const previous = categoryData.length > 1 ? categoryData[categoryData.length - 2] : latest;
+    const previous =
+      categoryData.length > 1 ? categoryData[categoryData.length - 2] : latest;
 
     const latestPrice = latest?.average_price || 0;
     const previousPrice = previous?.average_price || latestPrice;
 
     const percentageChange =
-      previousPrice > 0 ? ((latestPrice - previousPrice) / previousPrice * 100).toFixed(2) : 0;
+      previousPrice > 0
+        ? (((latestPrice - previousPrice) / previousPrice) * 100).toFixed(2)
+        : 0;
 
     const latestDate = new Date(latest?.record_day);
     const previousDate = new Date(previous?.record_day);
     const timeDiff = Math.abs(latestDate - previousDate);
     const daysAgo = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-    const timeAgoText = daysAgo === 1 ? "since yesterday" : `from ${daysAgo} days ago`;
+    const timeAgoText =
+      daysAgo === 1 ? "since yesterday" : `from ${daysAgo} days ago`;
 
     return { category, latestPrice, percentageChange, timeAgoText };
   });
@@ -97,15 +117,19 @@ function SingleStateGraph({ state = "CA" }) {
               <h3 className="text-[#5371FF] font-medium">California</h3>
               <h4>Daily Tracker</h4>
             </div>
-  
+
             <div className="relative">
               <button
                 className="w-7 h-7 bg-gray-200 rounded-full flex items-center justify-center"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
-                <img src={shoppingCart} alt="Toggle Categories" className="w-4 h-4" />
+                <img
+                  src={shoppingCart}
+                  alt="Toggle Categories"
+                  className="w-4 h-4"
+                />
               </button>
-  
+
               {dropdownOpen && (
                 <div className="absolute top-10 right-0 bg-white shadow-lg rounded-md p-2 border border-gray-300 z-20">
                   {categories.map((category) => (
@@ -118,14 +142,16 @@ function SingleStateGraph({ state = "CA" }) {
                       }`}
                       onClick={() => toggleCategory(category)}
                     >
-                      <span className="text-lg">{categoryIcons[category] || "🥚"}</span>
+                      <span className="text-lg">
+                        {categoryIcons[category] || "🥚"}
+                      </span>
                     </button>
                   ))}
                 </div>
               )}
             </div>
           </div>
-  
+
           {/* Chart Section */}
           <div className="flex-1 flex flex-col justify-end">
             <div className="h-20">
@@ -144,8 +170,8 @@ function SingleStateGraph({ state = "CA" }) {
                     ),
                     borderColor: `hsl(${index * 90}, 70%, 50%)`,
                     borderWidth: 2,
-                    fill: false
-                  }))
+                    fill: false,
+                  })),
                 }}
                 options={{
                   responsive: true,
@@ -154,31 +180,45 @@ function SingleStateGraph({ state = "CA" }) {
                     legend: { display: false },
                     tooltip: {
                       callbacks: {
-                        title: (tooltipItems) =>
-                          `Date: ${new Date(
-                            tooltipItems[0].label
-                          ).toLocaleDateString()}`,
+                        title: function (tooltipItems) {
+                          const rawDate = tooltipItems[0].label; // "2025-04-02T00:00:00.000Z"
+
+                          // Extract just the date part from the ISO string
+                          const [year, month, dayWithTime] = rawDate.split("-");
+                          const day = dayWithTime.slice(0, 2); // removes "T00:00:00.000Z"
+
+                          const dateObj = new Date(
+                            `${year}-${month}-${day}T12:00:00`
+                          ); // noon = safe from timezone shift
+
+                          return `Date: ${dateObj.toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                          })}`;
+                        },
+
                         label: (tooltipItem) => {
                           const cat = tooltipItem.dataset.label;
                           const icon = categoryIcons[cat] || "🥚";
                           const price = tooltipItem.raw?.toFixed(2);
                           return `${icon} ${cat}: $${price}`;
-                        }
-                      }
-                    }
+                        },
+                      },
+                    },
                   },
                   scales: {
                     x: { display: false },
-                    y: { display: false }
+                    y: { display: false },
                   },
                   elements: {
                     line: { tension: 0.4 },
-                    point: { radius: 3, backgroundColor: "black" }
-                  }
+                    point: { radius: 3, backgroundColor: "black" },
+                  },
                 }}
               />
             </div>
-  
+
             {/* Dashed Line at Bottom */}
             <div className="w-full border-t-2 border-dashed border-blue-400 mt-4"></div>
           </div>
@@ -190,7 +230,6 @@ function SingleStateGraph({ state = "CA" }) {
       )}
     </div>
   );
-  
 }
 
 export default SingleStateGraph;

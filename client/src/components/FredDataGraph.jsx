@@ -34,10 +34,11 @@ function FredDataGraph() {
             // ✅ Group data by category
             const grouped = {};
             rawData.forEach(({ date, price, category }) => {
-                const formattedDate = new Date(date).toLocaleString("en-US", { month: "short", year: "numeric" });
-
+                // Use the raw date string
+                const isoDate = new Date(date).toISOString().split("T")[0]; // e.g., "2025-02-01"
+    
                 if (!grouped[category]) grouped[category] = {};
-                grouped[category][formattedDate] = parseFloat(price);
+                grouped[category][isoDate] = parseFloat(price);
             });
 
             setGroupedData(grouped);
@@ -120,9 +121,12 @@ function FredDataGraph() {
       tooltip: { 
         enabled: true,
         callbacks: {
-          title: function(tooltipItem) {
-            return `Date: ${tooltipItem[0].label}`;
-          },
+            title: function (tooltipItems) {
+                const rawDate = tooltipItems[0].label; // "2025-02-01"
+                const [year, month, day] = rawDate.split("-"); // Split manually
+                const dateObj = new Date(year, month - 1, day); // Construct as local time
+                return `Date: ${dateObj.toLocaleString("en-US", { month: "short", year: "numeric" })}`;
+            },            
           label: function(tooltipItem) {
             const dataset = tooltipItem.dataset;
             const category = dataset.label;

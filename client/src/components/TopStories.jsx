@@ -29,7 +29,7 @@ const stories = [
 
 export default function TopStories() {
   return (
-    <div className="bg-[#eaeefc] rounded-3xl px-6 py-10 text-white max-w-5xl mx-auto mt-10 mb-10 p-6">
+    <div className="bg-[#eaeefc] rounded-3xl px-6 py-10 text-white max-w-5xl mx-auto mt-10 mb-10 ">
       <h2 className="text-sm font-semibold text-blue-600 uppercase mb-4">Top Stories</h2>
       <div className="space-y-6">
         {stories.map((story, index) => (

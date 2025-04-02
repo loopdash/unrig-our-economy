@@ -138,10 +138,21 @@ function ProductAveragesGraph({ state, data }) {
                             tooltip: { 
                                 enabled: true, // ✅ Enables hover tooltip
                                 callbacks: {
-                                    title: function(tooltipItem) {
-                                        const date = new Date(tooltipItem[0].label);
-                                        return `Date: ${date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`;
-                                    },
+                                    title: function (tooltipItems) {
+                                        const rawDate = tooltipItems[0].label; // "2025-04-02T00:00:00.000Z"
+                                      
+                                        // Extract just the date part from the ISO string
+                                        const [year, month, dayWithTime] = rawDate.split("-");
+                                        const day = dayWithTime.slice(0, 2); // removes "T00:00:00.000Z"
+                                      
+                                        const dateObj = new Date(`${year}-${month}-${day}T12:00:00`); // noon = safe from timezone shift
+                                      
+                                        return `Date: ${dateObj.toLocaleDateString("en-US", {
+                                          month: "short",
+                                          day: "numeric",
+                                          year: "numeric"
+                                        })}`;
+                                      },
                                     label: function(tooltipItem) {
                                         const dataset = tooltipItem.dataset;
                                         const category = dataset.label;
