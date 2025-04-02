@@ -86,11 +86,11 @@ function SingleStateGraph({ state = "CA" }) {
   });
 
   return (
-    <div className="flex flex-col items-center w-full h-full min-h-[60vh] px-4">
+    <div className="relative w-full sm:min-w-[40vw] bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 border border-black">
       {loading ? (
         <p className="mt-4">Collecting data...</p>
       ) : stateData.length > 0 ? (
-        <div className="w-full sm:min-w-[40vw] bg-[#f6f8ff] rounded-xl shadow-lg p-4 border border-black flex flex-col justify-between min-h-[60vh]">
+        <div className="w-full sm:min-w-[40vw] bg-[#f6f8ff] rounded-xl p-4 flex flex-col justify-between min-h-[60vh]">
           {/* Header */}
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center space-x-2">

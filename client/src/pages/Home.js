@@ -8,6 +8,7 @@ import Button from "../components/Button";
 import CTA from "../components/CTA";
 import TopStories from "../components/TopStories";
 import SingleStateData from "../components/SingleStateGraph";
+import Subscribe from "../components/Subscribe";
 
 function Home() {
   const [prices, setPrices] = useState({
@@ -86,14 +87,17 @@ function Home() {
         </div>
         <FredDataGraph />
       </section>
-      <TopStories />
-      <CTA />
+      <div className="p-6">
+        <TopStories />
+        <CTA />
+      </div>
+
 
       <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 p-6">
       <SingleStateData state="CA"/>
 
         <div
-          className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 min-h-[70vh] rounded-3xl text-white mx-auto"
+          className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 rounded-3xl text-white mx-auto"
           style={{ backgroundColor: "black" }}
         >
           <h2 className="font-semibold uppercase tracking-wider ">
@@ -114,7 +118,7 @@ function Home() {
           />
         </div>
       </section>
-
+      <Subscribe/>
     </div>
   );
 }

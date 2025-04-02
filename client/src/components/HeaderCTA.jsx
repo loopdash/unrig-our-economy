@@ -80,7 +80,7 @@ function HeaderCTA() {
                 has gone {direction} <span className="px-2 bg-[#E8EA58]"> {percentageChange}%</span> over the last month.
             </h1>
 
-            <section className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
+            <section className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 mt-2">
             <p className="text-[#4D5440]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, end of first sentence.</p>
                 <a 
                     href="#" 

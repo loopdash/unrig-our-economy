@@ -3,6 +3,7 @@ import { getProductAverages } from "../services/api";
 import ProductAveragesGraph from "../components/ProductAveragesGraph";
 import searchArrow from "../assets/search-arrow.png";
 import SearchAnotherState from "../components/SearchAnotherState";
+import Subscribe from "../components/Subscribe";
 
 // ✅ State Abbreviation Mapping
 const stateAbbreviations = {
@@ -41,8 +42,8 @@ function SearchByState() {
     const fetchProductAverages = async () => {
         try {
             const data = await getProductAverages();
-            console.log("Fetched Kroger Data:", data);
-            console.log('march 22', data.filter(d => d.record_day.includes("2025-03-22")));
+            // console.log("Fetched Kroger Data:", data);
+            // console.log('march 22', data.filter(d => d.record_day.includes("2025-03-22")));
             setProductAverages(data);
             setLoading(false)
         } catch (error) {
@@ -85,6 +86,7 @@ function SearchByState() {
     const filteredStates = Object.keys(groupedByState).filter((state) => searchKeys.has(state));
 
     return (
+      <>
 <div className="flex flex-col items-center w-full px-4 mb-6">
     <div className="bg-[#E8EA58] absolute top-0 right-0 left-0 h-[40vh]" style={{ zIndex: -1 }}>
     {/* Blank Space */}
@@ -135,7 +137,8 @@ function SearchByState() {
 <SearchAnotherState/>
 
 </div>
-
+<Subscribe/>
+</>
     );
 }
 

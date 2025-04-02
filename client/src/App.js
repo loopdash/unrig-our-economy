@@ -25,7 +25,6 @@ function App() {
                 <Route path="/errors/get" element={<ErrorLogs />} />
             </Routes>
         </Router>
-        <Subscribe/>
         <Footer/>
         </>
     );
