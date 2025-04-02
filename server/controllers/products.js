@@ -62,7 +62,8 @@ async function getLatestDate(category) {
             "SELECT MAX(date) AS latest_date FROM fred_data WHERE category = ?",
             [category]
         );
-        return rows[0].latest_date || "2000-01-01"; // Default to an old date if no data exists
+        const date = rows[0].latest_date || new Date("2000-01-01");
+        return date.toISOString().split('T')[0]; // ensures YYYY-MM-DD format
     } catch (error) {
         console.error(`❌ Error fetching latest date for ${category}:`, error.message);
         throw error;
@@ -88,12 +89,23 @@ async function getPrices(seriesID, category) {
             },
         });
 
-        console.log('FRED response: ', response)
         const observations = response.data.observations || [];
+        
+        // 🧪 Log the last available data point from FRED
+        if (observations.length > 0) {
+            console.log(`🧪 Last observation for ${category}:`, observations[observations.length - 1]);
+        } else {
+            console.log(`⚠️ No observations returned for ${category}`);
+        }
 
-        // Filter new data only (dates after the latest stored date)
         const newEntries = observations
-            .filter(obs => obs.value !== "." && obs.date > latestDate)
+            .filter(obs => {
+                const isNew = obs.value !== "." && obs.date > latestDate;
+                if (isNew) {
+                    console.log(`✅ Found new entry: ${obs.date} > ${latestDate}`);
+                }
+                return isNew;
+            })
             .map(obs => ({
                 date: obs.date,
                 price: parseFloat(obs.value),
@@ -107,6 +119,7 @@ async function getPrices(seriesID, category) {
         return [];
     }
 }
+
 
 /**
  * Inserts new FRED data into the database.

@@ -44,8 +44,8 @@ cron.schedule('0 3 * * *', async () => {
     }
 });
 
-// 🕑 **Cron job: Scrape Fred Data monthly on the 2nd day of the month at 3:00 AM**
-cron.schedule('0 3 2 * *', async () => {
+// 🕑 **Cron job: Scrape Fred Data monthly on the 14th day of the month at 3:00 AM so FRED data has published **
+cron.schedule('0 3 14 * *', async () => {
     const logPath = path.join(__dirname, 'fred_cron.log');
     const log = (msg) => fs.appendFileSync(logPath, `[${new Date().toISOString()}] ${msg}\n`);
     log('📊 Running monthly Scrape Fred Data calculation (2nd day of the month)...');
@@ -60,7 +60,7 @@ cron.schedule('0 3 2 * *', async () => {
     } catch (error) {
         log(`❌ Fred monthly update failed: ${error.message}`);
         console.error('❌ Fred monthly update failed:', error.message);
-        
+
         await logError(error.message, error.stack, 'Cron Job Fred Monthly');
     }
 });
