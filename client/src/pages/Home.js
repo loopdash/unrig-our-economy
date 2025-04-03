@@ -66,7 +66,7 @@ function Home() {
 
       <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 pt-8 max-w-6xl justify-center items-center mx-2 sm:mx-auto">
         <div
-          className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 min-h-[70vh] rounded-3xl text-white mx-auto"
+          className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 min-h-fit rounded-3xl text-white mx-auto max-h-xl"
           style={{ backgroundColor: "#E8EA58" }}
         >
           <h2 className="text-lg font-bold mb-2 text-[#4D5440] font-normal uppercase">
