@@ -35,6 +35,10 @@ code {
   background-color: black !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .at-submit {
   background-color: black !important;
   text-transform: uppercase;

@@ -100,6 +100,7 @@ function SearchByState() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="border p-2 pr-10 rounded w-full rounded-[40px] border-black p-[20px] "
+            id="search"
         />
         <img
             src={searchArrow}

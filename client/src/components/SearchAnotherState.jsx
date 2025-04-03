@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import stateGroup from "../assets/stateGroup.png";
 
 function SearchAnotherState() {
@@ -15,12 +14,10 @@ function SearchAnotherState() {
             Search another state to compare state data.
           </h2>
           <p className="text-base text-white/90 max-w-xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget gravida leo.
-            Mauris nec massa volutpat lacus egestas fringilla ac vitae lacus. Nullam ut sagittis nisl.
-            Sed convallis molestie ultricies.{' '}
-            <Link to="/search-by-state" className="underline">
-              See data in my state.
-            </Link>
+          It’s time to act. The rising costs of everyday goods aren’t just a nuisance—they’re a reflection of a rigged economy that puts profits over people.{' '}
+            <a href="#search" className="underline">
+              Search again.
+            </a>
           </p>
         </div>
 
