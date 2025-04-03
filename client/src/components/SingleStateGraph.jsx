@@ -31,6 +31,16 @@ const categoryIcons = {
   "Coffee 11 oz": "☕",
 };
 
+const categoryColors = {
+  "Egg 12ct": "#E8EA58",   // eggshell white
+  "Milk 1gal": "#A5D8FF",  // soft blue
+  "Bread 20oz": "#D2B48C", // light brown
+  "Beef 1lb": "#8B0000",   // dark red
+  "Coffee 11 oz": "#4B2E2B", // dark brown
+};
+
+
+
 function SingleStateGraph({ state = "CA" }) {
   const [productAverages, setProductAverages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -110,7 +120,7 @@ function SingleStateGraph({ state = "CA" }) {
       {loading ? (
         <p className="mt-4">Collecting data...</p>
       ) : stateData.length > 0 ? (
-        <div className="w-full sm:min-w-[40vw] bg-[#f6f8ff] rounded-xl p-6 flex flex-col justify-between min-h-fit border border-black">
+        <div className="w-full sm:min-w-fit bg-[#f6f8ff] rounded-xl p-6 flex flex-col justify-between min-h-fit border border-black">
           {/* Header */}
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center space-x-2">
@@ -168,7 +178,9 @@ function SingleStateGraph({ state = "CA" }) {
                             entry.product_category === category
                         )?.average_price || null
                     ),
-                    borderColor: `hsl(${index * 90}, 70%, 50%)`,
+                    borderColor: categoryColors[category] || "black",
+                    pointBackgroundColor: categoryColors[category] || "black",
+                    pointBorderColor: categoryColors[category] || "black",
                     borderWidth: 2,
                     fill: false,
                   })),

@@ -15,6 +15,14 @@ const categoryIcons = {
     "Coffee 11 oz": "☕"
 };
 
+const categoryColors = {
+    "Egg 12ct": "#E8EA58",   // eggshell white
+    "Milk 1gal": "#A5D8FF",  // soft blue
+    "Bread 20oz": "#D2B48C", // light brown
+    "Beef 1lb": "#8B0000",   // dark red
+    "Coffee 11 oz": "#4B2E2B", // dark brown
+  };
+
 function ProductAveragesGraph({ state, data }) {
     const sortedData = [...data].sort((a, b) => new Date(a.record_day) - new Date(b.record_day));
     const labels = [...new Set(sortedData.map((entry) => entry.record_day))];
@@ -125,7 +133,9 @@ function ProductAveragesGraph({ state, data }) {
                                     sortedData.find((entry) => entry.record_day === day && entry.product_category === category)
                                         ?.average_price || null
                             ),
-                            borderColor: `hsl(${index * 90}, 70%, 50%)`,
+                            borderColor: categoryColors[category] || "black",
+                            pointBackgroundColor: categoryColors[category] || "black",
+                            pointBorderColor: categoryColors[category] || "black",
                             borderWidth: 2,
                             fill: false,
                         }))

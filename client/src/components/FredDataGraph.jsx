@@ -67,7 +67,9 @@ function FredDataGraph() {
     const datasets = selectedCategories.map((category, index) => ({
         label: category,
         data: labels.map((date) => groupedData[category]?.[date] || null),
-        borderColor: `hsl(${index * 90}, 70%, 50%)`,
+        borderColor: "black",
+        pointBackgroundColor:"black",
+        pointBorderColor:"black",
         borderWidth: 2,
         fill: false,
     }));
