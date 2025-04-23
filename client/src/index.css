@@ -33,6 +33,12 @@ code {
 
 .at-submit {
   background-color: black !important;
+  text-transform: uppercase !important;
+  transition: transform 0.2s ease !important;
+}
+
+.at-submit:hover {
+  transform: scale(1.05) !important;
 }
 
 html {

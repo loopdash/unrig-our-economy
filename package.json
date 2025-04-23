@@ -23,6 +23,7 @@
   "license": "ISC",
   "dependencies": {
     "node-cron": "^3.0.3",
+    "react-countup": "^6.5.3",
     "recharts": "^2.15.1"
   }
 }

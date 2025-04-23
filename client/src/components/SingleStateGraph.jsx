@@ -32,14 +32,12 @@ const categoryIcons = {
 };
 
 const categoryColors = {
-  "Egg 12ct": "#E8EA58",   // eggshell white
-  "Milk 1gal": "#A5D8FF",  // soft blue
+  "Egg 12ct": "#E8EA58", // eggshell white
+  "Milk 1gal": "#A5D8FF", // soft blue
   "Bread 20oz": "#D2B48C", // light brown
-  "Beef 1lb": "#8B0000",   // dark red
+  "Beef 1lb": "#8B0000", // dark red
   "Coffee 11 oz": "#4B2E2B", // dark brown
 };
-
-
 
 function SingleStateGraph({ state = "CA" }) {
   const [productAverages, setProductAverages] = useState([]);
@@ -120,25 +118,31 @@ function SingleStateGraph({ state = "CA" }) {
       {loading ? (
         <p className="mt-4">Collecting data...</p>
       ) : stateData.length > 0 ? (
-        <div className="w-full sm:min-w-fit bg-[#f6f8ff] rounded-xl p-6 flex flex-col justify-between min-h-fit border border-black">
+        <div className="w-full bg-[#f6f8ff] rounded-xl p-6 flex flex-col justify-between border-2 border-black">
           {/* Header */}
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center space-x-2">
-              <h3 className="text-[#5371FF] font-medium">California</h3>
+              <h3 className="text-black font-medium uppercase">California</h3>
               <h4>Daily Tracker</h4>
             </div>
 
             <div className="relative">
-              <button
-                className="w-7 h-7 bg-gray-200 rounded-full flex items-center justify-center"
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-              >
-                <img
-                  src={shoppingCart}
-                  alt="Toggle Categories"
-                  className="w-4 h-4"
-                />
-              </button>
+              <div className="relative group">
+                <button
+                  className="w-7 h-7 bg-gray-200 rounded-full flex items-center justify-center"
+                  onClick={() => setDropdownOpen(!dropdownOpen)}
+                >
+                  <img
+                    src={shoppingCart}
+                    alt="Toggle Categories"
+                    className="w-4 h-4"
+                  />
+                </button>
+
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
+                  Shop more items
+                </span>
+              </div>
 
               {dropdownOpen && (
                 <div className="absolute top-10 right-0 bg-white shadow-lg rounded-md p-2 border border-gray-300 z-20">
@@ -164,7 +168,7 @@ function SingleStateGraph({ state = "CA" }) {
 
           {/* Chart Section */}
           <div className="flex-1 flex flex-col justify-end">
-            <div className="h-20">
+            <div className="h-[200px] md:h-[250px] w-full">
               <Line
                 data={{
                   labels,

@@ -15,7 +15,7 @@ function SearchAnotherState() {
           </h2>
           <p className="text-base text-white/90 max-w-xl">
           It’s time to act. The rising costs of everyday goods aren’t just a nuisance—they’re a reflection of a rigged economy that puts profits over people.{' '}
-            <a href="#search" className="underline">
+            <a href="#search" className="underline underline-offset-4">
               Search again.
             </a>
           </p>

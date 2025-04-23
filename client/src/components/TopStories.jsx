@@ -36,7 +36,7 @@ const stories = [
 
 export default function TopStories() {
   return (
-    <div className="bg-[#eaeefc] rounded-3xl px-6 py-10 text-white max-w-6xl mx-2 sm:mx-auto mt-10 mb-10 ">
+    <div className="bg-[#eaeefc] rounded-3xl px-6 py-12 text-white max-w-6xl mx-2 sm:mx-auto mt-10 mb-10 ">
       <h2 className="text-sm font-semibold text-blue-600 uppercase mb-4">
         How Tariffs and Tax Breaks Drive Prices Higher
       </h2>

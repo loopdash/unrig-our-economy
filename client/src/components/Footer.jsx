@@ -10,7 +10,7 @@ import tiktok from "../assets/tiktok.png"
 
 function Footer() {
   return (
-    <footer className="bg-[#E8EA58] text-black px-6 py-12">
+    <footer className="bg-[#E8EA58] text-black px-6 py-24">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10">
         
         {/* Left Side Content */}

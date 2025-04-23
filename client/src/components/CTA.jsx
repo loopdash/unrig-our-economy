@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function CTA() {
   return (
-    <div className="bg-[#F0643C] rounded-3xl px-6 py-10 text-white max-w-6xl mx-2 sm:mx-auto mt-10 mb-10">
+    <div className="bg-[#F0643C] rounded-3xl p-12 text-white max-w-6xl mx-2 sm:mx-auto mt-10 mb-10">
       <p className="text-sm font-semibold uppercase tracking-wider mb-4">
         It’s time to unrig our economy
       </p>
@@ -13,7 +13,7 @@ function CTA() {
       <p className="text-base text-white/90 max-w-3xl">
       Since President Trump took office, the cost of everyday essentials has risen. What used to be affordable has now become a financial burden for many families. This site dives into how these price increases can affect your life, focusing on the impact of key good s— eggs, bread, milk, meat, and coffee. We’ll show you who’s responsible for these rising prices and how these costs are taking a bigger bite out of American paychecks.
       </p>
-      <Link to="/search-by-state" className="underline">
+      <Link to="/search-by-state" className="underline underline-offset-4">
           See data in my state.
         </Link>
     </div>
