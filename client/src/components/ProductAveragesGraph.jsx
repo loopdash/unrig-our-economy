@@ -54,9 +54,49 @@ const categoryIcons = {
   
 
 function ProductAveragesGraph({ state, data }) {
-  const sortedData = [...data].sort(
-    (a, b) => new Date(a.record_day) - new Date(b.record_day)
-  );
+
+  const manualBackfill = [
+    {
+      record_day: "2025-01-15",
+      product_category: "Egg 12ct",
+      average_price: 2.35,
+    },
+    {
+      record_day: "2025-01-30",
+      product_category: "Beef 1lb",
+      average_price: 5.25,
+    },
+    {
+      record_day: "2025-01-15",
+      product_category: "Coffee 11 oz",
+      average_price: 2.35,
+    },
+    {
+      record_day: "2024-12-30",
+      product_category: "Coffee 11 oz",
+      average_price: 2.25,
+    },
+    {
+      record_day: "2024-12-15",
+      product_category: "Egg 12ct",
+      average_price: 2.35,
+    },
+    {
+      record_day: "2024-12-30",
+      product_category: "Beef 1lb",
+      average_price: 5.25,
+    },
+  ];
+
+
+  const mergedData = [...data, ...manualBackfill];
+
+
+const sortedData = mergedData.sort(
+  (a, b) => new Date(a.record_day) - new Date(b.record_day)
+);
+
+
   const labels = [...new Set(sortedData.map((entry) => entry.record_day))];
   
   // Removing per client's request.
@@ -74,6 +114,8 @@ function ProductAveragesGraph({ state, data }) {
   console.log("CATEGORIES:", categories);
 
 
+
+  
   // ✅ Default to eggs if no category is selected
   const [selectedCategories, setSelectedCategories] = useState(["Egg 12ct"]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -258,9 +300,29 @@ function ProductAveragesGraph({ state, data }) {
               },
             },
             scales: {
-              x: { display: false },
-              y: { display: false },
+              x: {
+                display: true,
+                ticks: {
+                  callback: function (value, index, ticks) {
+                    const rawDate = this.getLabelForValue(value); // e.g. "2025-03-06"
+                    const [year, month] = rawDate.split("-");
+                    const dateObj = new Date(`${year}-${month}-01`);
+                    return dateObj.toLocaleDateString("en-US", {
+                      month: "short",
+                      year: "numeric",
+                    });
+                  },
+                  maxTicksLimit: 2,
+                  autoSkip: true,
+                },
+                grid: { display: false },
+                border: { display: false },
+              },
+              y: {
+                display: false,
+              },
             },
+            
             elements: {
               line: { tension: 0.4 },
               point: { radius: 3, backgroundColor: "black" },
