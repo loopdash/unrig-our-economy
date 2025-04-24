@@ -6,52 +6,46 @@ import coffee from "../assets/coffee.png";
 
 const stories = [
   {
-    title: "The Real Reason Prices Are Rising",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum. Lorem ipsum...",
     outlet: "OUTLET",
-    date: "Everyday costs are climbing, and working families are feeling the squeeze. But why? The answer lies in government policies that put corporate profits first—through tariffs that drive prices up and tax breaks that benefit big corporations instead of everyday Americans.",
+    date: "04.27.25",
     image: yolk,
   },
   {
-    title:
-      "Tariffs That Raise Prices on Families",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum. Lorem ipsum...",
     outlet: "OUTLET",
-    date: "Tariffs are taxes on imported goods, and when they go up, so do the prices we pay at the store. These government-imposed costs disrupt supply chains, make production more expensive, and leave American consumers footing the bill. Instead of addressing inflation, policies like trade wars and tariffs on essential goods only make it harder for working families to make ends meet.",
+    date: "04.27.25",
     image: steak,
   },
   {
-    title:
-      "Tax Breaks for Big Corporations, Not You",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum. Lorem ipsum...",
     outlet: "OUTLET",
-    date: "At the same time, instead of working to lower everyday costs, Republicans are prioritizing tax breaks for massive corporations—including the very companies that are hiking prices on consumers. While working families struggle with the rising cost of food, gas, and rent, these corporations are pocketing billions in profits—thanks to tax policies designed to benefit the wealthy.",
+    date: "04.27.25",
     image: bread,
   },
   {
-    title:
-      "A Better Path Forward",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum. Lorem ipsum...",
     outlet: "OUTLET",
-    date: "Instead of tax giveaways for the biggest corporations and tariffs that make essentials more expensive, we need policies that lower costs for families—by addressing corporate price gouging, strengthening supply chains, and ensuring the tax system works for everyone, not just the rich.",
-    image: coffee,
+    date: "04.27.25",
+    image: bread,
   },
 ];
 
 export default function TopStories() {
   return (
     <div className="bg-[#eaeefc] rounded-3xl px-6 py-12 text-white max-w-6xl mx-2 sm:mx-auto mt-10 mb-10 ">
-      <h2 className="text-sm font-semibold text-blue-600 uppercase mb-4">
-        How Tariffs and Tax Breaks Drive Prices Higher
+      <h2 className="text-md font-bold text-blue-600 uppercase mb-4">
+       Top Stories
       </h2>
       <div className="space-y-6">
         {stories.map((story, index) => (
           <div key={index} className="flex items-start justify-between">
             <div className="flex-1">
-              <p className="text-lg font-bold text-black mb-1 leading-snug">
+              <p className="text-xl font-bold text-black mb-1 leading-snug">
                 {story.title}
               </p>
-              {/* <p className="text-sm font-semibold text-[#6c757d] tracking-wide">
-                {story.outlet} <span className="ml-2">{story.date}</span>
-              </p> */}
-              <p className="text-sm font-semibold text-[#6c757d] tracking-wide">
-                {story.date}
+              <p className="text-sm font-bold text-[#6c757d] tracking-wide text-[#4D5440]">
+                {story.outlet} <span className="ml-2 font-medium">{story.date}</span>
               </p>
             </div>
             <img src={story.image} alt="story icon" className="w-20 h-20 ml-4 text-3xl" />

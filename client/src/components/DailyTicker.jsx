@@ -6,8 +6,8 @@ import { AnimatedPrice } from "./AnimatedPrice";
 
 function DailyTicker({ texasPrice, californiaPrice, virginiaPrice }) {
   return (
-    <div className="w-full px-4 py-4 sm:px-10 md:px-[100px] flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0 justify-center items-center bg-black">
-      <p style={{ color: "white", fontWeight: 600, fontSize: "x-small" }}>TODAY</p>
+    <div className="w-full px-4 py-4 sm:px-10 md:px-[100px] flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0 justify-center items-center bg-[#231F21]">
+      <p style={{ color: "white", fontWeight: 600 }} className="text-sm">TODAY</p>
 
       {texasPrice !== null && (
         <div className="flex items-center space-x-1">

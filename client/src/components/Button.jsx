@@ -4,7 +4,7 @@ function Button({ href, text, color = '#000', bgColor = '#5371FF', textColor = '
   return (
     <a
       href={href}
-      className={`inline-block w-[131px] h-[40px] min-w-full text-center leading-[40px] uppercase transition-transform duration-200 hover:scale-105`}
+      className={`inline-block w-[131px] h-[40px] min-w-full text-center leading-[40px] uppercase transition-transform duration-200 hover:scale-105 font-bold`}
       style={{
         backgroundColor: bgColor,
         color: textColor,

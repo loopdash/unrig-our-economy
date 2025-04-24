@@ -45,6 +45,35 @@ function SingleStateGraph({ state = "CA" }) {
   const [selectedCategories, setSelectedCategories] = useState(["Egg 12ct"]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
+  const nationalAverages = {
+    "Egg 12ct": 1.51,
+    "Beef 1lb": 5.11,
+    "Coffee 11 oz": 2.4,
+  };
+
+  const annotationTextPlugin = {
+    id: "annotationText",
+    beforeDraw: (chart) => {
+      const { ctx, chartArea, scales } = chart;
+      const text = chart.options.plugins.annotationText?.text;
+      if (!text) return;
+
+      const selected = selectedCategories[0];
+      const avgValue = nationalAverages[selected];
+      if (!avgValue) return;
+
+      const yPosition = scales.y.getPixelForValue(avgValue) - 6;
+      const xPosition = chartArea.left + 2;
+
+      ctx.save();
+      ctx.font = "500 12px sans-serif";
+      ctx.fillStyle = "#3B82F6";
+      ctx.textAlign = "left";
+      ctx.fillText(text, xPosition, yPosition);
+      ctx.restore();
+    },
+  };
+
   useEffect(() => {
     fetchProductAverages();
   }, []);
@@ -118,7 +147,7 @@ function SingleStateGraph({ state = "CA" }) {
       {loading ? (
         <p className="mt-4">Collecting data...</p>
       ) : stateData.length > 0 ? (
-        <div className="w-full bg-[#f6f8ff] rounded-xl p-6 flex flex-col justify-between border-2 border-black">
+        <div className="w-full bg-[#f6f8ff] rounded-[38px] p-6 flex flex-col justify-between border-2 border-black">
           {/* Header */}
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center space-x-2">
@@ -172,22 +201,42 @@ function SingleStateGraph({ state = "CA" }) {
               <Line
                 data={{
                   labels,
-                  datasets: selectedCategories.map((category, index) => ({
-                    label: category,
-                    data: labels.map(
-                      (day) =>
-                        sortedData.find(
-                          (entry) =>
-                            entry.record_day === day &&
-                            entry.product_category === category
-                        )?.average_price || null
-                    ),
-                    borderColor: categoryColors[category] || "black",
-                    pointBackgroundColor: categoryColors[category] || "black",
-                    pointBorderColor: categoryColors[category] || "black",
-                    borderWidth: 2,
-                    fill: false,
-                  })),
+                  datasets: selectedCategories.flatMap((category) => {
+                    const baseColor = categoryColors[category] || "black";
+                    const nationalAvgValue = nationalAverages[category];
+
+                    return [
+                      {
+                        label: category,
+                        data: labels.map(
+                          (day) =>
+                            sortedData.find(
+                              (entry) =>
+                                entry.record_day === day &&
+                                entry.product_category === category
+                            )?.average_price || null
+                        ),
+                        borderColor: baseColor,
+                        pointBackgroundColor: baseColor,
+                        pointBorderColor: baseColor,
+                        borderWidth: 2,
+                        fill: false,
+                        spanGaps: true,
+                      },
+                      ...(nationalAvgValue
+                        ? [
+                            {
+                              label: "National Average 2000–2020",
+                              data: labels.map(() => nationalAvgValue),
+                              borderColor: "#3B82F6",
+                              borderWidth: 2,
+                              pointRadius: 0,
+                              fill: false,
+                            },
+                          ]
+                        : []),
+                    ];
+                  }),
                 }}
                 options={{
                   responsive: true,
@@ -222,6 +271,10 @@ function SingleStateGraph({ state = "CA" }) {
                         },
                       },
                     },
+                    annotationText: {
+                      display: true,
+                      text: "National Average 2000–2020",
+                    },
                   },
                   scales: {
                     x: { display: false },
@@ -229,9 +282,10 @@ function SingleStateGraph({ state = "CA" }) {
                   },
                   elements: {
                     line: { tension: 0.4 },
-                    point: { radius: 3, backgroundColor: "black" },
+                    point: { radius: 3 },
                   },
                 }}
+                plugins={[annotationTextPlugin]}
               />
             </div>
 

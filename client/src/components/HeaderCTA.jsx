@@ -76,12 +76,12 @@ function HeaderCTA() {
   }, [selectedState]);
 
   return (
-    <div className="w-full h-auto gap-4 p-6 sm:p-10 md:p-16 max-w-6xl mx-auto">
-      <h1 className="font-barlow font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[75px] leading-tight tracking-normal">
+    <div className="w-full h-auto gap-4 p-6 sm:p-10 md:p-16 max-w-6xl mx-auto leading-normal">
+      <h1 className="font-barlow font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[75px] tracking-normal">
         The price of eggs 🥚 in
         <span className="ml-2 mr-2">
           <select
-            className="border-b-4 border-dashed border-blue-400 p-2 rounded bg-white text-black mt-2"
+            className="border-b-4 border-dashed border-[#5371FF] p-2 rounded bg-white text-black mt-2"
             value={selectedState}
             onChange={(e) => setSelectedState(e.target.value)}
           >
@@ -107,7 +107,7 @@ function HeaderCTA() {
         )}
       </h1>
 
-      <section className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 mt-2">
+      <section className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 mt-6">
         <p className="text-[#4D5440]">
           Prices are changing, and you might not like what you see.
         </p>
