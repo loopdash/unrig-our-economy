@@ -92,7 +92,7 @@ function SingleFredDataGraph() {
           <div className="flex items-center space-x-2 mb-4">
             <h3 className="text-lg font-bold text-[#5371FF]">
               {categoryIcons[category] || "🥚"}{" "}
-              {category.charAt(0).toUpperCase() + category.slice(1)} Price Trend
+              {category.charAt(0).toUpperCase() + category.slice(1)} Prices
             </h3>
           </div>
 

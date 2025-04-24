@@ -84,7 +84,7 @@ function Home() {
           </p>
 
           <a
-            href={"/search-by-state"}
+            href={"/search-by-state-fred"}
   className="inline-block w-full md:w-1/2 text-center leading-[40px] uppercase transition-transform duration-200 hover:scale-105"
             style={{
               backgroundColor: "black",
@@ -119,7 +119,7 @@ function Home() {
       How the prices of eggs, milk, meat, bread, and coffee have soared under his watch.
     </p>
     <Button
-      href={"/search-by-state"}
+      href={"/search-by-state-fred"}
       text={"See State-level grocery prices"}
       color={"#E8EA58"}
       textColor="black"

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import searchArrow from "../assets/search-arrow.png";
-import directionArrow from "../assets/direction-arrow.png";
+import searchArrow from "../assets/white-arrow.png";
+import directionArrow from "../assets/orange-arrow.png";
 import { AnimatedPrice } from "./AnimatedPrice";
 
 function DailyTicker({ texasPrice, californiaPrice, virginiaPrice }) {
@@ -13,7 +13,7 @@ function DailyTicker({ texasPrice, californiaPrice, virginiaPrice }) {
         <div className="flex items-center space-x-1">
           <span className="text-white">
             Eggs in Texas
-            <span className="pl-2 text-red-600 font-semibold">$
+            <span className="pl-2 text-[#F16941] font-semibold">$
               <AnimatedPrice end={Number(texasPrice)} />
             </span>
           </span>
@@ -25,7 +25,7 @@ function DailyTicker({ texasPrice, californiaPrice, virginiaPrice }) {
         <div className="flex items-center space-x-1">
           <span className="text-white">
             Eggs in California
-            <span className="pl-2 text-red-600 font-semibold">$
+            <span className="pl-2 text-[#F16941] font-semibold">$
               <AnimatedPrice end={Number(californiaPrice)} />
             </span>
           </span>
@@ -37,7 +37,7 @@ function DailyTicker({ texasPrice, californiaPrice, virginiaPrice }) {
         <div className="flex items-center space-x-1">
           <span className="text-white">
             Eggs in Virginia
-            <span className="pl-2 text-red-600 font-semibold">$
+            <span className="pl-2 text-[#F16941] font-semibold">$
               <AnimatedPrice end={Number(virginiaPrice)} />
             </span>
           </span>
@@ -45,7 +45,7 @@ function DailyTicker({ texasPrice, californiaPrice, virginiaPrice }) {
         </div>
       )}
 
-      <Link to="/search-by-state" className="flex items-center space-x-1 underline underline-offset-4 text-white font-medium">
+      <Link to="/search-by-state-fred" className="flex items-center space-x-1 underline underline-offset-4 text-white font-medium">
         <span>Search by my state</span>
         <img src={searchArrow} alt="Search arrow" className="w-4 h-4" />
       </Link>

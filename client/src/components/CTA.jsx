@@ -13,7 +13,7 @@ function CTA() {
       <p className="text-base text-white/90 max-w-3xl">
       Since President Trump took office, the cost of everyday essentials has risen. What used to be affordable has now become a financial burden for many families. This site dives into how these price increases can affect your life, focusing on the impact of key good s— eggs, bread, milk, meat, and coffee. We’ll show you who’s responsible for these rising prices and how these costs are taking a bigger bite out of American paychecks.
       </p>
-      <Link to="/search-by-state" className="underline underline-offset-4">
+      <Link to="/search-by-state-fred" className="underline underline-offset-4">
           See data in my state.
         </Link>
     </div>

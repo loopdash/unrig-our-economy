@@ -15,7 +15,7 @@ function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6">
-          <a href="/search-by-state" className="flex items-center space-x-1 underline underline-offset-4">
+          <a href="/search-by-state-fred" className="flex items-center space-x-1 underline underline-offset-4">
             <span>See grocery prices in my state!</span>
           </a>
         </nav>
@@ -47,7 +47,7 @@ function Header() {
       {/* Mobile Nav Dropdown */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-[#E8EA58] px-6 py-4 text-black">
-          <a href="/search-by-state" className="block py-2 underline underline-offset-4">
+          <a href="/search-by-state-fred" className="block py-2 underline underline-offset-4">
             See grocery prices in my state!
           </a>
         </div>
