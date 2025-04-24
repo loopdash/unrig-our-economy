@@ -7,7 +7,8 @@ import Header from './components/Header';
 import SearchByState from './pages/SearchByState';
 import ProtectedRoute from './components/ProtectedRoute'
 import Footer from './components/Footer';
-import Subscribe from './components/Subscribe';
+import PerState from './pages/PerState';
+import SearchByStateWithFred from './pages/SearchByStateWithFred';
 
 function App() {
     return (
@@ -22,6 +23,8 @@ function App() {
                     </ProtectedRoute>} 
                 />
                 <Route path="/search-by-state" element={<SearchByState />} />
+                <Route path="/per-state" element={<PerState />} />
+                <Route path="/search-by-state-fred" element={<SearchByStateWithFred />} />
                 <Route path="/errors/get" element={<ErrorLogs />} />
             </Routes>
         </Router>

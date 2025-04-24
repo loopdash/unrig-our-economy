@@ -58,9 +58,19 @@ function ProductAveragesGraph({ state, data }) {
     (a, b) => new Date(a.record_day) - new Date(b.record_day)
   );
   const labels = [...new Set(sortedData.map((entry) => entry.record_day))];
-  const categories = [
-    ...new Set(sortedData.map((entry) => entry.product_category)),
-  ];
+  
+  // Removing per client's request.
+  // const categories = [
+  //   ...new Set(sortedData.map((entry) => entry.product_category)),
+  // ];
+
+  const excludedCategories = ["Milk 1gal", "Bread 20oz", "Bread"];
+  const categories = [...new Set(
+    sortedData
+      .map((entry) => entry.product_category)
+      .filter((cat) => !excludedCategories.includes(cat))
+  )];
+
   console.log("CATEGORIES:", categories);
 
 
