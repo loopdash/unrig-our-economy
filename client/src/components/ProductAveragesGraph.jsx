@@ -281,6 +281,9 @@ function ProductAveragesGraph({ state, data }) {
                     return ""; // suppress label if same month
                   },
                   autoSkip: false, // let our custom logic control it
+                  maxRotation: 0,   // Make sure it's flat
+                  minRotation: 0,
+
                 },                          
                 grid: { display: false },
                 border: { display: false },
