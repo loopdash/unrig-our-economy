@@ -9,13 +9,13 @@ function Modal({ isOpen, onClose }) {
       onClick={onClose} // Clicking background closes modal
     >
       <div
-        className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full"
+        className="bg-white p-6 rounded-[28px] shadow-lg max-w-md w-full"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
       >
-        <h2 className="uppercase" style={{ color: "black", fontWeight: 600 , fontSize: "small"}}>
+        <h2 className="uppercase font-bold" style={{ color: "black", fontWeight: 600 , fontSize: "small"}}>
           How Did We Arrive at This Number?
         </h2>
-        <p>
+        <p className=" mt-2 pb-4 font-normal text-[32px] leading-tight font-barlow">
           Our price calculation is based on historical trends, real-time
           supplier data, and market analysis to provide accurate pricing
           insights.

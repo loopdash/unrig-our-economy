@@ -15,7 +15,7 @@ function Footer() {
 <div className="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10">
   {/* Left Side: 60% width on large screens */}
   <div className="w-full lg:w-[55%]">
-    <h2 className="text-[5rem] font-bold mb-6 leading-tight">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] font-bold mb-6 leading-tight">
       Our Eggconomy is Rigged.
     </h2>
     <p className="mb-6 max-w-md text-lg">

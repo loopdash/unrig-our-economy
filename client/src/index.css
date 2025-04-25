@@ -26,6 +26,13 @@ code {
 
 }
 
+.at-text input {
+  background-color:#F0F3FF !important ;
+  border-top: none  !important;
+  border-left: none  !important;
+  border-right: none  !important;
+
+}
 #NVSignupForm1226316-ContactInformation, .at-form-submit {
   background-color: #F0F3FF !important;
   padding-bottom: 0px;
@@ -35,7 +42,6 @@ code {
   background-color: black !important;
   text-transform: uppercase !important;
   transition: transform 0.2s ease !important;
-  font-weight: bold !important;
 }
 
 .at-submit:hover {

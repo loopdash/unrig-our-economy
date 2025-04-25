@@ -32,7 +32,7 @@ const categoryIcons = {
 };
 
 const categoryColors = {
-  "Egg 12ct": "#E8EA58", // eggshell white
+  "Egg 12ct": "#F16941", // eggshell white
   "Milk 1gal": "#A5D8FF", // soft blue
   "Bread 20oz": "#D2B48C", // light brown
   "Beef 1lb": "#8B0000", // dark red
