@@ -22,7 +22,7 @@ function Modal({ isOpen, onClose }) {
         </p>
         <button
           onClick={onClose}
-          className="mt-4 px-4 py-2 bg-[#E8EA58] text-[#231F21] transition-transform duration-200 transform hover:scale-105 uppercase bold"
+          className="mt-4 px-4 py-2 bg-[#E8EA58] text-[#231F21] transition-transform duration-200 transform hover:scale-105 uppercase font-bold"
 
         >
           Got it!

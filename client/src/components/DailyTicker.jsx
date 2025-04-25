@@ -6,12 +6,12 @@ import { AnimatedPrice } from "./AnimatedPrice";
 
 function DailyTicker({ texasPrice, californiaPrice, virginiaPrice }) {
   return (
-    <div className="w-full px-4 py-4 sm:px-10 md:px-[100px] flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0 justify-center items-center bg-[#231F21]">
+    <div className="w-full px-4 py-6 sm:px-10 md:px-[100px] flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0 justify-center items-center bg-[#231F21]">
       <p style={{ color: "white", fontWeight: 600 }} className="text-sm">TODAY</p>
 
       {texasPrice !== null && (
         <div className="flex items-center space-x-1">
-          <span className="text-white">
+          <span className="text-white text-lg">
             Eggs in Texas
             <span className="pl-2 text-[#F16941] font-semibold">$
               <AnimatedPrice end={Number(texasPrice)} />
@@ -23,7 +23,7 @@ function DailyTicker({ texasPrice, californiaPrice, virginiaPrice }) {
 
       {californiaPrice !== null && (
         <div className="flex items-center space-x-1">
-          <span className="text-white">
+          <span className="text-white text-lg">
             Eggs in California
             <span className="pl-2 text-[#F16941] font-semibold">$
               <AnimatedPrice end={Number(californiaPrice)} />
@@ -35,7 +35,7 @@ function DailyTicker({ texasPrice, californiaPrice, virginiaPrice }) {
 
       {virginiaPrice !== null && (
         <div className="flex items-center space-x-1">
-          <span className="text-white">
+          <span className="text-white text-lg">
             Eggs in Virginia
             <span className="pl-2 text-[#F16941] font-semibold">$
               <AnimatedPrice end={Number(virginiaPrice)} />
@@ -45,7 +45,7 @@ function DailyTicker({ texasPrice, californiaPrice, virginiaPrice }) {
         </div>
       )}
 
-      <Link to="/search-by-state-fred" className="flex items-center space-x-1 underline underline-offset-4 text-white font-medium">
+      <Link to="/search-by-state-fred" className="flex items-center space-x-1 underline underline-offset-4 text-white text-lg">
         <span>Search by my state</span>
         <img src={searchArrow} alt="Search arrow" className="w-4 h-4" />
       </Link>

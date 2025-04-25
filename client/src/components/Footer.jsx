@@ -44,7 +44,7 @@ function Footer() {
 
   {/* Right Side: 40% width on large screens */}
   <div className="w-full lg:w-[45%] flex flex-col items-end justify-center text-right">
-    <img src={brokenEgg} alt="Broken Egg" className="w-96 mb-6" />
+    <img src={brokenEgg} alt="Broken Egg" className="w-105 mb-6" />
     <div className="flex justify-end items-center space-x-4 text-2xl">
             <a
               href="https://twitter.com/unrigoureconomy"

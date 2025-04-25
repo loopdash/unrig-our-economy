@@ -76,8 +76,8 @@ function HeaderCTA() {
   }, [selectedState]);
 
   return (
-    <div className="w-full h-auto gap-4 p-6 sm:p-10 md:p-16 max-w-6xl mx-auto leading-normal">
-      <h1 className="font-barlow font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[75px] tracking-normal">
+    <div className="w-full h-auto gap-4 p-6 sm:p-10 md:p-10 max-w-6xl mx-auto leading-normal">
+      <h1 className="font-barlow font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[75px] tracking-normal md:leading-tight">
         The price of eggs 🥚 in
         <span className="ml-2 mr-2">
           <select

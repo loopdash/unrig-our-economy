@@ -78,7 +78,7 @@ function SingleProductSingleStateGraph({ state, data }) {
     daysAgo === 1 ? "since yesterday" : `from ${daysAgo} days ago`;
 
   return (
-    <div className="relative bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 border border-gray-200">
+    <div className="relative bg-[#FBFBFF] rounded-xl shadow-lg p-4 space-y-3 border border-gray-200">
       {/* Top Row */}
       <div className="flex justify-between items-center">
         <div className="flex items-center space-x-2">

@@ -97,7 +97,7 @@ function FredDataGraph() {
   }));
 
   return (
-<div className="relative bg-[#FDFDFC] border-[#231F21] shadow-xl p-4 space-y-3 border rounded-[24px]">
+<div className="relative bg-[#FBFBFF] border-[#231F21] shadow-xl p-4 space-y-3 border rounded-[24px]">
 
       {/* Top Row - Title & Category Selector */}
       <div className="flex justify-between items-center">

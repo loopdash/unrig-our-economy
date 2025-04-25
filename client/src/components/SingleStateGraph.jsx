@@ -147,7 +147,7 @@ function SingleStateGraph({ state = "CA" }) {
       {loading ? (
         <p className="mt-4">Collecting data...</p>
       ) : stateData.length > 0 ? (
-        <div className="w-full bg-[#f6f8ff] rounded-[38px] p-6 flex flex-col justify-between border-2 border-[#231F21]">
+        <div className="w-full bg-[#FBFBFF] rounded-[38px] p-6 flex flex-col justify-between border-2 border-[#231F21]">
           {/* Header */}
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center space-x-2">

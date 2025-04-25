@@ -33,7 +33,7 @@ const stories = [
 
 export default function TopStories() {
   return (
-    <div className="bg-[#eaeefc] rounded-3xl px-6 py-12 text-white max-w-6xl mx-2 sm:mx-auto mt-10 mb-10 ">
+    <div className="bg-[#eaeefc] rounded-3xl px-16 py-12  text-white max-w-6xl mx-2 sm:mx-auto mt-10 mb-10 ">
       <h2 className="text-md font-bold text-blue-600 uppercase mb-4">
        Top Stories
       </h2>

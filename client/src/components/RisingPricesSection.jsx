@@ -10,7 +10,8 @@ export default function RisingPricesSection() {
       <div className="max-w-5xl mx-auto space-y-16">
         {/* Headline + Subtitle */}
         <div className="flex flex-col items-center text-center space-y-4">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] font-bold mb-6 leading-tight text-[#F0633B] px-12" >
+        <h1 className=" font-bold mb-6 leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] font-bold mb-6 leading-tight text-[#F0633B] px-12">
+
             The Real Reason Prices Are Rising
           </h1>
           <p className="text-md sm:text-lg font-medium max-w-3xl text-black">
