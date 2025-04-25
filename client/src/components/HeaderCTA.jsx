@@ -81,7 +81,7 @@ function HeaderCTA() {
         The price of eggs 🥚 in
         <span className="ml-2 mr-2">
           <select
-            className="border-b-4 border-dashed border-[#5371FF] p-2 rounded bg-white text-black mt-2"
+            className="border-b-4 border-dashed border-[#5371FF] p-2 rounded bg-white text-[#231F21] mt-2"
             value={selectedState}
             onChange={(e) => setSelectedState(e.target.value)}
           >

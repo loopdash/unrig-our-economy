@@ -6,7 +6,7 @@ function Header() {
 
   return (
     <header className="w-full text-white py-4 shadow-lg bg-[#E8EA58]">
-      <div className="container mx-auto flex justify-between items-center px-6 text-black">
+      <div className="container mx-auto flex justify-between items-center px-6 text-[#231F21]">
         {/* Logo */}
         <a className="flex flex-row items-center" href="/">
           <img src={unrigLogo} alt="Unrig Logo" className="h-10 mr-2" />
@@ -24,7 +24,7 @@ function Header() {
         <div className="md:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-black focus:outline-none"
+            className="text-[#231F21] focus:outline-none"
           >
             <svg
               className="w-6 h-6"
@@ -46,7 +46,7 @@ function Header() {
 
       {/* Mobile Nav Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#E8EA58] px-6 py-4 text-black">
+        <div className="md:hidden bg-[#E8EA58] px-6 py-4 text-[#231F21]">
           <a href="/search-by-state-fred" className="block py-2 underline underline-offset-4">
             See grocery prices in my state!
           </a>

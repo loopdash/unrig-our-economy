@@ -67,7 +67,7 @@ function SingleStateGraph({ state = "CA" }) {
 
       ctx.save();
       ctx.font = "500 12px sans-serif";
-      ctx.fillStyle = "#3B82F6";
+      ctx.fillStyle = "#5471FF";
       ctx.textAlign = "left";
       ctx.fillText(text, xPosition, yPosition);
       ctx.restore();
@@ -147,11 +147,11 @@ function SingleStateGraph({ state = "CA" }) {
       {loading ? (
         <p className="mt-4">Collecting data...</p>
       ) : stateData.length > 0 ? (
-        <div className="w-full bg-[#f6f8ff] rounded-[38px] p-6 flex flex-col justify-between border-2 border-black">
+        <div className="w-full bg-[#f6f8ff] rounded-[38px] p-6 flex flex-col justify-between border-2 border-[#231F21]">
           {/* Header */}
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center space-x-2">
-              <h3 className="text-black font-medium uppercase">California</h3>
+              <h3 className="text-[#231F21] font-medium uppercase">California</h3>
               <h4>Daily Tracker</h4>
             </div>
 
@@ -168,7 +168,7 @@ function SingleStateGraph({ state = "CA" }) {
                   />
                 </button>
 
-                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
+                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-[#231F21] rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
                   Shop more items
                 </span>
               </div>
@@ -228,7 +228,7 @@ function SingleStateGraph({ state = "CA" }) {
                             {
                               label: "National Average 2000–2020",
                               data: labels.map(() => nationalAvgValue),
-                              borderColor: "#3B82F6",
+                              borderColor: "#5471FF",
                               borderWidth: 2,
                               pointRadius: 0,
                               fill: false,
@@ -290,8 +290,8 @@ function SingleStateGraph({ state = "CA" }) {
             </div>
 
             {/* Dashed Line at Bottom */}
-            <div className="w-full border-t-2 border-dashed border-blue-400 mt-4"></div>
-          </div>
+            <div className="w-full border-t-2 border-dashed border-[#5471FF] mt-2"></div>
+            </div>
         </div>
       ) : (
         <p className="mt-4">

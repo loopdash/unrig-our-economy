@@ -41,7 +41,7 @@ export default function TopStories() {
         {stories.map((story, index) => (
           <div key={index} className="flex items-start justify-between">
             <div className="flex-1">
-              <p className="text-xl font-bold text-black mb-1 leading-snug">
+              <p className="text-xl font-bold text-[#231F21] mb-1 leading-snug">
                 {story.title}
               </p>
               <p className="text-sm font-bold text-[#6c757d] tracking-wide text-[#4D5440]">

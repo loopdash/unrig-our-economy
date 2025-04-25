@@ -97,10 +97,8 @@ function FredDataGraph() {
   }));
 
   return (
-    <div
-      className="relative w-full sm:min-w-[40vw] bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 border border-black
-"
-    >
+<div className="relative bg-[#FDFDFC] border-[#231F21] shadow-xl p-4 space-y-3 border rounded-[24px]">
+
       {/* Top Row - Title & Category Selector */}
       <div className="flex justify-between items-center">
         <div className="flex items-center justify-center space-x-2">
@@ -125,7 +123,7 @@ function FredDataGraph() {
               />
             </button>
 
-            <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
+            <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-[#231F21] rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
               Shop more items
             </span>
           </div>
@@ -230,7 +228,7 @@ function FredDataGraph() {
       </div>
 
       {/* Bottom Dashed Line */}
-      <div className="w-full border-t-2 border-dashed border-blue-400 mt-2"></div>
+      <div className="w-full border-t-2 border-dashed border-[#5471FF] mt-2"></div>
     </div>
   );
 }

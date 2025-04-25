@@ -31,7 +31,7 @@ const categoryIcons = {
 };
 
 const categoryColors = {
-  egg: "#E8EA58",
+  egg: "#F16941",
   milk: "#A5D8FF",
   bread: "#D2B48C",
   beef: "#8B0000",
@@ -70,84 +70,89 @@ function SingleFredDataGraph() {
 
   return (
     <div className="grid grid-cols-1 gap-6 w-full max-w-6xl mx-auto">
-  {Object.entries(groupedData)
-    .filter(([category]) => ["egg", "beef", "coffee"].includes(category))
-    .map(([category, dataMap]) => {
-      const dataset = {
-        label: category,
-        data: labels.map((date) => dataMap[date] ?? null),
-        borderColor: categoryColors[category] || "black",
-        pointBackgroundColor: categoryColors[category] || "black",
-        pointBorderColor: categoryColors[category] || "black",
-        borderWidth: 2,
-        fill: false,
-        spanGaps: true,
-      };
+      {Object.entries(groupedData)
+        .filter(([category]) => ["egg", "beef", "coffee"].includes(category))
+        .map(([category, dataMap]) => {
+          const dataset = {
+            label: category,
+            data: labels.map((date) => dataMap[date] ?? null),
+            borderColor: categoryColors[category] || "black",
+            pointBackgroundColor: categoryColors[category] || "black",
+            pointBorderColor: categoryColors[category] || "black",
+            borderWidth: 2,
+            fill: false,
+            spanGaps: true,
+          };
 
-      return (
-        <div
-          key={category}
-          className="bg-[#f6f8ff] rounded-xl shadow-lg p-4 border border-black"
-        >
-          <div className="flex items-center space-x-2 mb-4">
-            <h3 className="text-lg font-bold text-[#5371FF]">
-              {categoryIcons[category] || "🥚"}{" "}
-              {category.charAt(0).toUpperCase() + category.slice(1)} Prices
-            </h3>
-          </div>
+          return (
+            <div
+              key={category}
+              className="border-[#231F21] shadow-xl p-4 space-y-3 border rounded-[24px]"
+            >
+              <div className="flex items-center space-x-2 mb-4 p-6">
+                <h3 className="text-4xl font-bold text-[#231F21]">
+                  National {categoryIcons[category] || "🥚"}{" "}
+                  <span className="font-normal">
+                    {" "}
+                    {category.charAt(0).toUpperCase() + category.slice(1)}{" "}
+                    Prices
+                  </span>
+                </h3>
+              </div>
 
-          <div className="flex-grow min-h-[500px]">
-            <Line
-              data={{ labels, datasets: [dataset] }}
-              options={{
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                  legend: { display: false },
-                  tooltip: {
-                    callbacks: {
-                      title: (tooltipItems) => {
-                        const rawDate = tooltipItems[0].label;
-                        const [y, m, d] = rawDate.split("-");
-                        return `${new Date(`${y}-${m}-${d}T12:00:00`).toLocaleDateString("en-US", {
-                          month: "short",
-                          year: "numeric",
-                        })}`;
-                      },
-                      label: (tooltipItem) => {
-                        const price = tooltipItem.raw?.toFixed(2);
-                        return `$${price}`;
+              <div className="flex-grow min-h-[500px]">
+                <Line
+                  data={{ labels, datasets: [dataset] }}
+                  options={{
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                      legend: { display: false },
+                      tooltip: {
+                        callbacks: {
+                          title: (tooltipItems) => {
+                            const rawDate = tooltipItems[0].label;
+                            const [y, m, d] = rawDate.split("-");
+                            return `${new Date(
+                              `${y}-${m}-${d}T12:00:00`
+                            ).toLocaleDateString("en-US", {
+                              month: "short",
+                              year: "numeric",
+                            })}`;
+                          },
+                          label: (tooltipItem) => {
+                            const price = tooltipItem.raw?.toFixed(2);
+                            return `$${price}`;
+                          },
+                        },
                       },
                     },
-                  },
-                },
-                scales: {
-                  x: {
-                    ticks: {
-                      callback: function (val) {
-                        const label = this.getLabelForValue(val);
-                        return new Date(label).getFullYear();
+                    scales: {
+                      x: {
+                        ticks: {
+                          callback: function (val) {
+                            const label = this.getLabelForValue(val);
+                            return new Date(label).getFullYear();
+                          },
+                          autoSkip: true,
+                          maxTicksLimit: 10,
+                        },
+                        grid: { display: false },
+                        border: { display: false },
                       },
-                      autoSkip: true,
-                      maxTicksLimit: 10,
+                      y: { display: false },
                     },
-                    grid: { display: false },
-                    border: { display: false },
-                  },
-                  y: { display: false },
-                },
-                elements: {
-                  line: { tension: 0.4 },
-                  point: { radius: 3 },
-                },
-              }}
-            />
-          </div>
-        </div>
-      );
-    })}
-</div>
-
+                    elements: {
+                      line: { tension: 0.4 },
+                      point: { radius: 3 },
+                    },
+                  }}
+                />
+              </div>
+            </div>
+          );
+        })}
+    </div>
   );
 }
 

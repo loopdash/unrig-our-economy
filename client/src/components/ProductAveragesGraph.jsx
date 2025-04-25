@@ -43,7 +43,7 @@ const categoryIcons = {
 };
 
 const categoryColors = {
-  egg12ct: "#E8EA58",
+  egg12ct: "#F16941",
   milk1gal: "#A5D8FF",
   bread20oz: "#D2B48C",
   beef1lb: "#8B0000",
@@ -99,11 +99,11 @@ function ProductAveragesGraph({ state, data }) {
   });
 
   return (
-    <div className="relative bg-[#f6f8ff] rounded-xl shadow-lg p-4 space-y-3 border border-gray-200">
-      <div className="flex justify-between items-center">
+<div className="relative bg-[#FDFDFC] border-[#231F21] shadow-xl p-4 space-y-3 border rounded-[24px]">
+<div className="flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 bg-black rounded-full"></div>
-          <h3 className="text-gray-800 font-medium">{state}</h3>
+          <div className="w-3 h-3 bg-[#231F21] rounded-full"></div>
+          <h3 className="text-[#231F21] text-xl font-semibold leading-tight font-barlow">{state}</h3>
         </div>
 
         <div className="relative">
@@ -118,7 +118,7 @@ function ProductAveragesGraph({ state, data }) {
                 className="w-4 h-4"
               />
             </button>
-            <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
+            <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-[#231F21] rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
               Shop more items
             </span>
           </div>
@@ -146,27 +146,33 @@ function ProductAveragesGraph({ state, data }) {
       </div>
 
       <div className="space-y-2">
-        {categoryStats.map(
-          ({ category, latestPrice, percentageChange, timeAgoText }) => (
-            <div key={category} className="flex items-center space-x-2">
-              <span className="text-lg">
-                {categoryIcons[normalizeCategory(category)] || "🥚"}
-              </span>
-              {percentageChange > 0 && (
-                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded relative group cursor-pointer">
-                  +{percentageChange}%
-                  <span className="absolute left-1/2 transform -translate-x-1/2 mt-[1rem] w-max bg-black text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                    {timeAgoText}
-                  </span>
-                </span>
-              )}
-              <span className="text-blue-600 text-sm font-semibold">
-                ${latestPrice.toFixed(2)}
-              </span>
-            </div>
-          )
+  {categoryStats.map(
+    ({ category, latestPrice, percentageChange, timeAgoText }) => (
+      <div key={category} className="flex items-center space-x-3">
+        {/* 🥚 Emoji - bump size */}
+        <span className="text-4xl">
+          {categoryIcons[normalizeCategory(category)] || "🥚"}
+        </span>
+
+        {/* +% Badge - bump size */}
+        {percentageChange > 0 && (
+          <span className="bg-orange-500 text-white text-sm px-3 py-1 rounded relative group cursor-pointer font-semibold">
+            +{percentageChange}%
+            <span className="absolute left-1/2 transform -translate-x-1/2 mt-[1rem] w-max bg-[#231F21] text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+              {timeAgoText}
+            </span>
+          </span>
         )}
+
+        {/* Price - bump size, change to orange */}
+        <span className="text-[#F16941] text-lg font-bold">
+          ${latestPrice.toFixed(2)}
+        </span>
       </div>
+    )
+  )}
+</div>
+
 
       <div className="h-60">
         <Line
@@ -207,7 +213,7 @@ function ProductAveragesGraph({ state, data }) {
                         {
                           label: "National Average 2000–2020",
                           data: labels.map(() => nationalAvgValue),
-                          borderColor: "#3B82F6",
+                          borderColor: "#5471FF",
                           borderWidth: 2,
                           pointRadius: 0,
                           fill: false,
@@ -314,12 +320,11 @@ function ProductAveragesGraph({ state, data }) {
                 const avgValue = nationalAverages[selected];
                 if (!avgValue) return;
           
-                const yPosition = scales.y.getPixelForValue(avgValue) - 6; // slightly above line
-                const xPosition = chartArea.left + 2; // align left with padding
-          
+                const yPosition = scales.y.getPixelForValue(avgValue) - 8; // slightly above line
+                const xPosition = scales.x.left + 4;          
                 ctx.save();
                 ctx.font = "500 12px sans-serif";
-                ctx.fillStyle = "#3B82F6";
+                ctx.fillStyle = "#5471FF";
                 ctx.textAlign = "left";
                 ctx.fillText(text, xPosition, yPosition);
                 ctx.restore();
@@ -330,7 +335,7 @@ function ProductAveragesGraph({ state, data }) {
         />
       </div>
 
-      <div className="w-full border-t-2 border-dashed border-blue-400 mt-2"></div>
+      <div className="w-full border-t-2 border-dashed border-[#5471FF] mt-2"></div>
     </div>
   );
 }

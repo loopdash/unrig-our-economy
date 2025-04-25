@@ -99,7 +99,7 @@ function SearchByState() {
             placeholder="Search your state..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="border p-2 pr-10 rounded w-full rounded-[40px] border-black p-[20px] "
+            className="border p-2 pr-10 rounded w-full rounded-[40px] border-[#231F21] p-[20px] "
             id="search"
         />
         <img
@@ -127,7 +127,7 @@ function SearchByState() {
     {filteredStates.length > visibleCount && (
   <button
     onClick={handleLoadMore}
-    className="mt-6 px-6 py-3 bg-black text-white hover:bg-gray-800 transition uppercase"
+    className="mt-6 px-6 py-3 bg-[#231F21] text-white hover:bg-gray-800 transition uppercase"
   >
     Load More
   </button>

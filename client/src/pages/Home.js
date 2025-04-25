@@ -70,13 +70,13 @@ function Home() {
           className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[#f6f8ff] rounded-xl shadow-lg p-12 space-y-3 min-h-fit rounded-3xl text-white mx-auto max-h-xl min-h-xl leading-tight"
           style={{ backgroundColor: "#E8EA58" }}
         >
-          <p className="text-md font-semibold uppercase tracking-wider mb-4 text-black max-w-[70%]">
+          <p className="text-md font-semibold uppercase tracking-wider mb-4 text-[#231F21] max-w-[70%]">
             Rising prices, shrinking wallets
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] font-bold mb-6 leading-tight text-black">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] font-bold mb-6 leading-tight text-[#231F21]">
             The cost of living for hardworking Americans continues to climb.
           </h2>
-          <p className="mb-4 font-normal text-lg tracking-[0] pb-4 text-black max-w-[70%]">
+          <p className="mb-4 font-normal text-lg tracking-[0] pb-4 text-[#231F21] max-w-[70%]">
             Some of the most essential items in your grocery cart have seen
             dramatic price increases. While families are struggling to make ends
             meet, corporations are reaping the rewards. This page breaks down

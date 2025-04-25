@@ -82,7 +82,7 @@ function SingleProductSingleStateGraph({ state, data }) {
       {/* Top Row */}
       <div className="flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 bg-black rounded-full" />
+          <div className="w-3 h-3 bg-[#231F21] rounded-full" />
           <h3 className="text-gray-800 font-medium">{state}</h3>
         </div>
 

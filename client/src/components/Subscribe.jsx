@@ -14,7 +14,7 @@ function Subscribe() {
   
 
   return (
-    <div className="bg-[#F0F3FF] text-black px-6 py-12">
+    <div className="bg-[#F0F3FF] text-[#231F21] px-6 py-12">
       <div className="max-w-6xl mx-2 sm:mx-auto flex flex-col lg:flex-row justify-between items-center gap-10">
         
         {/* Left Side Content */}
