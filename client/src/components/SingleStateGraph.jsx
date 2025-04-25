@@ -158,7 +158,7 @@ function SingleStateGraph({ state = "CA" }) {
             <div className="relative">
               <div className="relative group">
                 <button
-                  className="w-7 h-7 bg-gray-200 rounded-full flex items-center justify-center"
+                  className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center"
                   onClick={() => setDropdownOpen(!dropdownOpen)}
                 >
                   <img

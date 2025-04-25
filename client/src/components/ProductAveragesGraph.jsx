@@ -99,17 +99,28 @@ function ProductAveragesGraph({ state, data }) {
   });
 
   return (
-<div className="relative bg-[#FDFDFC] border-[#231F21] shadow-xl p-4 space-y-3 border rounded-[24px]">
-<div className="flex justify-between items-center">
+    <div className="relative bg-[#FDFDFC] border-[#231F21] shadow-xl p-4 space-y-3 border rounded-[24px]">
+      <div className="flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <div className="w-3 h-3 bg-[#231F21] rounded-full"></div>
-          <h3 className="text-[#231F21] text-xl font-semibold leading-tight font-barlow">{state}</h3>
+          <div className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center">
+            <img
+              src={`/states-svg/${state
+                .toLowerCase()
+                .replace(/\s+/g, "-")}.svg`}
+              alt={`${state} icon`}
+              className="w-6 h-6 object-contain"
+            />
+          </div>
+
+          <h3 className="text-[#231F21] text-xl font-semibold leading-tight font-barlow">
+            {state}
+          </h3>
         </div>
 
         <div className="relative">
           <div className="relative group">
             <button
-              className="w-7 h-7 bg-gray-200 rounded-full flex items-center justify-center"
+              className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               <img
@@ -146,33 +157,32 @@ function ProductAveragesGraph({ state, data }) {
       </div>
 
       <div className="space-y-2">
-  {categoryStats.map(
-    ({ category, latestPrice, percentageChange, timeAgoText }) => (
-      <div key={category} className="flex items-center space-x-3">
-        {/* 🥚 Emoji - bump size */}
-        <span className="text-4xl">
-          {categoryIcons[normalizeCategory(category)] || "🥚"}
-        </span>
+        {categoryStats.map(
+          ({ category, latestPrice, percentageChange, timeAgoText }) => (
+            <div key={category} className="flex items-center space-x-3">
+              {/* 🥚 Emoji - bump size */}
+              <span className="text-4xl">
+                {categoryIcons[normalizeCategory(category)] || "🥚"}
+              </span>
 
-        {/* +% Badge - bump size */}
-        {percentageChange > 0 && (
-          <span className="bg-orange-500 text-white text-sm px-3 py-1 rounded relative group cursor-pointer font-semibold">
-            +{percentageChange}%
-            <span className="absolute left-1/2 transform -translate-x-1/2 mt-[1rem] w-max bg-[#231F21] text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-              {timeAgoText}
-            </span>
-          </span>
+              {/* +% Badge - bump size */}
+              {percentageChange > 0 && (
+                <span className="bg-orange-500 text-white text-sm px-3 py-1 rounded relative group cursor-pointer font-semibold">
+                  +{percentageChange}%
+                  <span className="absolute left-1/2 transform -translate-x-1/2 mt-[1rem] w-max bg-[#231F21] text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                    {timeAgoText}
+                  </span>
+                </span>
+              )}
+
+              {/* Price - bump size, change to orange */}
+              <span className="text-[#F16941] text-lg font-bold">
+                ${latestPrice.toFixed(2)}
+              </span>
+            </div>
+          )
         )}
-
-        {/* Price - bump size, change to orange */}
-        <span className="text-[#F16941] text-lg font-bold">
-          ${latestPrice.toFixed(2)}
-        </span>
       </div>
-    )
-  )}
-</div>
-
 
       <div className="h-60">
         <Line
@@ -272,25 +282,36 @@ function ProductAveragesGraph({ state, data }) {
                     const current = new Date(label);
                     const currentMonth = current.getMonth();
                     const currentYear = current.getFullYear();
-                
-                    if (index === 0) return current.toLocaleDateString("en-US", { month: "short", year: "numeric" });
-                
-                    const prevLabel = this.getLabelForValue(values[index - 1].value);
+
+                    if (index === 0)
+                      return current.toLocaleDateString("en-US", {
+                        month: "short",
+                        year: "numeric",
+                      });
+
+                    const prevLabel = this.getLabelForValue(
+                      values[index - 1].value
+                    );
                     const prev = new Date(prevLabel);
                     const prevMonth = prev.getMonth();
                     const prevYear = prev.getFullYear();
-                
-                    if (currentMonth !== prevMonth || currentYear !== prevYear) {
-                      return current.toLocaleDateString("en-US", { month: "short", year: "numeric" });
+
+                    if (
+                      currentMonth !== prevMonth ||
+                      currentYear !== prevYear
+                    ) {
+                      return current.toLocaleDateString("en-US", {
+                        month: "short",
+                        year: "numeric",
+                      });
                     }
-                
+
                     return ""; // suppress label if same month
                   },
                   autoSkip: false, // let our custom logic control it
-                  maxRotation: 0,   // Make sure it's flat
+                  maxRotation: 0, // Make sure it's flat
                   minRotation: 0,
-
-                },                          
+                },
                 grid: { display: false },
                 border: { display: false },
               },
@@ -310,7 +331,7 @@ function ProductAveragesGraph({ state, data }) {
                 const { ctx, chartArea, scales } = chart;
                 const text = chart.options.plugins.annotationText?.text;
                 if (!text) return;
-          
+
                 const selected = normalizeCategory(selectedCategories[0]);
                 const nationalAverages = {
                   egg12ct: 1.51,
@@ -319,9 +340,9 @@ function ProductAveragesGraph({ state, data }) {
                 };
                 const avgValue = nationalAverages[selected];
                 if (!avgValue) return;
-          
+
                 const yPosition = scales.y.getPixelForValue(avgValue) - 8; // slightly above line
-                const xPosition = scales.x.left + 4;          
+                const xPosition = scales.x.left + 4;
                 ctx.save();
                 ctx.font = "500 12px sans-serif";
                 ctx.fillStyle = "#5471FF";
@@ -331,7 +352,6 @@ function ProductAveragesGraph({ state, data }) {
               },
             },
           ]}
-          
         />
       </div>
 
