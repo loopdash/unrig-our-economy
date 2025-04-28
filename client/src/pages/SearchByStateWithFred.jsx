@@ -5,6 +5,7 @@ import searchArrow from "../assets/search-arrow-2.png";
 import SearchAnotherState from "../components/SearchAnotherState";
 import Subscribe from "../components/Subscribe";
 import SingleFredDataGraph from "../components/SingleFredDataGraph";
+import SingleStateCTA from "../components/SingleStateCTA";
 
 // ✅ State Abbreviation Mapping
 const stateAbbreviations = {
@@ -73,10 +74,15 @@ function SearchByStateWithFred() {
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(true);
   const [visibleCount, setVisibleCount] = useState(6);
+  const [eggPercentChange, setEggPercentChange] = useState(null);
 
   useEffect(() => {
     fetchProductAverages();
   }, []);
+
+  useEffect(() => {
+    setEggPercentChange(null); // reset when user searches
+  }, [searchQuery]);
 
   const fetchProductAverages = async () => {
     try {
@@ -143,7 +149,7 @@ function SearchByStateWithFred() {
             placeholder="Enter your state here"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="border pr-10 w-full rounded-[40px] border-[#231F21] p-6 text-[#231F21BF] text-lg focus:outline-none focus:border-[#231F21]"
+            className="border-2 pr-10 w-full rounded-[40px] border-[#231F21] p-6 text-[#231F21BF] text-lg focus:outline-none focus:border-[#231F21]"
             id="search"
           />
           <img
@@ -158,36 +164,45 @@ function SearchByStateWithFred() {
         ) : (
           <>
             {filteredStates.length > 0 ? (
-          <div
-          className={`grid grid-cols-1 ${
-            filteredStates.length > 1 ? "md:grid-cols-2" : ""
-          } gap-6 w-full ${filteredStates.length === 1 ? "max-w-6xl" : "max-w-6xl"}`}
-        >
-          {filteredStates.slice(0, visibleCount).map((state) => (
-            <div key={state}>
-              <ProductAveragesGraph
-                state={stateAbbreviations[state]}
-                data={groupedByState[state]}
-              />
-            </div>
-          ))}
-        </div>
-        
+              <div
+                className={`grid grid-cols-1 ${
+                  filteredStates.length > 1 ? "md:grid-cols-2" : ""
+                } gap-6 w-full ${
+                  filteredStates.length === 1 ? "max-w-6xl" : "max-w-6xl"
+                }`}
+              >
+                {eggPercentChange > 0 && filteredStates.length === 1 && (
+                  <SingleStateCTA
+                    state={stateAbbreviations[filteredStates[0]]}
+                    percent={eggPercentChange}
+                  />
+                )}
+
+                {filteredStates.slice(0, visibleCount).map((state) => (
+                  <div key={state}>
+                    <ProductAveragesGraph
+                      state={stateAbbreviations[state]}
+                      data={groupedByState[state]}
+                      onEggPercentChange={setEggPercentChange}
+                    />
+                  </div>
+                ))}
+              </div>
             ) : (
               <div className="grid grid-cols-1 gap-6 w-full max-w-6xl">
                 <div className="text-center text-white text-base leading-right bg-[#4D5440] rounded-[24px] p-6 lg:px-36">
                   <p className="text-xl font-normal leading-tight font-barlow font-white">
-                    <span className="font-semibold">{searchQuery}</span>
-                    {" "}doesn’t have daily grocery price data! These
-                    charts show the rise in prices across the nation from the
-                    year 2000 until the present. {""}
+                    <span className="font-semibold">{searchQuery}</span> doesn’t
+                    have daily grocery price data! These charts show the rise in
+                    prices across the nation from the year 2000 until the
+                    present. {""}
                     <a
                       href="https://fredhelp.stlouisfed.org/fred/about/about-fred/what-is-fred/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="space-x-1 underline underline-offset-4"
                     >
-                       Read more about national FRED data here
+                      Read more about national FRED data here
                     </a>
                     .
                   </p>

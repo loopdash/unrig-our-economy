@@ -12,7 +12,7 @@ function Modal({ isOpen, onClose }) {
         className="bg-white p-6 rounded-[28px] shadow-lg max-w-md w-full"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
       >
-        <h2 className="uppercase font-bold" style={{ color: "black", fontWeight: 600 , fontSize: "small"}}>
+        <h2 className="uppercase font-bold" style={{ color: "black", fontSize: "small"}}>
           How Did We Arrive at This Number?
         </h2>
         <p className=" mt-2 pb-4 font-normal text-[32px] leading-tight font-barlow">

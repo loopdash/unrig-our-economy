@@ -50,7 +50,7 @@ const categoryColors = {
   coffee11oz: "#4B2E2B",
 };
 
-function ProductAveragesGraph({ state, data }) {
+function ProductAveragesGraph({ state, data , onEggPercentChange}) {
   const sortedData = data.sort(
     (a, b) => new Date(a.record_day) - new Date(b.record_day)
   );
@@ -95,11 +95,18 @@ function ProductAveragesGraph({ state, data }) {
     const daysAgo = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
     const timeAgoText =
       daysAgo === 1 ? "since yesterday" : `from ${daysAgo} days ago`;
+  
+    // ✅ Fire the callback for "Egg 12ct" only
+    if (category === "Egg 12ct" && onEggPercentChange) {
+      onEggPercentChange(Number(percentageChange));
+    }
+  
     return { category, latestPrice, percentageChange, timeAgoText };
   });
+  
 
   return (
-    <div className="relative bg-[#FDFDFC] border-[#231F21] shadow-xl p-4 space-y-3 border rounded-[24px]">
+    <div className="relative bg-[#FDFDFC] border-[#231F21] shadow-xl p-4 space-y-3 border-2 rounded-[24px]">
       <div className="flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <div className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center">
@@ -135,7 +142,7 @@ function ProductAveragesGraph({ state, data }) {
           </div>
 
           {dropdownOpen && (
-            <div className="absolute top-10 right-0 bg-white shadow-lg rounded-md p-2 border border-gray-300 z-20">
+            <div className="absolute top-10 right-0 bg-white shadow-lg rounded-md p-2 border-2 border-gray-300 z-20">
               {categories.map((category) => (
                 <button
                   key={category}

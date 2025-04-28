@@ -151,7 +151,7 @@ function SingleStateGraph({ state = "CA" }) {
           {/* Header */}
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center space-x-2">
-              <h3 className="text-[#231F21] font-medium uppercase">California</h3>
+              <h3 className="text-[#231F21] font-bold uppercase">California</h3>
               <h4>Daily Tracker</h4>
             </div>
 

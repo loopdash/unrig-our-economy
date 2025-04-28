@@ -90,7 +90,7 @@ function SingleFredDataGraph() {
               className="border-[#231F21] shadow-xl p-4 space-y-3 border rounded-[24px]"
             >
               <div className="flex items-center space-x-2 mb-4 p-6">
-                <h3 className="text-4xl font-bold text-[#231F21]">
+                <h3 className="text-3xl font-bold text-[#231F21]">
                   National {categoryIcons[category] || "🥚"}{" "}
                   <span className="font-normal">
                     {" "}

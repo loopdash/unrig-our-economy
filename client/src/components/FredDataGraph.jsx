@@ -89,20 +89,20 @@ function FredDataGraph() {
   const datasets = selectedCategories.map((category, index) => ({
     label: category,
     data: labels.map((date) => groupedData[category]?.[date] || null),
-    borderColor: "red",
-    pointBackgroundColor: "red",
-    pointBorderColor: "red",
+    borderColor: "#F16941",
+    pointBackgroundColor: "#F16941",
+    pointBorderColor: "#F16941",
     borderWidth: 2,
     fill: false,
   }));
 
   return (
-<div className="relative bg-[#FBFBFF] border-[#231F21] shadow-xl p-4 space-y-3 border rounded-[24px]">
+<div className="relative bg-[#FBFBFF] border-[#231F21] shadow-xl p-4 space-y-3 border-2 rounded-[24px]">
 
       {/* Top Row - Title & Category Selector */}
       <div className="flex justify-between items-center">
         <div className="flex items-center justify-center space-x-2">
-          <h3 className="text-[#5371FF] font-lg uppercase font-bold">
+        <h3 className="text-[#5371FF] text-md font-bold uppercase tracking-wider">
             National Grocery Price Tracker
           </h3>
           <h4 className="text-lg pl-2">Grocery Prices since the year 2000</h4>

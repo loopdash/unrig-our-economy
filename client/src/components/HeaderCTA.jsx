@@ -93,7 +93,7 @@ function HeaderCTA() {
         </span>
         {percentageChange < 1 ? (
           <>
-            <span className="px-2 bg-red-600 text-white font-semibold">
+            <span className="px-2 bg-[#F16941] text-white font-semibold">
               has not gone down
             </span>{" "}
             in the past {daysAgo !== null && ` ${daysAgo} days`}.

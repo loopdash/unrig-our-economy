@@ -10,7 +10,7 @@ function SearchAnotherState() {
 
       <div className="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
         {/* Text Content */}
-        <div className="md:w-[80%] w-full">
+        <div className="md:w-[80%] w-full px-6">
         <p className="text-md font-semibold uppercase tracking-wider mb-4 text-[#E8EA58] max-w-[70%]">
         Unrig our economy
           </p>
@@ -26,7 +26,7 @@ function SearchAnotherState() {
         </div>
 
         {/* Image */}
-        <div className="flex justify-start">
+        <div className="flex justify-start px-6">
           <img src={stateGroup} alt="State Group Illustration" className="flex justify-start" />
         </div>
       </div>
