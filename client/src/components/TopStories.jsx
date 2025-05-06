@@ -6,28 +6,39 @@ import coffee from "../assets/coffee.png";
 
 const stories = [
   {
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum. Lorem ipsum...",
-    outlet: "OUTLET",
-    date: "04.27.25",
+    title: "Fact check: Trump lies about the price of eggs, groceries and gas",
+    outlet: "CNN",
+    date: "04.23.25",
     image: yolk,
+    link: "https://www.cnn.com/2025/04/23/politics/price-of-eggs-gas-trump-fact-check/index.html"
   },
   {
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum. Lorem ipsum...",
-    outlet: "OUTLET",
-    date: "04.27.25",
+    title: "Tariff Concerns Drive Global Food Prices to Two-Year High",
+    outlet: "BLOOMBERG",
+    date: "05.02.25",
     image: steak,
+    link: "https://www.bloomberg.com/news/articles/2025-05-02/tariff-uncertainty-drives-global-food-prices-to-two-year-high"
   },
   {
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum. Lorem ipsum...",
-    outlet: "OUTLET",
-    date: "04.27.25",
+    title: "Higher prices are likely for these 10 grocery items when tariffs hit",
+    outlet: "NPR",
+    date: "04.04.25",
     image: bread,
+    link: "https://www.npr.org/2025/04/04/nx-s1-5351324/tariffs-higher-grocery-prices-trump"
   },
   {
-    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum. Lorem ipsum...",
-    outlet: "OUTLET",
-    date: "04.27.25",
+    title: "Most Americans expect higher prices as a result of Trump’s tariffs, a new AP-NORC poll finds",
+    outlet: "AP NEWS",
+    date: "04.24.25",
     image: bread,
+    link: "https://apnews.com/article/trump-economy-poll-tariffs-inflation-prices-recession-1d320115e8801e4970bd5cccf2742fc4"
+  },
+  {
+    title: "Nearly two-thirds of Americans disapprove of Trump tariffs, with inflation a broad concern: POLL",
+    outlet: "ABC NEWS",
+    date: "04.25.25",
+    image: bread,
+    link: "https://abcnews.go.com/Politics/thirds-americans-disapprove-trump-tariffs-inflation-broad-concern/story?id=121123815"
   },
 ];
 

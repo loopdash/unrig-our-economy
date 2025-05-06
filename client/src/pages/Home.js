@@ -77,11 +77,7 @@ function Home() {
             The cost of living for hardworking Americans continues to climb.
           </h2>
           <p className="mb-4 font-normal text-lg tracking-[0] pb-4 text-[#231F21] max-w-[70%]">
-            Some of the most essential items in your grocery cart have seen
-            dramatic price increases. While families are struggling to make ends
-            meet, corporations are reaping the rewards. This page breaks down
-            how these prices have changed under the Trump administration and
-            what policies have contributed to the rising costs.
+          Some of the most essential items in your grocery cart have seen dramatic price increases. While families are struggling to make ends meet, corporations are reaping rewards. This page breaks down how these prices have changed under the Trump administration and what policies contribute to rising costs.
           </p>
 
           <a

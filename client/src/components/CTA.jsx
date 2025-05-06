@@ -12,7 +12,7 @@ function CTA() {
       The Cost of Living Under Trump. 
       </h2>
       <p className="text-base text-white/90 max-w-3xl">
-      Since President Trump took office, the cost of everyday essentials has risen. What used to be affordable has now become a financial burden for many families. This site dives into how these price increases can affect your life, focusing on the impact of key goods eggs, bread, milk, meat, and coffee. We’ll show you who’s responsible for these rising prices and how these costs are taking a bigger bite out of American paychecks.
+      Since President Trump took office, the cost of everyday essentials has risen. What used to be affordable has now become a financial burden for many families. This site dives into how these price increases can affect your life, focusing on the impact of key goods like eggs, meat, and coffee. We’ll show you who’s responsible for these rising prices and how these costs are taking a bigger bite out of Americans’ paychecks.
       </p>
       <Link to="/search-by-state-fred" className="underline underline-offset-4">
           See data in my state.
