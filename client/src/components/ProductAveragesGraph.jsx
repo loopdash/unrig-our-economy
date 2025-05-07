@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -23,13 +23,27 @@ ChartJS.register(
   Legend
 );
 
+const avg2024Values = {
+  egg12ct: { value: 4.15, label: " 😱 Natl. avg price of eggs in 2024", color: "#F16941" },
+  beef1lb: { value: 4.35, label: " 😱 Natl. avg price of beef in 2024", color: "#8B0000" },
+  coffee11oz: { value: 6.15, label: " 😱 Natl. avg price of coffee in 2024", color: "#4B2E2B" },
+};
+
 const normalizeCategory = (cat) => {
   const normalized = cat.replace(/\s+/g, "").toLowerCase();
   const aliases = {
     bread: "bread20oz",
-    bread20oz: "bread20oz",
-    coffee11oz: "coffee11oz",
-    coffee11: "coffee11oz",
+    "bread20oz": "bread20oz",
+    "coffee": "coffee11oz",
+    "coffee11": "coffee11oz",
+    "coffee11oz": "coffee11oz",
+    "coffee 11oz": "coffee11oz",
+    "egg": "egg12ct",
+    "egg12ct": "egg12ct",
+    "egg 12ct": "egg12ct",
+    "beef": "beef1lb",
+    "beef1lb": "beef1lb",
+    "beef 1lb": "beef1lb"
   };
   return aliases[normalized] || normalized;
 };
@@ -83,7 +97,7 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
         ? prev.filter((c) => c !== category)
         : [...prev, category]
     );
-  };
+  }
 
   const categoryStats = selectedCategories.map((category) => {
     const categoryData = sortedData.filter(
@@ -105,14 +119,18 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
     const timeAgoText =
       daysAgo === 1 ? "since yesterday" : `from ${daysAgo} days ago`;
   
-    // ✅ Fire the callback for "Egg 12ct" only
-    if (category === "Egg 12ct" && onEggPercentChange) {
-      onEggPercentChange(Number(percentageChange));
-    }
-  
     return { category, latestPrice, percentageChange, timeAgoText };
   });
   
+
+  useEffect(() => {
+    const eggCategory = categoryStats.find(
+      (stat) => normalizeCategory(stat.category) === "egg12ct"
+    );
+    if (eggCategory && onEggPercentChange) {
+      onEggPercentChange(Number(eggCategory.percentageChange));
+    }
+  }, [categoryStats, onEggPercentChange]);
 
   return (
     <div className="relative bg-[#FDFDFC] border-[#231F21] shadow-xl p-4 space-y-3 border-2 rounded-[24px]">
@@ -184,7 +202,7 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
 
               {/* +% Badge - bump size */}
               {percentageChange > 0 && (
-                <span className="bg-orange-500 text-white text-sm px-3 py-1 rounded relative group cursor-pointer font-semibold">
+                <span className="bg-[#F16941] text-white text-sm px-3 py-1 rounded relative group cursor-pointer font-semibold">
                   +{percentageChange}%
                   <span className="absolute left-1/2 transform -translate-x-1/2 mt-[1rem] w-max bg-[#231F21] text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                     {timeAgoText}
@@ -192,7 +210,7 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
                 </span>
               )}
 
-              {/* Price - bump size, change to orange */}
+              {/* Price - bump size, change to [#F16941] */}
               <span className="text-[#F16941] text-lg font-bold">
                 ${latestPrice.toFixed(2)} {categoryLabel[normalizeCategory(category)] || "/dozen"}
 
@@ -288,8 +306,13 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
               // ✅ Custom plugin to draw text
               annotationText: {
                 display: true,
-                text: "National Average 2000–2020",
+                text: "National Average 2000–2020"
               },
+              avg2024DotLabel: {
+                selectedCategories: selectedCategories.map(normalizeCategory),
+              },
+              
+              
             },
             scales: {
               x: {
@@ -368,7 +391,73 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
                 ctx.fillText(text, xPosition, yPosition);
                 ctx.restore();
               },
+              
             },
+            {
+              id: "avg2024DotLabel",
+              beforeDraw: (chart) => {
+                const { ctx, scales, options } = chart;
+                const selected = options.plugins?.avg2024DotLabel?.selectedCategories || [];
+            
+                ctx.save();
+                ctx.font = "600 13px sans-serif";
+            
+                let offsetIndex = 0;
+            
+                selected.forEach((normalized) => {
+                  const meta = avg2024Values[normalized];
+                  if (!meta) return;
+            
+                  const y = scales.y.getPixelForValue(meta.value);
+                  const textPadding = 12;
+                  const radius = 5;
+                  const gapFromDot = 8;
+                  const labelText = `${meta.label}: $${meta.value.toFixed(2)}`;
+                  const textWidth = ctx.measureText(labelText).width;
+            
+                  const labelHeight = 28;
+                  const cornerRadius = 6;
+                  const x = scales.x.right - 30;
+                  const totalLabelWidth = textWidth + textPadding * 2;
+                  const labelX = x - radius - totalLabelWidth - gapFromDot;
+                  const labelY = y - labelHeight / 2 + offsetIndex * (labelHeight + 6);
+            
+                  // Background
+                  ctx.beginPath();
+                  ctx.moveTo(labelX + cornerRadius, labelY);
+                  ctx.lineTo(labelX + totalLabelWidth - cornerRadius, labelY);
+                  ctx.quadraticCurveTo(labelX + totalLabelWidth, labelY, labelX + totalLabelWidth, labelY + cornerRadius);
+                  ctx.lineTo(labelX + totalLabelWidth, labelY + labelHeight - cornerRadius);
+                  ctx.quadraticCurveTo(labelX + totalLabelWidth, labelY + labelHeight, labelX + totalLabelWidth - cornerRadius, labelY + labelHeight);
+                  ctx.lineTo(labelX + cornerRadius, labelY + labelHeight);
+                  ctx.quadraticCurveTo(labelX, labelY + labelHeight, labelX, labelY + labelHeight - cornerRadius);
+                  ctx.lineTo(labelX, labelY + cornerRadius);
+                  ctx.quadraticCurveTo(labelX, labelY, labelX + cornerRadius, labelY);
+                  ctx.closePath();
+                  ctx.fillStyle = meta.color;
+                  ctx.fill();
+            
+                  // Text
+                  ctx.fillStyle = "white";
+                  ctx.textAlign = "left";
+                  ctx.textBaseline = "middle";
+                  ctx.fillText(labelText, labelX + textPadding, labelY + labelHeight / 2);
+            
+                  // Dot
+                  ctx.beginPath();
+                  ctx.arc(x, y + offsetIndex * (labelHeight + 6), radius, 0, Math.PI * 2);
+                  ctx.fillStyle = meta.color;
+                  ctx.fill();
+            
+                  offsetIndex++;
+                });
+            
+                ctx.restore();
+              },
+            }
+            
+            
+            
           ]}
         />
       </div>

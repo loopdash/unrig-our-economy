@@ -6,7 +6,8 @@ import SearchAnotherState from "../components/SearchAnotherState";
 import Subscribe from "../components/Subscribe";
 import SingleFredDataGraph from "../components/SingleFredDataGraph";
 import SingleStateCTA from "../components/SingleStateCTA";
-
+import StaticCopy from "../components/StaticCopy";
+import { stories } from "../components/TopStories";
 // ✅ State Abbreviation Mapping
 const stateAbbreviations = {
   AL: "Alabama",
@@ -73,7 +74,7 @@ function SearchByStateWithFred() {
   const [productAverages, setProductAverages] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(true);
-  const [visibleCount, setVisibleCount] = useState(6);
+  const [visibleCount, setVisibleCount] = useState(3);
   const [eggPercentChange, setEggPercentChange] = useState(null);
 
   useEffect(() => {
@@ -97,7 +98,7 @@ function SearchByStateWithFred() {
   };
 
   const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + 6); // or whatever increment you'd like
+    setVisibleCount((prev) => prev + 3); // or whatever increment you'd like
   };
 
   // ✅ Group by state abbreviation
@@ -123,6 +124,9 @@ function SearchByStateWithFred() {
       abbr.toLowerCase().includes(normalizedQuery) || // Matches abbreviation
       stateAbbreviations[abbr].toLowerCase().includes(normalizedQuery) // Matches full name (even partial)
   );
+  // Shuffle stories once before render (outside return)
+  const shuffledStories = [...stories].sort(() => 0.5 - Math.random());
+  let storyIndex = 0;
 
   // ✅ Find matching state abbreviations to use for filtering graphs
   const searchKeys = new Set(matchedStates);
@@ -177,16 +181,35 @@ function SearchByStateWithFred() {
                     percent={eggPercentChange}
                   />
                 )}
+                {filteredStates.slice(0, visibleCount).map((state, index) => {
+                  const shouldShowStatic = (index + 1) % 3 === 0;
+                  const story = shouldShowStatic
+                    ? shuffledStories[storyIndex++]
+                    : null;
 
-                {filteredStates.slice(0, visibleCount).map((state) => (
-                  <div key={state}>
-                    <ProductAveragesGraph
-                      state={stateAbbreviations[state]}
-                      data={groupedByState[state]}
-                      onEggPercentChange={setEggPercentChange}
-                    />
-                  </div>
-                ))}
+                  return (
+                    <React.Fragment key={state}>
+                      <div>
+                        <ProductAveragesGraph
+                          state={stateAbbreviations[state]}
+                          data={groupedByState[state]}
+                          onEggPercentChange={setEggPercentChange}
+                        />
+                      </div>
+
+                      {shouldShowStatic && story && (
+                        <StaticCopy
+                          eyebrow={`${story.outlet} • ${story.date}`}
+                          bg="#5371FF"
+                          color="white"
+                          href={`${story.link}`}
+                          header={<>{story.title}</>}
+                          subtext={`${story.subtext}`}
+                        />
+                      )}
+                    </React.Fragment>
+                  );
+                })}
               </div>
             ) : (
               <div className="grid grid-cols-1 gap-6 w-full max-w-6xl">

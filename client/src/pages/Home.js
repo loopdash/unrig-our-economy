@@ -101,7 +101,20 @@ function Home() {
         <FredDataGraph />
       </section>
       <div className="pt-8">
-      <StaticCopy />
+        <StaticCopy
+          bg="#E8EA58"
+          eyebrow="IT’s A FACT!"
+          header={
+            <>
+              Lorem ipsum dolor sit{" "}
+              <span className="bg-[#F16941] text-white font-semibold px-2">
+                over 20%
+              </span>{" "}
+              year over year.
+            </>
+          }
+          subtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum."
+        />
       </div>
 
       <div className="">
@@ -109,7 +122,20 @@ function Home() {
         <TopStories />
       </div>
       <div className="pb-8">
-      <StaticCopy />
+        <StaticCopy
+          bg="#E8EA58"
+          eyebrow="IT’s A FACT!"
+          header={
+            <>
+              Lorem ipsum dolor sit{" "}
+              <span className="bg-[#F16941] text-white font-semibold px-2">
+                over 20%
+              </span>{" "}
+              year over year.
+            </>
+          }
+          subtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum."
+        />
       </div>
       <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 pb-6 mx-2 sm:mx-auto max-w-6xl">
         <div className="w-full sm:w-1/2">
