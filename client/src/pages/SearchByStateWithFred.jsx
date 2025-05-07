@@ -77,6 +77,14 @@ function SearchByStateWithFred() {
   const [visibleCount, setVisibleCount] = useState(3);
   const [eggPercentChange, setEggPercentChange] = useState(null);
 
+  const [shuffledStories, setShuffledStories] = useState([]);
+  const [storyIndex, setStoryIndex] = useState(0);
+
+  useEffect(() => {
+    const shuffled = [...stories].sort(() => 0.5 - Math.random());
+    setShuffledStories(shuffled);
+  }, []);
+
   useEffect(() => {
     fetchProductAverages();
   }, []);
@@ -124,9 +132,6 @@ function SearchByStateWithFred() {
       abbr.toLowerCase().includes(normalizedQuery) || // Matches abbreviation
       stateAbbreviations[abbr].toLowerCase().includes(normalizedQuery) // Matches full name (even partial)
   );
-  // Shuffle stories once before render (outside return)
-  const shuffledStories = [...stories].sort(() => 0.5 - Math.random());
-  let storyIndex = 0;
 
   // ✅ Find matching state abbreviations to use for filtering graphs
   const searchKeys = new Set(matchedStates);
@@ -135,6 +140,7 @@ function SearchByStateWithFred() {
   const filteredStates = Object.keys(groupedByState).filter((state) =>
     searchKeys.has(state)
   );
+  let localStoryIndex = 0;
 
   return (
     <>
@@ -184,8 +190,11 @@ function SearchByStateWithFred() {
                 {filteredStates.slice(0, visibleCount).map((state, index) => {
                   const shouldShowStatic = (index + 1) % 3 === 0;
                   const story = shouldShowStatic
-                    ? shuffledStories[storyIndex++]
+                    ? shuffledStories[localStoryIndex++]
                     : null;
+                  if (shouldShowStatic && storyIndex < shuffledStories.length) {
+                    setStoryIndex((prev) => prev + 1);
+                  }
 
                   return (
                     <React.Fragment key={state}>
