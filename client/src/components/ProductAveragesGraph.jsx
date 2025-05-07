@@ -24,26 +24,38 @@ ChartJS.register(
 );
 
 const avg2024Values = {
-  egg12ct: { value: 4.15, label: " 😱 Natl. avg price of eggs in 2024", color: "#F16941" },
-  beef1lb: { value: 4.35, label: " 😱 Natl. avg price of beef in 2024", color: "#8B0000" },
-  coffee11oz: { value: 6.15, label: " 😱 Natl. avg price of coffee in 2024", color: "#4B2E2B" },
+  egg12ct: {
+    value: 4.15,
+    label: " 😱 Natl. avg price of eggs in 2024",
+    color: "#F16941",
+  },
+  beef1lb: {
+    value: 4.35,
+    label: " 😱 Natl. avg price of beef in 2024",
+    color: "#8B0000",
+  },
+  coffee11oz: {
+    value: 6.15,
+    label: " 😱 Natl. avg price of coffee in 2024",
+    color: "#4B2E2B",
+  },
 };
 
 const normalizeCategory = (cat) => {
   const normalized = cat.replace(/\s+/g, "").toLowerCase();
   const aliases = {
     bread: "bread20oz",
-    "bread20oz": "bread20oz",
-    "coffee": "coffee11oz",
-    "coffee11": "coffee11oz",
-    "coffee11oz": "coffee11oz",
+    bread20oz: "bread20oz",
+    coffee: "coffee11oz",
+    coffee11: "coffee11oz",
+    coffee11oz: "coffee11oz",
     "coffee 11oz": "coffee11oz",
-    "egg": "egg12ct",
-    "egg12ct": "egg12ct",
+    egg: "egg12ct",
+    egg12ct: "egg12ct",
     "egg 12ct": "egg12ct",
-    "beef": "beef1lb",
-    "beef1lb": "beef1lb",
-    "beef 1lb": "beef1lb"
+    beef: "beef1lb",
+    beef1lb: "beef1lb",
+    "beef 1lb": "beef1lb",
   };
   return aliases[normalized] || normalized;
 };
@@ -56,13 +68,12 @@ const categoryIcons = {
   coffee11oz: "☕",
 };
 
-
 const categoryLabel = {
   egg12ct: "/dozen",
   milk1gal: "/gallon",
   bread20oz: "/loaf",
   beef1lb: "/lb",
-  coffee11oz: "/bag"
+  coffee11oz: "/bag",
 };
 
 const categoryColors = {
@@ -73,7 +84,7 @@ const categoryColors = {
   coffee11oz: "#4B2E2B",
 };
 
-function ProductAveragesGraph({ state, data , onEggPercentChange}) {
+function ProductAveragesGraph({ state, data, onEggPercentChange }) {
   const sortedData = data.sort(
     (a, b) => new Date(a.record_day) - new Date(b.record_day)
   );
@@ -97,7 +108,7 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
         ? prev.filter((c) => c !== category)
         : [...prev, category]
     );
-  }
+  };
 
   const categoryStats = selectedCategories.map((category) => {
     const categoryData = sortedData.filter(
@@ -115,13 +126,21 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
     const timeDiff = Math.abs(
       new Date(latest?.record_day) - new Date(previous?.record_day)
     );
+
+    const normalized = normalizeCategory(category);
+    const avgMeta = avg2024Values[normalized];
+    const national2024 = avgMeta?.value || 0;
+    
+    const percentageChange2024 = 
+      previousPrice > 0 && national2024 > 0
+        ? (((national2024 - previousPrice) / previousPrice) * 100).toFixed(2)
+        : 0;
     const daysAgo = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
     const timeAgoText =
       daysAgo === 1 ? "since yesterday" : `from ${daysAgo} days ago`;
-  
-    return { category, latestPrice, percentageChange, timeAgoText };
+
+    return { category, latestPrice, percentageChange, timeAgoText, percentageChange2024 };
   });
-  
 
   useEffect(() => {
     const eggCategory = categoryStats.find(
@@ -192,12 +211,11 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
 
       <div className="space-y-2">
         {categoryStats.map(
-          ({ category, latestPrice, percentageChange, timeAgoText }) => (
+          ({ category, latestPrice, percentageChange, timeAgoText, percentageChange2024 }) => (
             <div key={category} className="flex items-center space-x-3">
               {/* 🥚 Emoji - bump size */}
               <span className="text-4xl">
                 {categoryIcons[normalizeCategory(category)] || "🥚"}
-
               </span>
 
               {/* +% Badge - bump size */}
@@ -212,9 +230,15 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
 
               {/* Price - bump size, change to [#F16941] */}
               <span className="text-[#F16941] text-lg font-bold">
-                ${latestPrice.toFixed(2)} {categoryLabel[normalizeCategory(category)] || "/dozen"}
-
+                ${latestPrice.toFixed(2)}{" "}
+                {categoryLabel[normalizeCategory(category)] || "/dozen"}
               </span>
+
+              {percentageChange > 0 && (
+                <span className="bg-[#F16941] text-white text-sm px-3 py-1 rounded relative group cursor-pointer font-semibold">
+                  up {percentageChange2024}% from 2024
+                </span>
+              )}
             </div>
           )
         )}
@@ -306,13 +330,11 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
               // ✅ Custom plugin to draw text
               annotationText: {
                 display: true,
-                text: "National Average 2000–2020"
+                text: "National Average 2000–2020",
               },
               avg2024DotLabel: {
                 selectedCategories: selectedCategories.map(normalizeCategory),
               },
-              
-              
             },
             scales: {
               x: {
@@ -391,73 +413,104 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
                 ctx.fillText(text, xPosition, yPosition);
                 ctx.restore();
               },
-              
             },
             {
               id: "avg2024DotLabel",
               beforeDraw: (chart) => {
                 const { ctx, scales, options } = chart;
-                const selected = options.plugins?.avg2024DotLabel?.selectedCategories || [];
-            
+                const selected =
+                  options.plugins?.avg2024DotLabel?.selectedCategories || [];
+
                 ctx.save();
                 ctx.font = "600 13px sans-serif";
-            
+
                 let offsetIndex = 0;
-            
+
                 selected.forEach((normalized) => {
                   const meta = avg2024Values[normalized];
                   if (!meta) return;
-            
+
                   const y = scales.y.getPixelForValue(meta.value);
                   const textPadding = 12;
                   const radius = 5;
                   const gapFromDot = 8;
                   const labelText = `${meta.label}: $${meta.value.toFixed(2)}`;
                   const textWidth = ctx.measureText(labelText).width;
-            
+
                   const labelHeight = 28;
                   const cornerRadius = 6;
                   const x = scales.x.right - 30;
                   const totalLabelWidth = textWidth + textPadding * 2;
                   const labelX = x - radius - totalLabelWidth - gapFromDot;
-                  const labelY = y - labelHeight / 2 + offsetIndex * (labelHeight + 6);
-            
+                  const labelY =
+                    y - labelHeight / 2 + offsetIndex * (labelHeight + 6);
+
                   // Background
                   ctx.beginPath();
                   ctx.moveTo(labelX + cornerRadius, labelY);
                   ctx.lineTo(labelX + totalLabelWidth - cornerRadius, labelY);
-                  ctx.quadraticCurveTo(labelX + totalLabelWidth, labelY, labelX + totalLabelWidth, labelY + cornerRadius);
-                  ctx.lineTo(labelX + totalLabelWidth, labelY + labelHeight - cornerRadius);
-                  ctx.quadraticCurveTo(labelX + totalLabelWidth, labelY + labelHeight, labelX + totalLabelWidth - cornerRadius, labelY + labelHeight);
+                  ctx.quadraticCurveTo(
+                    labelX + totalLabelWidth,
+                    labelY,
+                    labelX + totalLabelWidth,
+                    labelY + cornerRadius
+                  );
+                  ctx.lineTo(
+                    labelX + totalLabelWidth,
+                    labelY + labelHeight - cornerRadius
+                  );
+                  ctx.quadraticCurveTo(
+                    labelX + totalLabelWidth,
+                    labelY + labelHeight,
+                    labelX + totalLabelWidth - cornerRadius,
+                    labelY + labelHeight
+                  );
                   ctx.lineTo(labelX + cornerRadius, labelY + labelHeight);
-                  ctx.quadraticCurveTo(labelX, labelY + labelHeight, labelX, labelY + labelHeight - cornerRadius);
+                  ctx.quadraticCurveTo(
+                    labelX,
+                    labelY + labelHeight,
+                    labelX,
+                    labelY + labelHeight - cornerRadius
+                  );
                   ctx.lineTo(labelX, labelY + cornerRadius);
-                  ctx.quadraticCurveTo(labelX, labelY, labelX + cornerRadius, labelY);
+                  ctx.quadraticCurveTo(
+                    labelX,
+                    labelY,
+                    labelX + cornerRadius,
+                    labelY
+                  );
                   ctx.closePath();
                   ctx.fillStyle = meta.color;
                   ctx.fill();
-            
+
                   // Text
                   ctx.fillStyle = "white";
                   ctx.textAlign = "left";
                   ctx.textBaseline = "middle";
-                  ctx.fillText(labelText, labelX + textPadding, labelY + labelHeight / 2);
-            
+                  ctx.fillText(
+                    labelText,
+                    labelX + textPadding,
+                    labelY + labelHeight / 2
+                  );
+
                   // Dot
                   ctx.beginPath();
-                  ctx.arc(x, y + offsetIndex * (labelHeight + 6), radius, 0, Math.PI * 2);
+                  ctx.arc(
+                    x,
+                    y + offsetIndex * (labelHeight + 6),
+                    radius,
+                    0,
+                    Math.PI * 2
+                  );
                   ctx.fillStyle = meta.color;
                   ctx.fill();
-            
+
                   offsetIndex++;
                 });
-            
+
                 ctx.restore();
               },
-            }
-            
-            
-            
+            },
           ]}
         />
       </div>
