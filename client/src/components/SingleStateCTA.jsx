@@ -1,5 +1,5 @@
 import React from "react";
-import orangeArrow from "../assets/orange-arrow-2.png";
+import whiteArrow from "../assets/white-arrow.svg";
 function SingleStateCTA({ state, percent }) {
   return (
     <div className="bg-[#F16941] rounded-3xl px-6 py-10 text-white max-w-6xl mx-auto mt-10 mb-5">
@@ -10,7 +10,7 @@ function SingleStateCTA({ state, percent }) {
             <p className="text-md font-bold uppercase tracking-wider mb-4 text-[#E8EA58]">
               Daily Price Tracker
             </p>
-            <img src={orangeArrow} alt="orange-arrow" className="w-16 h-16" />
+            <img src={whiteArrow} alt="orange-arrow" className="w-16 h-16" />
           </div>
 
           <h1 className="font-barlow font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[75px] tracking-normal md:leading-tight">

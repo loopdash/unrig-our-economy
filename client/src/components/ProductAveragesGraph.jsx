@@ -10,7 +10,6 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import arrowIcon from "../assets/blue-arrow.png";
 import shoppingCart from "../assets/shopping-cart-2.svg";
 
 ChartJS.register(
@@ -25,17 +24,17 @@ ChartJS.register(
 
 const avg2024Values = {
   egg12ct: {
-    value: 4.15,
+    value: 3.17,
     label: " 😱 Natl. avg price of eggs in 2024",
     color: "#F16941",
   },
   beef1lb: {
-    value: 4.35,
+    value: 5.39,
     label: " 😱 Natl. avg price of beef in 2024",
     color: "#8B0000",
   },
   coffee11oz: {
-    value: 6.15,
+    value: 6.32,
     label: " 😱 Natl. avg price of coffee in 2024",
     color: "#4B2E2B",
   },
@@ -132,9 +131,11 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
     const national2024 = avgMeta?.value || 0;
     
     const percentageChange2024 = 
-      previousPrice > 0 && national2024 > 0
-        ? (((national2024 - previousPrice) / previousPrice) * 100).toFixed(2)
-        : 0;
+    national2024 > 0
+      ? (((latestPrice - national2024) / national2024) * 100).toFixed(2)
+      : 0;
+  
+
     const daysAgo = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
     const timeAgoText =
       daysAgo === 1 ? "since yesterday" : `from ${daysAgo} days ago`;
@@ -234,7 +235,7 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
                 {categoryLabel[normalizeCategory(category)] || "/dozen"}
               </span>
 
-              {percentageChange > 0 && (
+              {percentageChange2024 > 0 && (
                 <span className="bg-[#F16941] text-white text-sm px-3 py-1 rounded relative group cursor-pointer font-semibold">
                   up {percentageChange2024}% from 2024
                 </span>
@@ -416,7 +417,7 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
             },
             {
               id: "avg2024DotLabel",
-              beforeDraw: (chart) => {
+              afterDraw: (chart) => {
                 const { ctx, scales, options } = chart;
                 const selected =
                   options.plugins?.avg2024DotLabel?.selectedCategories || [];
