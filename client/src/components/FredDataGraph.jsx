@@ -11,7 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import { getFredData } from "../services/api";
-import shoppingCart from "../assets/shopping-cart.svg";
+import shoppingCart from "../assets/shopping-cart-2.svg";
 
 // Register Chart.js components
 ChartJS.register(
@@ -113,13 +113,13 @@ function FredDataGraph() {
         <div className="relative">
           <div className="relative group">
             <button
-              className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center"
+              className="rounded-full flex items-center justify-center"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               <img
                 src={shoppingCart}
                 alt="Toggle Categories"
-                className="w-4 h-4"
+                className="w-12 h-12"
               />
             </button>
 

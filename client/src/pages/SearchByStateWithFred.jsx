@@ -166,7 +166,7 @@ function SearchByStateWithFred() {
             {filteredStates.length > 0 ? (
               <div
                 className={`grid grid-cols-1 ${
-                  filteredStates.length > 1 ? "md:grid-cols-2" : ""
+                  filteredStates.length > 1 ? "md:grid-cols-1" : ""
                 } gap-6 w-full ${
                   filteredStates.length === 1 ? "max-w-6xl" : "max-w-6xl"
                 }`}

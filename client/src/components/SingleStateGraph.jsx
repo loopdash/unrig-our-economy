@@ -11,7 +11,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import shoppingCart from "../assets/shopping-cart.svg";
+import shoppingCart from "../assets/shopping-cart-2.svg";
 
 ChartJS.register(
   CategoryScale,

@@ -10,6 +10,7 @@ import TopStories from "../components/TopStories";
 import SingleStateData from "../components/SingleStateGraph";
 import Subscribe from "../components/Subscribe";
 import RisingPricesSection from "../components/RisingPricesSection";
+import StaticCopy from "../components/StaticCopy";
 
 function Home() {
   const [prices, setPrices] = useState({
@@ -77,7 +78,11 @@ function Home() {
             The cost of living for hardworking Americans continues to climb.
           </h2>
           <p className="mb-4 font-normal text-lg tracking-[0] pb-4 text-[#231F21] max-w-[70%]">
-          Some of the most essential items in your grocery cart have seen dramatic price increases. While families are struggling to make ends meet, corporations are reaping rewards. This page breaks down how these prices have changed under the Trump administration and what policies contribute to rising costs.
+            Some of the most essential items in your grocery cart have seen
+            dramatic price increases. While families are struggling to make ends
+            meet, corporations are reaping rewards. This page breaks down how
+            these prices have changed under the Trump administration and what
+            policies contribute to rising costs.
           </p>
 
           <a
@@ -95,11 +100,17 @@ function Home() {
         </div>
         <FredDataGraph />
       </section>
+      <div className="pt-8">
+      <StaticCopy />
+      </div>
+
       <div className="">
         <CTA />
         <TopStories />
       </div>
-
+      <div className="pb-8">
+      <StaticCopy />
+      </div>
       <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 pb-6 mx-2 sm:mx-auto max-w-6xl">
         <div className="w-full sm:w-1/2">
           <SingleStateData state="CA" />
@@ -125,7 +136,7 @@ function Home() {
         </div>
       </section>
 
-      <RisingPricesSection/>
+      <RisingPricesSection />
 
       <Subscribe />
     </div>

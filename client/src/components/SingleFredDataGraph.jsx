@@ -11,6 +11,11 @@ import {
   Legend,
 } from "chart.js";
 import { getFredData } from "../services/api";
+import orangeArrow from "../assets/orange-arrow.svg";
+import egg from "../assets/egg2.png";
+import bread from "../assets/bread2.png";
+import coffee from "../assets/coffee2.png";
+import steak from "../assets/steak.png";
 
 ChartJS.register(
   CategoryScale,
@@ -23,11 +28,10 @@ ChartJS.register(
 );
 
 const categoryIcons = {
-  egg: "🥚",
-  milk: "🥛",
-  bread: "🍞",
-  beef: "🥩",
-  coffee: "☕",
+  egg: egg,
+  bread: bread,
+  beef: steak,
+  coffee: coffee,
 };
 
 const categoryColors = {
@@ -89,15 +93,28 @@ function SingleFredDataGraph() {
               key={category}
               className="border-[#231F21] shadow-xl p-4 space-y-3 border rounded-[24px]"
             >
-              <div className="flex items-center space-x-2 mb-4 p-6">
+              <div className="flex items-center space-x-2 mb-4 p-6 justify-between">
                 <h3 className="text-3xl font-bold text-[#231F21]">
-                  National {categoryIcons[category] || "🥚"}{" "}
+                  National{" "}
                   <span className="font-normal">
                     {" "}
                     {category.charAt(0).toUpperCase() + category.slice(1)}{" "}
                     Prices
                   </span>
                 </h3>
+                <div className="flex flex-row">
+                <img
+                    src={categoryIcons[category] || {egg}}
+                    alt="arrow"
+                    style={{ width: 50, height: 50 }}
+                  />
+                  
+                  <img
+                    src={orangeArrow}
+                    alt="arrow"
+                    style={{ width: 50, height: 50 , marginLeft: 4}}
+                  />
+                </div>
               </div>
 
               <div className="flex-grow min-h-[500px]">

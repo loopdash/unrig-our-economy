@@ -11,7 +11,7 @@ import {
   Legend,
 } from "chart.js";
 import arrowIcon from "../assets/blue-arrow.png";
-import shoppingCart from "../assets/shopping-cart.svg";
+import shoppingCart from "../assets/shopping-cart-2.svg";
 
 ChartJS.register(
   CategoryScale,
@@ -40,6 +40,15 @@ const categoryIcons = {
   bread20oz: "🍞",
   beef1lb: "🥩",
   coffee11oz: "☕",
+};
+
+
+const categoryLabel = {
+  egg12ct: "/dozen",
+  milk1gal: "/gallon",
+  bread20oz: "/loaf",
+  beef1lb: "/lb",
+  coffee11oz: "/bag"
 };
 
 const categoryColors = {
@@ -127,13 +136,13 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
         <div className="relative">
           <div className="relative group">
             <button
-              className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center"
+              className="rounded-full flex items-center justify-center"
               onClick={() => setDropdownOpen(!dropdownOpen)}
             >
               <img
                 src={shoppingCart}
                 alt="Toggle Categories"
-                className="w-4 h-4"
+                className="w-12 h-12"
               />
             </button>
             <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 text-xs text-white bg-[#231F21] rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
@@ -170,6 +179,7 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
               {/* 🥚 Emoji - bump size */}
               <span className="text-4xl">
                 {categoryIcons[normalizeCategory(category)] || "🥚"}
+
               </span>
 
               {/* +% Badge - bump size */}
@@ -184,7 +194,8 @@ function ProductAveragesGraph({ state, data , onEggPercentChange}) {
 
               {/* Price - bump size, change to orange */}
               <span className="text-[#F16941] text-lg font-bold">
-                ${latestPrice.toFixed(2)}
+                ${latestPrice.toFixed(2)} {categoryLabel[normalizeCategory(category)] || "/dozen"}
+
               </span>
             </div>
           )
