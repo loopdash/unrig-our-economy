@@ -284,7 +284,7 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
                         {
                           label: "National Average 2000–2020",
                           data: labels.map(() => nationalAvgValue),
-                          borderColor: "#5471FF",
+                          borderColor: "#F16941",
                           borderWidth: 2,
                           pointRadius: 0,
                           fill: false,
@@ -409,7 +409,7 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
                 const xPosition = scales.x.left + 4;
                 ctx.save();
                 ctx.font = "500 12px sans-serif";
-                ctx.fillStyle = "#5471FF";
+                ctx.fillStyle = "#F16941";
                 ctx.textAlign = "left";
                 ctx.fillText(text, xPosition, yPosition);
                 ctx.restore();

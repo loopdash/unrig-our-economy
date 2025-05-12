@@ -17,7 +17,10 @@ const getProductScrapeData = async () => {
 
 const getFredData = async () => {
     try {
-        const [results] = await db.query(`SELECT * FROM fred_data`);
+        const [results] = await db.query(`
+            SELECT * FROM fred_data
+            WHERE date >= '2023-01-01'
+          `);       
         console.log('Fred Data scrape data fetched successfully:', results);
         return results;
     } catch (error) {

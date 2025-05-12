@@ -38,6 +38,15 @@ function FredDataGraph() {
     coffee: "☕",
   };
 
+  const categoryColors = {
+    egg: "#F16941",
+    milk: "#A5D8FF",
+    bread: "#D2B48C",
+    beef: "#8B0000",
+    coffee: "#4B2E2B",
+  };
+
+  
   // ✅ Fetch & Group Data on Load
   useEffect(() => {
     fetchFredData();
@@ -47,7 +56,7 @@ function FredDataGraph() {
     try {
       const rawData = await getFredData();
       // console.log("Fetched Data:", rawData);
-
+      console.log("✅ First 5 Results:", rawData.slice(0, 5));
       // ✅ Group data by category
       const grouped = {};
       rawData.forEach(({ date, price, category }) => {
@@ -89,9 +98,9 @@ function FredDataGraph() {
   const datasets = selectedCategories.map((category, index) => ({
     label: category,
     data: labels.map((date) => groupedData[category]?.[date] || null),
-    borderColor: "#F16941",
-    pointBackgroundColor: "#F16941",
-    pointBorderColor: "#F16941",
+    borderColor: categoryColors[category] || "#000", // fallback to black if not found
+    pointBackgroundColor: categoryColors[category] || "#000",
+    pointBorderColor: categoryColors[category] || "#000",
     borderWidth: 2,
     fill: false,
   }));
