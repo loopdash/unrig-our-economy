@@ -68,7 +68,7 @@ function Home() {
 
       <section className="flex flex-col items-center space-y-4 pt-8 max-w-6xl justify-center mx-2 sm:mx-auto">
         <div
-          className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[#f6f8ff] rounded-xl shadow-lg p-12 space-y-3 min-h-fit rounded-3xl text-white mx-auto max-h-xl min-h-xl leading-tight"
+          className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[#f6f8ff] rounded-xl shadow-lg p-12 space-y-3 min-h-fit rounded-3xl text-white mx-auto max-h-xl min-h-xl leading-tight mb-8"
           style={{ backgroundColor: "#E8EA58" }}
         >
           <p className="text-md font-bold uppercase tracking-wider mb-4 text-[#231F21] max-w-[70%]">
@@ -100,7 +100,7 @@ function Home() {
         </div>
         <FredDataGraph />
       </section>
-      <div className="pt-8">
+      {/* <div className="pt-8">
         <StaticCopy
           bg="#E8EA58"
           eyebrow="IT’s A FACT!"
@@ -115,13 +115,13 @@ function Home() {
           }
           subtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum."
         />
-      </div>
+      </div> */}
 
       <div className="">
         <CTA />
         <TopStories />
       </div>
-      <div className="pb-8">
+      {/* <div className="pb-8">
         <StaticCopy
           bg="#E8EA58"
           eyebrow="IT’s A FACT!"
@@ -136,8 +136,8 @@ function Home() {
           }
           subtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum."
         />
-      </div>
-      <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 pb-6 mx-2 sm:mx-auto max-w-6xl">
+      </div> */}
+      <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 pb-8 mx-2 sm:mx-auto max-w-6xl">
         <div className="w-full sm:w-1/2">
           <SingleStateData state="CA" />
         </div>
