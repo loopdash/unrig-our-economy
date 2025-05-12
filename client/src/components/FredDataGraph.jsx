@@ -209,14 +209,25 @@ function FredDataGraph() {
               x: {
                 display: true,
                 ticks: {
-                  callback: function (val, index, ticks) {
-                    const label = this.getLabelForValue(val); // e.g., "2023-05-01"
-                    const year = new Date(label).getFullYear();
-                    return year;
+                  callback: function (value, index, values) {
+                    const label = this.getLabelForValue(value); // "2023-01-01"
+                    const year = label.slice(0, 4); // Extract year string directly
+                  
+                    const isFirstOfYear = (() => {
+                      if (index === 0) return true;
+                      const prevLabel = this.getLabelForValue(values[index - 1].value);
+                      const prevYear = prevLabel.slice(0, 4);
+                      return year !== prevYear;
+                    })();
+                  
+                    return isFirstOfYear ? year : "";
                   },
-                  autoSkip: true,
-                  maxTicksLimit: 10,
+                  
+                  autoSkip: false,
+                  maxRotation: 0,
+                  minRotation: 0,
                 },
+                
                 grid: {
                   display: false,
                 },
