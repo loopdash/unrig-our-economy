@@ -121,7 +121,7 @@ function Home() {
               >
                 Most Americans
               </a>{" "}
-              about rising costs and their ability to support their families.
+              are concerned about rising costs and their ability to support their families.
             </>
           }
         />

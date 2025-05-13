@@ -7,6 +7,8 @@ import Subscribe from "../components/Subscribe";
 import SingleFredDataGraph from "../components/SingleFredDataGraph";
 import SingleStateCTA from "../components/SingleStateCTA";
 import StaticCopy from "../components/StaticCopy";
+import { useLocation } from "react-router-dom";
+
 // ✅ State Abbreviation Mapping
 const stateAbbreviations = {
   AL: "Alabama",
@@ -78,6 +80,22 @@ function SearchByStateWithFred() {
 
   const [shuffledStories, setShuffledStories] = useState([]);
   const [storyIndex, setStoryIndex] = useState(0);
+
+
+  const location = useLocation();
+
+useEffect(() => {
+  if (location.hash) {
+    const el = document.querySelector(location.hash);
+    if (el) {
+      // Wait for layout shift to finish first
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: "smooth" });
+      }, 100); // Delay ensures element is rendered
+    }
+  }
+}, [location]);
+
 
 const stories = [
   {
@@ -188,7 +206,7 @@ const stories = [
 
   return (
     <>
-      <div className="flex flex-col items-center w-full px-4 mb-6">
+      <div  id="start-search"  className="flex flex-col items-center w-full px-4 mb-6">
         <div
           className="bg-[#E8EA58] absolute top-0 right-0 left-0 h-[40vh]"
           style={{ zIndex: -1 }}
