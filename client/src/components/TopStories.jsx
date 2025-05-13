@@ -61,7 +61,7 @@ export default function TopStories() {
       <h2 className="text-md font-bold text-blue-600 uppercase mb-4">
         Top Stories
       </h2>
-      <div className="space-y-6">
+      <div className="space-y-4git">
         {stories.map((story, index) => (
           <div key={index} className="flex items-start justify-between">
             <div className="flex-1">
@@ -75,11 +75,11 @@ export default function TopStories() {
                 <span className="ml-2 font-medium">{story.date}</span>
               </p>
             </div>
-            <img
+            {/* <img
               src={story.image}
               alt="story icon"
               className="w-20 h-20 ml-4 text-3xl"
-            />
+            /> */}
           </div>
         ))}
       </div>
