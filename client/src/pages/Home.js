@@ -78,11 +78,12 @@ function Home() {
             The cost of living for hardworking Americans continues to climb.
           </h2>
           <p className="mb-4 font-normal text-lg tracking-[0] pb-4 text-[#231F21] max-w-[70%]">
-            Some of the most essential items in your grocery cart have seen
+            Some of the most essential products in your grocery cart have seen
             dramatic price increases. While families are struggling to make ends
             meet, corporations are reaping rewards. This page breaks down how
-            these prices have changed under the Trump administration and what
-            policies contribute to rising costs.
+            these prices have changed under the Trump administration and
+            Republican control of Congress and what federal policies contribute
+            to rising costs.
           </p>
 
           <a
@@ -100,43 +101,61 @@ function Home() {
         </div>
         <FredDataGraph />
       </section>
-      {/* <div className="pt-8">
+      <div className="pt-8">
         <StaticCopy
           bg="#E8EA58"
-          eyebrow="IT’s A FACT!"
+          eyebrow="IT’S A FACT!"
           header={
             <>
-              Lorem ipsum dolor sit{" "}
-              <span className="bg-[#F16941] text-white font-semibold px-2">
-                over 20%
-              </span>{" "}
-              year over year.
+              About 6 in 10 Americans are “extremely” or “very” concerned about
+              the cost of groceries.
             </>
           }
-          subtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum."
+          subtext={
+            <>
+              <a
+                href="https://apnews.com/article/trump-economy-poll-tariffs-inflation-prices-recession-1d320115e8801e4970bd5cccf2742fc4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                Most Americans
+              </a>{" "}
+              about rising costs and their ability to support their families.
+            </>
+          }
         />
-      </div> */}
+      </div>
 
       <div className="">
         <CTA />
         <TopStories />
       </div>
-      {/* <div className="pb-8">
+      <div className="pb-8">
         <StaticCopy
           bg="#E8EA58"
           eyebrow="IT’s A FACT!"
           header={
             <>
-              Lorem ipsum dolor sit{" "}
-              <span className="bg-[#F16941] text-white font-semibold px-2">
-                over 20%
-              </span>{" "}
-              year over year.
+              Nearly two-thirds of Americans disapprove of Trump and
+              Republicans’ tariffs
             </>
           }
-          subtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras egestas dui et ligula tincidunt, ac molestie arcu condimentum."
+          subtext={
+            <>
+              <a
+                href="https://abcnews.go.com/Politics/thirds-americans-disapprove-trump-tariffs-inflation-broad-concern/story?id=121123815"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                47% of Republicans and 75% of Independents
+              </a>{" "}
+              said they think tariffs will negatively impact inflation.
+            </>
+          }
         />
-      </div> */}
+      </div>
       <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 pb-8 mx-2 sm:mx-auto max-w-6xl">
         <div className="w-full sm:w-1/2">
           <SingleStateData state="CA" />

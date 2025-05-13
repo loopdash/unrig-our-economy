@@ -5,14 +5,14 @@ import store from "../assets/store.png";
 import trump from "../assets/trump.png";
 import numbers from "../assets/numbers.png";
 
-export const stories = [
+const stories = [
   {
     title: "Fact check: Trump lies about the price of eggs, groceries and gas",
     outlet: "CNN",
     date: "04.23.25",
     image: trump,
     link: "https://www.cnn.com/2025/04/23/politics/price-of-eggs-gas-trump-fact-check/index.html",
-    subtext: "Lorium Ipsum Lorem Ipsum",
+    subtext: "Gas. Groceries. Eggs. Over the last week, President Donald Trump has lied about the price of all of them — using this repeated deception to try to minimize widespread concerns that his tariffs will fuel inflation.",
 
   },
   {
@@ -21,7 +21,7 @@ export const stories = [
     date: "05.02.25",
     image: store,
     link: "https://www.bloomberg.com/news/articles/2025-05-02/tariff-uncertainty-drives-global-food-prices-to-two-year-high",
-    subtext: "Lorium Ipsum Lorem Ipsum",
+    subtext: "Global food prices rose to a two-year high in April, a sign that tariff uncertainty is starting to put a squeeze on trade. A United Nations index tracking raw commodity costs of food rose to 128.3, a 1% month-on-month jump, taking it levels last seen in March 2023.",
   },
   {
     title:
@@ -30,7 +30,7 @@ export const stories = [
     date: "04.04.25",
     image: fish,
     link: "https://www.npr.org/2025/04/04/nx-s1-5351324/tariffs-higher-grocery-prices-trump",
-    subtext: "Lorium Ipsum Lorem Ipsum",
+    subtext: "A trip to the grocery or liquor store is about to become even more expensive, economists say, following the latest round of import tariffs announced by President Trump on Wednesday.",
 
   },
   {
@@ -40,7 +40,7 @@ export const stories = [
     date: "04.24.25",
     image: shopper,
     link: "https://apnews.com/article/trump-economy-poll-tariffs-inflation-prices-recession-1d320115e8801e4970bd5cccf2742fc4",
-    subtext: "Lorium Ipsum Lorem Ipsum",
+    subtext: "Americans’ trust in President Donald Trump to bolster the U.S. economy appears to be faltering, with a new poll showing that many people fear the country is being steered into a recession and that the president’s broad and haphazardly enforced tariffs will cause prices to rise.",
 
   },
   {
@@ -50,7 +50,7 @@ export const stories = [
     date: "04.25.25",
     image: numbers,
     link: "https://abcnews.go.com/Politics/thirds-americans-disapprove-trump-tariffs-inflation-broad-concern/story?id=121123815",
-    subtext: "Lorium Ipsum Lorem Ipsum",
+    subtext: "Seven in 10 Americans think President Donald Trump's tariffs on international trade will drive up U.S. inflation, outweighing hopes that they'll boost manufacturing employment and fueling a 64% disapproval rate of how he's handling the issue.",
 
   },
 ];

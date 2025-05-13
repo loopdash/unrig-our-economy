@@ -7,7 +7,6 @@ import Subscribe from "../components/Subscribe";
 import SingleFredDataGraph from "../components/SingleFredDataGraph";
 import SingleStateCTA from "../components/SingleStateCTA";
 import StaticCopy from "../components/StaticCopy";
-import { stories } from "../components/TopStories";
 // ✅ State Abbreviation Mapping
 const stateAbbreviations = {
   AL: "Alabama",
@@ -80,6 +79,51 @@ function SearchByStateWithFred() {
   const [shuffledStories, setShuffledStories] = useState([]);
   const [storyIndex, setStoryIndex] = useState(0);
 
+const stories = [
+  {
+    title: "Fact check: Trump lies about the price of eggs, groceries and gas",
+    outlet: "CNN",
+    date: "04.23.25",
+
+    link: "https://www.cnn.com/2025/04/23/politics/price-of-eggs-gas-trump-fact-check/index.html",
+    subtext: "Lorium Ipsum Lorem Ipsum",
+
+  },
+  {
+    title: "Tariff Concerns Drive Global Food Prices to Two-Year High",
+    outlet: "BLOOMBERG",
+    date: "05.02.25",
+    link: "https://www.bloomberg.com/news/articles/2025-05-02/tariff-uncertainty-drives-global-food-prices-to-two-year-high",
+    subtext: "Lorium Ipsum Lorem Ipsum",
+  },
+  {
+    title:
+      "Higher prices are likely for these 10 grocery items when tariffs hit",
+    outlet: "NPR",
+    date: "04.04.25",
+    link: "https://www.npr.org/2025/04/04/nx-s1-5351324/tariffs-higher-grocery-prices-trump",
+    subtext: "Lorium Ipsum Lorem Ipsum",
+
+  },
+  {
+    title:
+      "Most Americans expect higher prices as a result of Trump’s tariffs, a new AP-NORC poll finds",
+    outlet: "AP NEWS",
+    date: "04.24.25",
+    link: "https://apnews.com/article/trump-economy-poll-tariffs-inflation-prices-recession-1d320115e8801e4970bd5cccf2742fc4",
+    subtext: "Lorium Ipsum Lorem Ipsum",
+
+  },
+  {
+    title:
+      "Nearly two-thirds of Americans disapprove of Trump tariffs, with inflation a broad concern: POLL",
+    outlet: "ABC NEWS",
+    date: "04.25.25",
+    link: "https://abcnews.go.com/Politics/thirds-americans-disapprove-trump-tariffs-inflation-broad-concern/story?id=121123815",
+    subtext: "Lorium Ipsum Lorem Ipsum",
+
+  },
+];
   useEffect(() => {
     const shuffled = [...stories].sort(() => 0.5 - Math.random());
     setShuffledStories(shuffled);

@@ -163,13 +163,12 @@ function FredDataGraph() {
       </div>
 
       <h4 className="text-lg max-w-[70%]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+      The rising cost of living isn’t just a local issue—it’s a nationwide crisis. Across the country, Americans are seeing essential products jump in price, straining budgets and reshaping everyday choices at the checkout line.
+
+          </h4>
+          <h4 className="text-lg max-w-[70%]">
+   
+      These price increases didn’t happen in a vacuum. Under the Trump administration, policies like corporate tax breaks and aggressive tariffs have tilted the scales—driving up costs while boosting profits for the very corporations hiking prices.
           </h4>
 
       {/* ✅ Line Chart */}
