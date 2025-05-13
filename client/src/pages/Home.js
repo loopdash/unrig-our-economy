@@ -129,6 +129,7 @@ function Home() {
 
       <div className="">
         <CTA />
+        <RisingPricesSection />
         <TopStories />
       </div>
       <div className="pb-8">
@@ -156,7 +157,7 @@ function Home() {
           }
         />
       </div>
-      <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 pb-8 mx-2 sm:mx-auto max-w-6xl">
+      <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 pt-2 pb-8 mx-2 sm:mx-auto max-w-6xl">
         <div className="w-full sm:w-1/2">
           <SingleStateData state="CA" />
         </div>
@@ -180,8 +181,6 @@ function Home() {
           />
         </div>
       </section>
-
-      <RisingPricesSection />
 
       <Subscribe />
     </div>

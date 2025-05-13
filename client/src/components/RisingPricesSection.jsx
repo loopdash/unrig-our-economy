@@ -4,7 +4,7 @@ import background from "../assets/background.png";
 export default function RisingPricesSection() {
   return (
     <section
-      className="px-6 pt-24 pb-24 text-[#231F21] bg-cover bg-center bg-no-repeat "
+      className="px-6 pt-24 pb-8 text-[#231F21] bg-cover bg-center bg-no-repeat "
       style={{ backgroundImage: `url(${background})` }}
     >
       <div className="max-w-5xl mx-auto space-y-16">
