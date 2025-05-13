@@ -124,10 +124,10 @@ const stories = [
 
   },
 ];
-  useEffect(() => {
-    const shuffled = [...stories].sort(() => 0.5 - Math.random());
-    setShuffledStories(shuffled);
-  }, []);
+  // useEffect(() => {
+  //   const shuffled = [...stories].sort(() => 0.5 - Math.random());
+  //   setShuffledStories(shuffled);
+  // }, []);
 
   useEffect(() => {
     fetchProductAverages();
@@ -232,13 +232,13 @@ const stories = [
                   />
                 )}
                 {filteredStates.slice(0, visibleCount).map((state, index) => {
-                  const shouldShowStatic = (index + 1) % 3 === 0;
-                  const story = shouldShowStatic
-                    ? shuffledStories[localStoryIndex++]
-                    : null;
-                  if (shouldShowStatic && storyIndex < shuffledStories.length) {
-                    setStoryIndex((prev) => prev + 1);
-                  }
+                  // const shouldShowStatic = (index + 1) % 3 === 0;
+                  // const story = shouldShowStatic
+                  //   ? shuffledStories[localStoryIndex++]
+                  //   : null;
+                  // if (shouldShowStatic && storyIndex < shuffledStories.length) {
+                  //   setStoryIndex((prev) => prev + 1);
+                  // }
 
                   return (
                     <React.Fragment key={state}>
@@ -250,7 +250,7 @@ const stories = [
                         />
                       </div>
 
-                      {shouldShowStatic && story && (
+                      {/* {shouldShowStatic && story && (
                         <StaticCopy
                           eyebrow={`${story.outlet} • ${story.date}`}
                           bg="#5371FF"
@@ -259,7 +259,7 @@ const stories = [
                           header={<>{story.title}</>}
                           subtext={`${story.subtext}`}
                         />
-                      )}
+                      )} */}
                     </React.Fragment>
                   );
                 })}
