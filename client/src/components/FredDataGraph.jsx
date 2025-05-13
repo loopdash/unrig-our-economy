@@ -114,7 +114,7 @@ function FredDataGraph() {
         <h3 className="text-[#5371FF] text-md font-bold uppercase tracking-wider">
             National Grocery Price Tracker
           </h3>
-          <h4 className="text-lg pl-2">Grocery Prices since the year 2000</h4>
+          <h4 className="text-lg pl-2">Grocery Prices since the year 2024</h4>
         </div>
 
 
