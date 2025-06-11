@@ -13,30 +13,25 @@ import SearchByStateWithFred from "./pages/SearchByStateWithFred";
 function App() {
   return (
     <>
-      <div className="sticky top-0 z-50 bg-white shadow-md">
-        <Header />
-      </div>
+      <ProtectedRoute>
+        <div className="sticky top-0 z-50 bg-white shadow-md">
+          <Header />
+        </div>
 
-      <Router>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <ProtectedRoute>
-                <Home />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="/search-by-state" element={<SearchByState />} />
-          <Route path="/per-state" element={<PerState />} />
-          <Route
-            path="/search-by-state-fred"
-            element={<SearchByStateWithFred />}
-          />
-          <Route path="/errors/get" element={<ErrorLogs />} />
-        </Routes>
-      </Router>
-      <Footer />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/search-by-state" element={<SearchByState />} />
+            <Route path="/per-state" element={<PerState />} />
+            <Route
+              path="/search-by-state-fred"
+              element={<SearchByStateWithFred />}
+            />
+            <Route path="/errors/get" element={<ErrorLogs />} />
+          </Routes>
+        </Router>
+        <Footer />
+      </ProtectedRoute>
     </>
   );
 }

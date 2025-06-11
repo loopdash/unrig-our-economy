@@ -164,7 +164,7 @@ function SingleStateGraph({ state = "CA" }) {
                   <img
                     src={shoppingCart}
                     alt="Toggle Categories"
-                    className="w-4 h-4"
+                    className="w-12 h-12"
                   />
                 </button>
 
@@ -175,7 +175,9 @@ function SingleStateGraph({ state = "CA" }) {
 
               {dropdownOpen && (
                 <div className="absolute top-10 right-0 bg-white shadow-lg rounded-md p-2 border border-gray-300 z-20">
-                  {categories.map((category) => (
+                  {categories  .filter((category) =>
+    ["Egg 12ct", "Beef 1lb", "Coffee 11 oz"].includes(category)
+  ).map((category) => (
                     <button
                       key={category}
                       className={`flex items-center justify-center p-2 rounded-md transition ${
@@ -201,42 +203,48 @@ function SingleStateGraph({ state = "CA" }) {
               <Line
                 data={{
                   labels,
-                  datasets: selectedCategories.flatMap((category) => {
-                    const baseColor = categoryColors[category] || "black";
-                    const nationalAvgValue = nationalAverages[category];
+                  datasets: selectedCategories
+                    .filter((category) =>
+                      ["Egg 12ct", "Beef 1lb", "Coffee 11 oz"].includes(
+                        category
+                      )
+                    )
+                    .flatMap((category) => {
+                      const baseColor = categoryColors[category] || "black";
+                      const nationalAvgValue = nationalAverages[category];
 
-                    return [
-                      {
-                        label: category,
-                        data: labels.map(
-                          (day) =>
-                            sortedData.find(
-                              (entry) =>
-                                entry.record_day === day &&
-                                entry.product_category === category
-                            )?.average_price || null
-                        ),
-                        borderColor: baseColor,
-                        pointBackgroundColor: baseColor,
-                        pointBorderColor: baseColor,
-                        borderWidth: 2,
-                        fill: false,
-                        spanGaps: true,
-                      },
-                      ...(nationalAvgValue
-                        ? [
-                            {
-                              label: "National Average 2000–2020",
-                              data: labels.map(() => nationalAvgValue),
-                              borderColor: "#F16941",
-                              borderWidth: 2,
-                              pointRadius: 0,
-                              fill: false,
-                            },
-                          ]
-                        : []),
-                    ];
-                  }),
+                      return [
+                        {
+                          label: category,
+                          data: labels.map(
+                            (day) =>
+                              sortedData.find(
+                                (entry) =>
+                                  entry.record_day === day &&
+                                  entry.product_category === category
+                              )?.average_price || null
+                          ),
+                          borderColor: baseColor,
+                          pointBackgroundColor: baseColor,
+                          pointBorderColor: baseColor,
+                          borderWidth: 2,
+                          fill: false,
+                          spanGaps: true,
+                        },
+                        ...(nationalAvgValue
+                          ? [
+                              {
+                                label: "National Average 2000–2020",
+                                data: labels.map(() => nationalAvgValue),
+                                borderColor: "#F16941",
+                                borderWidth: 2,
+                                pointRadius: 0,
+                                fill: false,
+                              },
+                            ]
+                          : []),
+                      ];
+                    }),
                 }}
                 options={{
                   responsive: true,
@@ -291,7 +299,7 @@ function SingleStateGraph({ state = "CA" }) {
 
             {/* Dashed Line at Bottom */}
             <div className="w-full border-t-2 border-dashed border-[#5471FF] mt-2"></div>
-            </div>
+          </div>
         </div>
       ) : (
         <p className="mt-4">

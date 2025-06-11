@@ -56,7 +56,7 @@ function FredDataGraph() {
     try {
       const rawData = await getFredData();
       // console.log("Fetched Data:", rawData);
-      console.log("✅ First 5 Results:", rawData.slice(0, 5));
+      // console.log("✅ First 5 Results:", rawData.slice(0, 5));
       // ✅ Group data by category
       const grouped = {};
       rawData.forEach(({ date, price, category }) => {
