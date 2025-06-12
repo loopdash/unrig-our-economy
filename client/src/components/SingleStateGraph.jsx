@@ -175,23 +175,27 @@ function SingleStateGraph({ state = "CA" }) {
 
               {dropdownOpen && (
                 <div className="absolute top-10 right-0 bg-white shadow-lg rounded-md p-2 border border-gray-300 z-20">
-                  {categories  .filter((category) =>
-    ["Egg 12ct", "Beef 1lb", "Coffee 11 oz"].includes(category)
-  ).map((category) => (
-                    <button
-                      key={category}
-                      className={`flex items-center justify-center p-2 rounded-md transition ${
-                        selectedCategories.includes(category)
-                          ? "bg-blue-100"
-                          : "hover:bg-gray-100"
-                      }`}
-                      onClick={() => toggleCategory(category)}
-                    >
-                      <span className="text-lg">
-                        {categoryIcons[category] || "🥚"}
-                      </span>
-                    </button>
-                  ))}
+                  {categories
+                    .filter((category) =>
+                      ["Egg 12ct", "Beef 1lb", "Coffee 11 oz"].includes(
+                        category
+                      )
+                    )
+                    .map((category) => (
+                      <button
+                        key={category}
+                        className={`flex items-center justify-center p-2 rounded-md transition ${
+                          selectedCategories.includes(category)
+                            ? "bg-blue-100"
+                            : "hover:bg-gray-100"
+                        }`}
+                        onClick={() => toggleCategory(category)}
+                      >
+                        <span className="text-lg">
+                          {categoryIcons[category] || "🥚"}
+                        </span>
+                      </button>
+                    ))}
                 </div>
               )}
             </div>
