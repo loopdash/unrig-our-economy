@@ -4,7 +4,7 @@ import axios from 'axios';
 // Set API base URL from environment variable or fallback to the Droplet's IP
 // const API_URL = 'http://localhost:5001/';
 let API_URL;
-if (process.env.NODE_ENV === 'DEV') {
+if (process.env.NODE_ENV === 'development') {
     API_URL =  'http://localhost:5001/'
 } else {
     API_URL = process.env.REACT_APP_API_URL_PROD
