@@ -15,7 +15,7 @@ function HeaderCTA() {
     const fetchPercentageChange = async () => {
       try {
         const data = await getProductAverages();
-        console.log('API response:', data);
+        // console.log('API response:', data);
         const stateEggPrices = data
           .filter(
             (item) =>
