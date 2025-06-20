@@ -98,7 +98,7 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
     ),
   ];
 
-  const [selectedCategories, setSelectedCategories] = useState(["Egg 12ct"]);
+  const [selectedCategories, setSelectedCategories] = useState(["Beef 1lb"]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleCategory = (category) => {
@@ -129,18 +129,23 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
     const normalized = normalizeCategory(category);
     const avgMeta = avg2024Values[normalized];
     const national2024 = avgMeta?.value || 0;
-    
-    const percentageChange2024 = 
-    national2024 > 0
-      ? (((latestPrice - national2024) / national2024) * 100).toFixed(2)
-      : 0;
-  
+
+    const percentageChange2024 =
+      national2024 > 0
+        ? (((latestPrice - national2024) / national2024) * 100).toFixed(2)
+        : 0;
 
     const daysAgo = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
     const timeAgoText =
       daysAgo === 1 ? "since yesterday" : `from ${daysAgo} days ago`;
 
-    return { category, latestPrice, percentageChange, timeAgoText, percentageChange2024 };
+    return {
+      category,
+      latestPrice,
+      percentageChange,
+      timeAgoText,
+      percentageChange2024,
+    };
   });
 
   useEffect(() => {
@@ -212,7 +217,13 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
 
       <div className="space-y-2">
         {categoryStats.map(
-          ({ category, latestPrice, percentageChange, timeAgoText, percentageChange2024 }) => (
+          ({
+            category,
+            latestPrice,
+            percentageChange,
+            timeAgoText,
+            percentageChange2024,
+          }) => (
             <div key={category} className="flex items-center space-x-3">
               {/* 🥚 Emoji - bump size */}
               <span className="text-4xl">
@@ -405,13 +416,14 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
                 const avgValue = nationalAverages[selected];
                 if (!avgValue) return;
 
-                const yPosition = scales.y.getPixelForValue(avgValue) - 8; // slightly above line
+                const yBottom = scales.y.getPixelForValue(scales.y.min) - 20; // bottom edge of Y-axis
+
                 const xPosition = scales.x.left + 4;
                 ctx.save();
                 ctx.font = "500 12px sans-serif";
                 ctx.fillStyle = "#F16941";
                 ctx.textAlign = "left";
-                ctx.fillText(text, xPosition, yPosition);
+                ctx.fillText(text, xPosition, yBottom);
                 ctx.restore();
               },
             },
