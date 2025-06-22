@@ -16,7 +16,7 @@ function Footer() {
   {/* Left Side: 60% width on large screens */}
   <div className="w-full lg:w-[55%]">
     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] font-bold mb-6 leading-tight">
-      Our Eggconomy is Rigged.
+      Don't inflate our plates.
     </h2>
     <p className="mb-6 max-w-md text-lg">
       It’s time to make our economy work for working people — not just

@@ -10,7 +10,7 @@ function Header() {
         {/* Logo */}
         <a className="flex flex-row items-center" href="/">
           <img src={unrigLogo} alt="Unrig Logo" className="h-10 mr-2" />
-          <div className="text-2xl font-bold">Don't Inflate Our Plate</div>
+          <div className="text-2xl font-bold">Don't Inflate Our Plates</div>
         </a>
 
         {/* Desktop Nav */}
