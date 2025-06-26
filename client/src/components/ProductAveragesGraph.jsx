@@ -23,11 +23,11 @@ ChartJS.register(
 );
 
 const avg2024Values = {
-  egg12ct: {
-    value: 3.17,
-    label: " 😱 Natl. avg price of eggs in 2024",
-    color: "#F16941",
-  },
+  // egg12ct: {
+  //   value: 3.17,
+  //   label: " 😱 Natl. avg price of eggs in 2024",
+  //   color: "#F16941",
+  // },
   beef1lb: {
     value: 5.39,
     label: " 😱 Natl. avg price of beef in 2024",
