@@ -8,7 +8,8 @@ import SingleFredDataGraph from "../components/SingleFredDataGraph";
 import SingleStateCTA from "../components/SingleStateCTA";
 import StaticCopy from "../components/StaticCopy";
 import { useLocation } from "react-router-dom";
-
+import allRegionalData from "../assets/allRegionalData";
+import RegionalAveragesGraph from "../components/RegionalAveragesGraph";
 // ✅ State Abbreviation Mapping
 const stateAbbreviations = {
   AL: "Alabama",
@@ -81,72 +82,99 @@ function SearchByStateWithFred() {
   const [shuffledStories, setShuffledStories] = useState([]);
   const [storyIndex, setStoryIndex] = useState(0);
 
-
   const location = useLocation();
 
-useEffect(() => {
-  if (location.hash) {
-    const el = document.querySelector(location.hash);
-    if (el) {
-      // Wait for layout shift to finish first
-      setTimeout(() => {
-        el.scrollIntoView({ behavior: "smooth" });
-      }, 100); // Delay ensures element is rendered
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        // Wait for layout shift to finish first
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100); // Delay ensures element is rendered
+      }
     }
-  }
-}, [location]);
+  }, [location]);
+const targetStates = {
+  ct: "Northeast",
+  de: "South",
+  hi: "West",
+  ia: "Midwest",
+  ma: "Northeast",
+  me: "Northeast",
+  mn: "Midwest",
+  nd: "Midwest",
+  nh: "Northeast",
+  nj: "Northeast",
+  ny: "Northeast",
+  ok: "South",
+  pa: "Northeast",
+  ri: "Northeast",
+  sd: "Midwest",
+  vt: "Northeast",
+  fl: "South",
+  nc: "South",
+  md: "South",
+  connecticut: "Northeast",
+  delaware: "South",
+  hawaii: "West",
+  iowa: "Midwest",
+  massachusetts: "Northeast",
+  maine: "Northeast",
+  minnesota: "Midwest",
+  "north dakota": "Midwest",
+  "new hampshire": "Northeast",
+  "new jersey": "Northeast",
+  "new york": "Northeast",
+  oklahoma: "South",
+  pennsylvania: "Northeast",
+  "rhode island": "Northeast",
+  "south dakota": "Midwest",
+  vermont: "Northeast",
+  florida: "South",
+  "north carolina": "South",
+  maryland: "South",
+};
+
+function getRegionForState(stateInput) {
+  const normalized = stateInput.trim().toLowerCase();
+  return targetStates[normalized] || null;
+}
 
 
-const stories = [
-  {
-    title: "Fact check: Trump lies about the price of eggs, groceries and gas",
-    outlet: "CNN",
-    date: "04.23.25",
+  const region = getRegionForState(searchQuery); // Get the region from state input
+  const hasRegionMatch = region !== null;
+  const regionalData = allRegionalData.filter(
+    (entry) => entry.region === region
+  );
 
-    link: "https://www.cnn.com/2025/04/23/politics/price-of-eggs-gas-trump-fact-check/index.html",
-    subtext: "Lorium Ipsum Lorem Ipsum",
-
-  },
-  {
-    title: "Tariff Concerns Drive Global Food Prices to Two-Year High",
-    outlet: "BLOOMBERG",
-    date: "05.02.25",
-    link: "https://www.bloomberg.com/news/articles/2025-05-02/tariff-uncertainty-drives-global-food-prices-to-two-year-high",
-    subtext: "Lorium Ipsum Lorem Ipsum",
-  },
-  {
-    title:
-      "Higher prices are likely for these 10 grocery items when tariffs hit",
-    outlet: "NPR",
-    date: "04.04.25",
-    link: "https://www.npr.org/2025/04/04/nx-s1-5351324/tariffs-higher-grocery-prices-trump",
-    subtext: "Lorium Ipsum Lorem Ipsum",
-
-  },
-  {
-    title:
-      "Most Americans expect higher prices as a result of Trump’s tariffs, a new AP-NORC poll finds",
-    outlet: "AP NEWS",
-    date: "04.24.25",
-    link: "https://apnews.com/article/trump-economy-poll-tariffs-inflation-prices-recession-1d320115e8801e4970bd5cccf2742fc4",
-    subtext: "Lorium Ipsum Lorem Ipsum",
-
-  },
-  {
-    title:
-      "Nearly two-thirds of Americans disapprove of Trump tariffs, with inflation a broad concern: POLL",
-    outlet: "ABC NEWS",
-    date: "04.25.25",
-    link: "https://abcnews.go.com/Politics/thirds-americans-disapprove-trump-tariffs-inflation-broad-concern/story?id=121123815",
-    subtext: "Lorium Ipsum Lorem Ipsum",
-
-  },
-];
-  // useEffect(() => {
-  //   const shuffled = [...stories].sort(() => 0.5 - Math.random());
-  //   setShuffledStories(shuffled);
-  // }, []);
-
+  const regionText = [
+    {
+      region: "Northeast",
+      icon: "🔹",
+      text: "Egg and beef prices reflect BLS monthly averages for the Northeast Census Region. Data is reported by the U.S. Bureau of Labor Statistics and represents regional urban price trends.",
+    },
+    {
+      region: "Midwest",
+      icon: "🔸",
+      text: "Prices are sourced from BLS regional data for the Midwest Census Region. Monthly values reflect average retail food prices across urban markets in this region.",
+    },
+    {
+      region: "South",
+      icon: "🔻",
+      text: "Retail prices for eggs and beef are based on BLS data from the South Region, which includes the Southeastern and parts of the Mid-Atlantic U.S.",
+    },
+    {
+      region: "West (including HI)",
+      icon: "🔼",
+      text: "West Region prices are pulled from BLS monthly tables and represent an average of states in the Pacific and Mountain divisions. Hawaii is included in this grouping.",
+    },
+    {
+      region: "Hawaii",
+      icon: "🌺",
+      text: "Egg prices are based on reports from the Hawaiʻi Department of Agriculture (HDOA). Monthly prices are estimated using interpolation between official reports. Beef prices are using BLS West Region data, which includes Hawaii.",
+    },
+  ];
   useEffect(() => {
     fetchProductAverages();
   }, []);
@@ -206,7 +234,10 @@ const stories = [
 
   return (
     <>
-      <div  id="start-search"  className="flex flex-col items-center w-full px-4 mb-6">
+      <div
+        id="start-search"
+        className="flex flex-col items-center w-full px-4 mb-6"
+      >
         <div
           className="bg-[#E8EA58] absolute top-0 right-0 left-0 h-[40vh]"
           style={{ zIndex: -1 }}
@@ -239,9 +270,7 @@ const stories = [
               <div
                 className={`grid grid-cols-1 ${
                   filteredStates.length > 1 ? "md:grid-cols-1" : ""
-                } gap-6 w-full ${
-                  filteredStates.length === 1 ? "max-w-6xl" : "max-w-6xl"
-                }`}
+                } gap-6 w-full max-w-6xl`}
               >
                 {eggPercentChange > 0 && filteredStates.length === 1 && (
                   <SingleStateCTA
@@ -249,38 +278,49 @@ const stories = [
                     percent={eggPercentChange}
                   />
                 )}
-                {filteredStates.slice(0, visibleCount).map((state, index) => {
-                  // const shouldShowStatic = (index + 1) % 3 === 0;
-                  // const story = shouldShowStatic
-                  //   ? shuffledStories[localStoryIndex++]
-                  //   : null;
-                  // if (shouldShowStatic && storyIndex < shuffledStories.length) {
-                  //   setStoryIndex((prev) => prev + 1);
-                  // }
 
-                  return (
-                    <React.Fragment key={state}>
-                      <div>
-                        <ProductAveragesGraph
-                          state={stateAbbreviations[state]}
-                          data={groupedByState[state]}
-                          onEggPercentChange={setEggPercentChange}
-                        />
+                {filteredStates.slice(0, visibleCount).map((state, index) => (
+                  <React.Fragment key={state}>
+                    <div>
+                      <ProductAveragesGraph
+                        state={stateAbbreviations[state]}
+                        data={groupedByState[state]}
+                        onEggPercentChange={setEggPercentChange}
+                      />
+                    </div>
+                  </React.Fragment>
+
+                ))}
+                                                      <div className="px-6 mb-6">
+                      <div className="text-3xl font-bold text-[#231F21] mb-2">
+                       🛒  Kroger States 
                       </div>
-
-                      {/* {shouldShowStatic && story && (
-                        <StaticCopy
-                          eyebrow={`${story.outlet} • ${story.date}`}
-                          bg="#5371FF"
-                          color="white"
-                          href={`${story.link}`}
-                          header={<>{story.title}</>}
-                          subtext={`${story.subtext}`}
-                        />
-                      )} */}
-                    </React.Fragment>
+                      <p className="mb-4 pb-4 font-normal text-2xl leading-normal font-barlow text-[#231F21]">Retail egg and beef prices for select states were sourced directly from the Kroger API, which reflects real-time in-store prices from Kroger and affiliated banners.</p>
+                    </div>
+              </div>
+            ) : hasRegionMatch && regionalData.length > 0 ? (
+              <div className="grid grid-cols-1 gap-6 w-full max-w-6xl">
+                <RegionalAveragesGraph
+                  state={searchQuery}
+                  data={regionalData}
+                />
+                {(() => {
+                  const regionKey =
+                    region === "West" ? "West (including HI)" : region;
+                  const matched = regionText.find(
+                    (r) => r.region === regionKey || r.region === region
                   );
-                })}
+                  return matched ? (
+                    <div className="px-6 mb-6">
+                      <div className="text-3xl font-bold text-[#231F21] mb-2">
+                        {matched.icon} {matched.region}
+                      </div>
+                      <p className="mb-4 pb-4 font-normal text-2xl leading-normal font-barlow text-[#231F21]">{matched.text}</p>
+                    </div>
+                  ) : null;
+                })()}
+
+                <SingleFredDataGraph />
               </div>
             ) : (
               <div className="grid grid-cols-1 gap-6 w-full max-w-6xl">
@@ -289,7 +329,7 @@ const stories = [
                     <span className="font-semibold">{searchQuery}</span> doesn’t
                     have daily grocery price data! These charts show the rise in
                     prices across the nation from the year 2000 until the
-                    present. {""}
+                    present.{" "}
                     <a
                       href="https://fredhelp.stlouisfed.org/fred/about/about-fred/what-is-fred/"
                       target="_blank"
@@ -305,6 +345,7 @@ const stories = [
                 <SingleFredDataGraph />
               </div>
             )}
+
             {filteredStates.length > visibleCount && (
               <button
                 onClick={handleLoadMore}

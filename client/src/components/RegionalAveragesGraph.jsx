@@ -83,22 +83,23 @@ const categoryColors = {
   coffee11oz: "#4B2E2B",
 };
 
-function ProductAveragesGraph({ state, data, onEggPercentChange }) {
+function RegionalAveragesGraph({ state, data, onEggPercentChange }) {
   const sortedData = data.sort(
     (a, b) => new Date(a.record_day) - new Date(b.record_day)
   );
   const labels = [...new Set(sortedData.map((entry) => entry.record_day))];
 
-  const excludedCategories = ["Milk 1gal", "Bread 20oz", "Bread"];
+  const excludedCategories = [];
+
   const categories = [
     ...new Set(
       sortedData
-        .map((entry) => entry.product_category)
+        .map((entry) => normalizeCategory(entry.product_category))
         .filter((cat) => !excludedCategories.includes(cat))
     ),
   ];
 
-  const [selectedCategories, setSelectedCategories] = useState(["Beef 1lb"]);
+  const [selectedCategories, setSelectedCategories] = useState(["beef1lb"]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleCategory = (category) => {
@@ -111,8 +112,11 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
 
   const categoryStats = selectedCategories.map((category) => {
     const categoryData = sortedData.filter(
-      (entry) => entry.product_category === category
+      (entry) =>
+        normalizeCategory(entry.product_category) ===
+        normalizeCategory(category)
     );
+
     const latest = categoryData[categoryData.length - 1];
     const previous =
       categoryData.length > 1 ? categoryData[categoryData.length - 2] : latest;
@@ -160,19 +164,10 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
   return (
     <div className="relative bg-[#FDFDFC] border-[#231F21] shadow-xl p-4 space-y-3 border-2 rounded-[24px]">
       <div className="flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center">
-            <img
-              src={`/states-svg/${state
-                .toLowerCase()
-                .replace(/\s+/g, "-")}.svg`}
-              alt={`${state} icon`}
-              className="w-6 h-6 object-contain"
-            />
-          </div>
-
-          <h3 className="text-[#231F21] text-xl font-semibold leading-tight font-barlow">
-            {state}
+        <div className="flex items-center space-x-2 mb-4 p-6">
+          <h3 className="text-3xl font-bold text-[#231F21]">
+            Regional Data{" "}
+            <span className="font-normal text-[#5371FF]">{data[0].region}</span>
           </h3>
         </div>
 
@@ -224,7 +219,7 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
             timeAgoText,
             percentageChange2024,
           }) => (
-            <div key={category} className="flex items-center space-x-3">
+            <div key={category} className="flex items-center space-x-3 pl-6">
               {/* 🥚 Emoji - bump size */}
               <span className="text-4xl">
                 {categoryIcons[normalizeCategory(category)] || "🥚"}
@@ -350,49 +345,18 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
             },
             scales: {
               x: {
-                display: true,
                 ticks: {
-                  callback: function (value, index, values) {
-                    const label = this.getLabelForValue(value); // "2025-03-15"
-                    const current = new Date(label);
-                    const currentMonth = current.getMonth();
-                    const currentYear = current.getFullYear();
-
-                    if (index === 0)
-                      return current.toLocaleDateString("en-US", {
-                        month: "short",
-                        year: "numeric",
-                      });
-
-                    const prevLabel = this.getLabelForValue(
-                      values[index - 1].value
-                    );
-                    const prev = new Date(prevLabel);
-                    const prevMonth = prev.getMonth();
-                    const prevYear = prev.getFullYear();
-
-                    if (
-                      currentMonth !== prevMonth ||
-                      currentYear !== prevYear
-                    ) {
-                      return current.toLocaleDateString("en-US", {
-                        month: "short",
-                        year: "numeric",
-                      });
-                    }
-
-                    return ""; // suppress label if same month
+                  callback: function (val) {
+                    const label = this.getLabelForValue(val);
+                    return new Date(label).getFullYear();
                   },
-                  autoSkip: false, // let our custom logic control it
-                  maxRotation: 0, // Make sure it's flat
-                  minRotation: 0,
+                  autoSkip: true,
+                  maxTicksLimit: 10,
                 },
                 grid: { display: false },
                 border: { display: false },
               },
-              y: {
-                display: false,
-              },
+              y: { display: false },
             },
             elements: {
               line: { tension: 0.4 },
@@ -533,4 +497,4 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
   );
 }
 
-export default ProductAveragesGraph;
+export default RegionalAveragesGraph;
