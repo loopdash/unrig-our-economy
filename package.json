@@ -22,6 +22,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "node-cron": "^3.0.3",
     "react-countup": "^6.5.3",
     "recharts": "^2.15.1"

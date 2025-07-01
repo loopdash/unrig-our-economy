@@ -12,40 +12,39 @@ import unrigLogo from "../assets/logo-black.png";
 function Footer() {
   return (
     <footer className="bg-[#E8EA58] text-[#231F21] px-6 py-24">
-<div className="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10">
-  {/* Left Side: 60% width on large screens */}
-  <div className="w-full lg:w-[55%]">
-    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] font-bold mb-6 leading-tight">
-      Don't inflate our plates.
-    </h2>
-    <p className="mb-6 max-w-md text-lg">
-      It’s time to make our economy work for working people — not just
-      corporations and the wealthy few.
-    </p>
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-10">
+        {/* Left Side: 60% width on large screens */}
+        <div className="w-full lg:w-[55%]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[5rem] font-bold mb-6 leading-tight">
+            Don't inflate our plates.
+          </h2>
+          <p className="mb-6 max-w-md text-lg">
+            It’s time to make our economy work for working people — not just
+            corporations and the wealthy few.
+          </p>
 
-<a
+          <a
             href={"https://unrigoureconomy.com/"}
-  className="inline-block w-full md:w-1/2 text-center leading-[40px] uppercase transition-transform duration-200 hover:scale-105 font-bold"
+            className="inline-block w-full md:w-1/2 text-center leading-[40px] uppercase transition-transform duration-200 hover:scale-105 font-bold"
             style={{
               backgroundColor: "black",
               color: "white",
               border: `3px solid black`,
               boxShadow: `-4px 4px 0 0 black`,
-
             }}
           >
             Learn More
           </a>
 
-    <p className="text-sm mt-4">
-      © 2025 Unrig Our Economy. All rights reserved.
-    </p>
-  </div>
+          <p className="text-sm mt-4">
+            © 2025 Unrig Our Economy. All rights reserved.
+          </p>
+        </div>
 
-  {/* Right Side: 40% width on large screens */}
-  <div className="w-full lg:w-[45%] flex flex-col items-end justify-center text-right">
-    <img src={brokenEgg} alt="Broken Egg" className="w-105 mb-6" />
-    <div className="flex justify-end items-center space-x-4 text-2xl">
+        {/* Right Side: 40% width on large screens */}
+        <div className="w-full lg:w-[45%] flex flex-col items-end justify-center text-right">
+          <img src={brokenEgg} alt="Broken Egg" className="w-105 mb-6" />
+          <div className="flex justify-end items-center space-x-4 text-2xl">
             <a
               href="https://twitter.com/unrigoureconomy"
               target="_blank"
