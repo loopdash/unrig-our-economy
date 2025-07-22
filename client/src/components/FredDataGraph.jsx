@@ -56,13 +56,14 @@ function FredDataGraph() {
     try {
       const rawData = await getFredData();
       // console.log("Fetched Data:", rawData);
-      // console.log("✅ First 5 Results:", rawData.slice(0, 5));
+      console.log("✅ First 5 Results:", rawData.slice(0, 6));
       // ✅ Group data by category
       const grouped = {};
       rawData.forEach(({ date, price, category }) => {
         // Use the raw date string
+        console.log('date coming in:' , date)
         const isoDate = new Date(date).toISOString().split("T")[0]; // e.g., "2025-02-01"
-
+        console.log('date coming out:' , isoDate)
         if (!grouped[category]) grouped[category] = {};
         grouped[category][isoDate] = parseFloat(price);
       });

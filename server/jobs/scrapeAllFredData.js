@@ -8,7 +8,16 @@ const BASE_URL = 'https://api.stlouisfed.org/fred/series/observations';
 // Path to save the SQL file
 const sqlFilePath = path.join(__dirname, 'fred_sql.sql');
 
-/
+
+// Array of series IDs and corresponding filenames
+// https://fred.stlouisfed.org/series/seriesID
+const series = [
+  { id: 'APU0000708111', name: 'egg' },      // Eggs
+  { id: 'APU0000703112', name: 'beef' },    // Beef
+  { id: 'APU0000709112', name: 'milk' },     // Milk
+  { id: 'APU0000702111', name: 'bread' },    // Bread
+  { id: 'APU0000717311', name: 'coffee' },   // Coffee
+];
 
 // Function to fetch and process FRED data
 async function getPrices(seriesID, category) {
@@ -47,7 +56,7 @@ async function generateSQLFile() {
     let allSQLStatements = [];
     
     for (const item of series) {
-        const sqlData = await getPrices(item.id, item.category);
+        const sqlData = await getPrices(item.id, item.name);
         allSQLStatements.push(...sqlData);
     }
 
