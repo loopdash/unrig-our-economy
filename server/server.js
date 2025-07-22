@@ -45,7 +45,7 @@ cron.schedule('0 3 * * *', async () => {
 });
 
 // 🕑 **Cron job: Scrape Fred Data monthly on the 14th day of the month at 3:00 AM so FRED data has published **
-cron.schedule('0 3 14 * *', async () => {
+cron.schedule('0 3 20 * *', async () => {
     const logPath = path.join(__dirname, 'fred_cron.log');
     const log = (msg) => fs.appendFileSync(logPath, `[${new Date().toISOString()}] ${msg}\n`);
     log('📊 Running monthly Scrape Fred Data calculation (2nd day of the month)...');
