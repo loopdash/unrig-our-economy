@@ -26,7 +26,7 @@ ChartJS.register(
 
 function FredDataGraph() {
   const [groupedData, setGroupedData] = useState({});
-  const [selectedCategories, setSelectedCategories] = useState(["egg"]);
+  const [selectedCategories, setSelectedCategories] = useState(["beef"]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // ✅ Define category icons
@@ -46,7 +46,6 @@ function FredDataGraph() {
     coffee: "#4B2E2B",
   };
 
-  
   // ✅ Fetch & Group Data on Load
   useEffect(() => {
     fetchFredData();
@@ -61,9 +60,9 @@ function FredDataGraph() {
       const grouped = {};
       rawData.forEach(({ date, price, category }) => {
         // Use the raw date string
-        console.log('date coming in:' , date)
+        console.log("date coming in:", date);
         const isoDate = new Date(date).toISOString().split("T")[0]; // e.g., "2025-02-01"
-        console.log('date coming out:' , isoDate)
+        console.log("date coming out:", isoDate);
         if (!grouped[category]) grouped[category] = {};
         grouped[category][isoDate] = parseFloat(price);
       });
@@ -107,17 +106,15 @@ function FredDataGraph() {
   }));
 
   return (
-<div className="relative bg-[#FBFBFF] border-[#231F21] shadow-xl p-4 space-y-3 border-2 rounded-[24px]">
-
+    <div className="relative bg-[#FBFBFF] border-[#231F21] shadow-xl p-4 space-y-3 border-2 rounded-[24px]">
       {/* Top Row - Title & Category Selector */}
       <div className="flex justify-between items-center">
         <div className="flex items-center justify-center space-x-2">
-        <h3 className="text-[#5371FF] text-md font-bold uppercase tracking-wider">
+          <h3 className="text-[#5371FF] text-md font-bold uppercase tracking-wider">
             National Grocery Price Tracker
           </h3>
           <h4 className="text-lg pl-2">Grocery Prices since the year 2024</h4>
         </div>
-
 
         {/* ✅ Category Dropdown */}
         <div className="relative">
@@ -164,13 +161,21 @@ function FredDataGraph() {
       </div>
 
       <h4 className="text-lg max-w-[70%]">
-      The rising cost of living isn’t just a local issue—it’s a nationwide crisis. Across the country, Americans are seeing essential products jump in price, straining budgets and reshaping everyday choices at the checkout line.
+        The rising cost of living isn’t just a local issue—it’s a nationwide
+        crisis. Across the country, Americans are seeing essential products jump
+        in price, straining budgets and reshaping everyday choices at the
+        checkout line.
+      </h4>
+      <h4 className="text-lg max-w-[70%]">
+        These price increases didn’t happen in a vacuum. Under the Trump
+        administration, policies like corporate tax breaks and aggressive
+        tariffs have tilted the scales—driving up costs while boosting profits
+        for the very corporations hiking prices.
+      </h4>
 
-          </h4>
-          <h4 className="text-lg max-w-[70%]">
-   
-      These price increases didn’t happen in a vacuum. Under the Trump administration, policies like corporate tax breaks and aggressive tariffs have tilted the scales—driving up costs while boosting profits for the very corporations hiking prices.
-          </h4>
+      <h4 className="text-sm max-w-[70%]">
+        Data source: FRED (Federal Reserve Economic Data)
+      </h4>
 
       {/* ✅ Line Chart */}
       <div className="h-[400px]">
@@ -212,22 +217,24 @@ function FredDataGraph() {
                   callback: function (value, index, values) {
                     const label = this.getLabelForValue(value); // "2023-01-01"
                     const year = label.slice(0, 4); // Extract year string directly
-                  
+
                     const isFirstOfYear = (() => {
                       if (index === 0) return true;
-                      const prevLabel = this.getLabelForValue(values[index - 1].value);
+                      const prevLabel = this.getLabelForValue(
+                        values[index - 1].value
+                      );
                       const prevYear = prevLabel.slice(0, 4);
                       return year !== prevYear;
                     })();
-                  
+
                     return isFirstOfYear ? year : "";
                   },
-                  
+
                   autoSkip: false,
                   maxRotation: 0,
                   minRotation: 0,
                 },
-                
+
                 grid: {
                   display: false,
                 },

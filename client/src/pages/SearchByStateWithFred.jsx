@@ -10,6 +10,7 @@ import StaticCopy from "../components/StaticCopy";
 import { useLocation } from "react-router-dom";
 import allRegionalData from "../assets/allRegionalData";
 import RegionalAveragesGraph from "../components/RegionalAveragesGraph";
+import Modal from "../components/Modal";
 // ✅ State Abbreviation Mapping
 const stateAbbreviations = {
   AL: "Alabama",
@@ -78,7 +79,7 @@ function SearchByStateWithFred() {
   const [loading, setLoading] = useState(true);
   const [visibleCount, setVisibleCount] = useState(3);
   const [eggPercentChange, setEggPercentChange] = useState(null);
-
+  const [isModalOpen, setModalOpen] = useState(false);
   const [shuffledStories, setShuffledStories] = useState([]);
   const [storyIndex, setStoryIndex] = useState(0);
 
@@ -95,52 +96,53 @@ function SearchByStateWithFred() {
       }
     }
   }, [location]);
-const targetStates = {
-  ct: "Northeast",
-  de: "South",
-  hi: "West",
-  ia: "Midwest",
-  ma: "Northeast",
-  me: "Northeast",
-  mn: "Midwest",
-  nd: "Midwest",
-  nh: "Northeast",
-  nj: "Northeast",
-  ny: "Northeast",
-  ok: "South",
-  pa: "Northeast",
-  ri: "Northeast",
-  sd: "Midwest",
-  vt: "Northeast",
-  fl: "South",
-  nc: "South",
-  md: "South",
-  connecticut: "Northeast",
-  delaware: "South",
-  hawaii: "West",
-  iowa: "Midwest",
-  massachusetts: "Northeast",
-  maine: "Northeast",
-  minnesota: "Midwest",
-  "north dakota": "Midwest",
-  "new hampshire": "Northeast",
-  "new jersey": "Northeast",
-  "new york": "Northeast",
-  oklahoma: "South",
-  pennsylvania: "Northeast",
-  "rhode island": "Northeast",
-  "south dakota": "Midwest",
-  vermont: "Northeast",
-  florida: "South",
-  "north carolina": "South",
-  maryland: "South",
-};
+  const targetStates = {
+    ct: "Northeast",
+    de: "South",
+    hi: "West",
+    ia: "Midwest",
+    ma: "Northeast",
+    me: "Northeast",
+    mn: "Midwest",
+    nd: "Midwest",
+    nh: "Northeast",
+    nj: "Northeast",
+    ny: "Northeast",
+    ok: "South",
+    pa: "Northeast",
+    ri: "Northeast",
+    sd: "Midwest",
+    vt: "Northeast",
+    fl: "South",
+    nc: "South",
+    md: "South",
+    dc: "South",
+    "washington dc": "South",
+    connecticut: "Northeast",
+    delaware: "South",
+    hawaii: "West",
+    iowa: "Midwest",
+    massachusetts: "Northeast",
+    maine: "Northeast",
+    minnesota: "Midwest",
+    "north dakota": "Midwest",
+    "new hampshire": "Northeast",
+    "new jersey": "Northeast",
+    "new york": "Northeast",
+    oklahoma: "South",
+    pennsylvania: "Northeast",
+    "rhode island": "Northeast",
+    "south dakota": "Midwest",
+    vermont: "Northeast",
+    florida: "South",
+    "north carolina": "South",
+    maryland: "South",
+  };
 
-function getRegionForState(stateInput) {
-  const normalized = stateInput.trim().toLowerCase();
-  return targetStates[normalized] || null;
-}
-
+  function getRegionForState(stateInput) {
+    const normalized = stateInput.trim().toLowerCase();
+    return targetStates[normalized] || null;
+  }
 
   const region = getRegionForState(searchQuery); // Get the region from state input
   const hasRegionMatch = region !== null;
@@ -246,7 +248,7 @@ function getRegionForState(stateInput) {
         </div>
 
         {/* ✅ Search Bar */}
-        <div className="relative max-w-6xl mt-10 mb-6 w-full min-w-6xl">
+        <div className="relative max-w-6xl mt-10 mb-0 w-full min-w-6xl">
           <input
             type="text"
             placeholder="Enter your state here"
@@ -261,6 +263,25 @@ function getRegionForState(stateInput) {
             className="absolute right-3 top-1/2 transform -translate-y-1/2 w-10 h-10"
           />
         </div>
+
+        <section className="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0 mb-12 mt-2 max-w-6xl w-full justify-end">
+          <p className="text-[#4D5440]">
+            Prices are changing, and you might not like what you see.
+          </p>
+          <a
+            href="#"
+            className="underline cursor-pointer text-[#4D5440] underline-offset-4"
+            onClick={(e) => {
+              e.preventDefault();
+              setModalOpen(true);
+            }}
+          >
+            How did we arrive at this number?
+          </a>
+        </section>
+
+        {/* ✅ Render the modal if open */}
+        <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
 
         {loading ? (
           <p className="mt-4">Collecting data...</p>
@@ -289,14 +310,17 @@ function getRegionForState(stateInput) {
                       />
                     </div>
                   </React.Fragment>
-
                 ))}
-                                                      <div className="px-6 mb-6">
-                      <div className="text-3xl font-bold text-[#231F21] mb-2">
-                       🛒  Kroger States 
-                      </div>
-                      <p className="mb-4 pb-4 font-normal text-2xl leading-normal font-barlow text-[#231F21]">Retail egg and beef prices for select states were sourced directly from the Kroger API, which reflects real-time in-store prices from Kroger and affiliated banners.</p>
-                    </div>
+                <div className="px-6 mb-6">
+                  <div className="text-3xl font-bold text-[#231F21] mb-2">
+                    🛒 Kroger States
+                  </div>
+                  <p className="mb-4 pb-4 font-normal text-2xl leading-normal font-barlow text-[#231F21]">
+                    Retail egg and beef prices for select states were sourced
+                    directly from the Kroger API, which reflects real-time
+                    in-store prices from Kroger and affiliated banners.
+                  </p>
+                </div>
               </div>
             ) : hasRegionMatch && regionalData.length > 0 ? (
               <div className="grid grid-cols-1 gap-6 w-full max-w-6xl">
@@ -315,7 +339,9 @@ function getRegionForState(stateInput) {
                       <div className="text-3xl font-bold text-[#231F21] mb-2">
                         {matched.icon} {matched.region}
                       </div>
-                      <p className="mb-4 pb-4 font-normal text-2xl leading-normal font-barlow text-[#231F21]">{matched.text}</p>
+                      <p className="mb-4 pb-4 font-normal text-2xl leading-normal font-barlow text-[#231F21]">
+                        {matched.text}
+                      </p>
                     </div>
                   ) : null;
                 })()}
