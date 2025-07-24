@@ -207,6 +207,7 @@ function RegionalAveragesGraph({ state, data, onEggPercentChange }) {
               ))}
             </div>
           )}
+          
         </div>
       </div>
 
@@ -246,6 +247,7 @@ function RegionalAveragesGraph({ state, data, onEggPercentChange }) {
                   up {percentageChange2024}% from 2024
                 </span>
               )}
+              
             </div>
           )
         )}

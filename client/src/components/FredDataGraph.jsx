@@ -174,7 +174,16 @@ function FredDataGraph() {
       </h4>
 
       <h4 className="text-sm max-w-[70%]">
-        Data source: FRED (Federal Reserve Economic Data)
+        Data source:{" "}
+        <a
+          href="https://fredhelp.stlouisfed.org/fred/about/about-fred/what-is-fred/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="space-x-1 underline underline-offset-4"
+        >
+          FRED (Federal Reserve Economic Data)
+        </a>
+       
       </h4>
 
       {/* ✅ Line Chart */}

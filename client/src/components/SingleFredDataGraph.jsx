@@ -94,29 +94,43 @@ function SingleFredDataGraph() {
               className="border-[#231F21] shadow-xl p-4 space-y-3 border rounded-[24px]"
             >
               <div className="flex items-center space-x-2 mb-4 p-6 justify-between">
-                <h3 className="text-3xl font-bold text-[#231F21]">
-                  National{" "}
-                  <span className="font-normal">
-                    {" "}
-                    {category.charAt(0).toUpperCase() + category.slice(1)}{" "}
-                    Prices
-                  </span>
-                </h3>
+                <div className="flex flex-col">
+                  <h3 className="text-3xl font-bold text-[#231F21]">
+                    National{" "}
+                    <span className="font-normal">
+                      {" "}
+                      {category.charAt(0).toUpperCase() +
+                        category.slice(1)}{" "}
+                      Prices
+                    </span>
+                  </h3>
+                  <h4 className="text-sm max-w-[70%]">
+                    Data source:{" "}
+                    <a
+                      href="https://fredhelp.stlouisfed.org/fred/about/about-fred/what-is-fred/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="space-x-1 underline underline-offset-4"
+                    >
+                      FRED
+                    </a>
+                  </h4>
+                </div>
+
                 <div className="flex flex-row">
-                <img
-                    src={categoryIcons[category] || {egg}}
+                  <img
+                    src={categoryIcons[category] || { egg }}
                     alt="arrow"
                     style={{ width: 50, height: 50 }}
                   />
-                  
+
                   <img
                     src={orangeArrow}
                     alt="arrow"
-                    style={{ width: 50, height: 50 , marginLeft: 4}}
+                    style={{ width: 50, height: 50, marginLeft: 4 }}
                   />
                 </div>
               </div>
-
               <div className="flex-grow min-h-[500px]">
                 <Line
                   data={{ labels, datasets: [dataset] }}

@@ -254,6 +254,7 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
             </div>
           )
         )}
+        <h4 className="text-sm max-w-[70%]">Data source: Kroger</h4>
       </div>
 
       <div className="h-60">
