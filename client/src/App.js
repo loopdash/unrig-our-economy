@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import ErrorLogs from "./pages/ErrorLogs";
 import Header from "./components/Header";
 import SearchByState from "./pages/SearchByState";
-import ProtectedRoute from "./components/ProtectedRoute";
 import Footer from "./components/Footer";
 import PerState from "./pages/PerState";
 import SearchByStateWithFred from "./pages/SearchByStateWithFred";
@@ -13,7 +12,7 @@ import SearchByStateWithFred from "./pages/SearchByStateWithFred";
 function App() {
   return (
     <>
-      <ProtectedRoute>
+
         <div className="sticky top-0 z-50 bg-white shadow-md">
           <Header />
         </div>
@@ -31,7 +30,6 @@ function App() {
           </Routes>
         </Router>
         <Footer />
-      </ProtectedRoute>
     </>
   );
 }

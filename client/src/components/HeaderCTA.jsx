@@ -3,7 +3,7 @@ import Modal from "./Modal";
 import { getProductAverages } from "../services/api";
 
 function HeaderCTA() {
-  const [selectedState, setSelectedState] = useState("CA"); // Default to California
+  const [selectedState, setSelectedState] = useState("TX"); // Default to Texas
   const [statePrice, setStatePrice] = useState(null);
   const [percentageChange, setPercentageChange] = useState(0);
   const [direction, setDirection] = useState("down");
