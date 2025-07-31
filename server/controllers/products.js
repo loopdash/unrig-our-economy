@@ -45,7 +45,7 @@ const getProductAveragesData = async () => {
         `;
 
         const [results] = await db.query(query);
-        console.log('✅ Product Averages Data:', results);
+        // console.log('✅ Product Averages Data:', results);
         return results;
     } catch (error) {
         console.error('⚠️ Failed to fetch Product Averages data:', error.message);

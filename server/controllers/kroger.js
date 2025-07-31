@@ -99,7 +99,7 @@ const fetchKrogerData = async () => {
                             [productName, productLink, location.location_id, product.kroger_id, productPrice, 'Kroger']
                         );
     
-                        console.log(`✅ Saved: ${productName} - $${productPrice} for ${location.city}, ${location.state}`);
+                        // console.log(`✅ Saved: ${productName} - $${productPrice} for ${location.city}, ${location.state}`);
                     } else {
                         console.log(`❌ Skipped: ${productName} - $${productPrice} for ${location.city}, ${location.state} - Price is $0`);
                     }
