@@ -1,14 +1,14 @@
 // server/controllers/kroger.js
-import { post, get } from 'axios';
-import mysql from 'mysql2/promise';
-import db, { query } from '../config/db';
-import { logError } from './errors';
+const axios = require('axios');
+const mysql = require('mysql2/promise');
+const db = require('../config/db');
+const { logError } = require('./errors');
 
 // Get a new Kroger API token
 const getKrogerToken = async () => {
     try {
 
-        const response = await post(
+        const response = await axios.post(
             'https://api.kroger.com/v1/connect/oauth2/token',
             'grant_type=client_credentials&scope=product.compact',
             {
@@ -65,14 +65,14 @@ const fetchKrogerData = async () => {
     try {
         const locations = await getLocationsByState(db); // Pull rotated locations
 
-        const [products] = await query('SELECT name, kroger_id FROM kroger_products');
+        const [products] = await db.query('SELECT name, kroger_id FROM kroger_products');
         
         for (const location of locations) {
             for (const product of products) {
                 const url = `https://api.kroger.com/v1/products?filter.productId=${product.kroger_id}&filter.locationId=${location.location_id}`;
 
                 try {
-                    const response = await get(url, {
+                    const response = await axios.get(url, {
                         headers: {
                             Accept: 'application/json',
                             Authorization: `Bearer ${token}`
@@ -92,7 +92,7 @@ const fetchKrogerData = async () => {
                     const productPrice = item.items?.[0]?.price?.regular || 0;
 
                     if (productPrice > 0) {
-                        await query(
+                        await db.query(
                             `INSERT INTO product_scraping 
                              (product_name, product_link, product_location_id, origin_product_id, product_price, product_source)
                              VALUES (?, ?, ?, ?, ?, ?)`,
@@ -115,7 +115,7 @@ const fetchKrogerData = async () => {
 };
 const fetchKrogerProductData = async () => {
     try {
-        const [results] = await query(`SELECT * FROM kroger_products`);
+        const [results] = await db.query(`SELECT * FROM kroger_products`);
         console.log('Kroger products fetched successfully:', results);
         return results;
     } catch (error) {
@@ -127,4 +127,4 @@ const fetchKrogerProductData = async () => {
 
 
 // Export functions
-export default { fetchKrogerData, fetchKrogerProductData, getKrogerToken };
+module.exports = { fetchKrogerData, fetchKrogerProductData, getKrogerToken };
