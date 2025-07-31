@@ -7,7 +7,7 @@ let API_URL;
 if (process.env.NODE_ENV === 'development') {
     API_URL =  'http://localhost:5001/'
 } else {
-    API_URL = process.env.REACT_APP_API_URL_PROD
+    API_URL = process.env.REACT_APP_API_URL
 }
 
 // console.log('API URL', API_URL)
