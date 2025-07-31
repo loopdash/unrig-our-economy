@@ -60,9 +60,9 @@ function FredDataGraph() {
       const grouped = {};
       rawData.forEach(({ date, price, category }) => {
         // Use the raw date string
-        console.log("date coming in:", date);
+        // console.log("date coming in:", date);
         const isoDate = new Date(date).toISOString().split("T")[0]; // e.g., "2025-02-01"
-        console.log("date coming out:", isoDate);
+        // console.log("date coming out:", isoDate);
         if (!grouped[category]) grouped[category] = {};
         grouped[category][isoDate] = parseFloat(price);
       });
