@@ -31,6 +31,12 @@
   color: #61dafb;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
 
 @keyframes App-logo-spin {
   from {

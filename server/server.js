@@ -2,7 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const cron = require('node-cron');
-const { fetchKrogerData } = require('./controllers/kroger');
+const { fetchKrogerData } = require('./controllers/kroger').default;
 const { updateStateAverages } = require('./jobs/updateStateAverages');
 const { logError } = require('./controllers/errors');
 const { scrapeFredDataMonthly } = require('./controllers/products');

@@ -1,6 +1,6 @@
 // server/routes/kroger.js
 const express = require('express');
-const { fetchKrogerData, fetchKrogerProductData } = require('../controllers/kroger');
+const { fetchKrogerData, fetchKrogerProductData } = require('../controllers/kroger').default;
 const router = express.Router();
 
 // GET /api/kroger/scrape → Manually trigger the scrape
