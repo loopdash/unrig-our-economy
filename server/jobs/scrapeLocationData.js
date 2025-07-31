@@ -25,7 +25,7 @@ const scrapeLocationData = async () => {
 
             // Skip if locationId is missing
             if (!locationId) {
-                console.log(`⚠️ Skipping entry due to missing locationId: ${city}, ${state}`);
+                // console.log(`⚠️ Skipping entry due to missing locationId: ${city}, ${state}`);
                 continue;
             }
 
@@ -47,7 +47,7 @@ const scrapeLocationData = async () => {
 
         // Write to SQL file
         fs.writeFileSync(sqlFilePath, sqlStatements.join('\n'), 'utf-8');
-        console.log(`✅ SQL file saved: ${sqlFilePath}`);
+        // console.log(`✅ SQL file saved: ${sqlFilePath}`);
 
     } catch (error) {
         console.error('❌ Error generating SQL file:', error.message);

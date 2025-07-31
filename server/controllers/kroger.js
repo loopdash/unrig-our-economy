@@ -82,7 +82,7 @@ const fetchKrogerData = async () => {
                     const item = response.data.data?.[0];
 
                     if (!item) {
-                        console.log(`⚠️ No data found for ${product.name} at ${location.city}, ${location.state}. Skipping...`);
+                        // console.log(`⚠️ No data found for ${product.name} at ${location.city}, ${location.state}. Skipping...`);
                         continue; // Skip to the next product
                     }
 // after 500 axios reuqests, pause for a little, get a fresh token, try again
@@ -101,7 +101,7 @@ const fetchKrogerData = async () => {
     
                         // console.log(`✅ Saved: ${productName} - $${productPrice} for ${location.city}, ${location.state}`);
                     } else {
-                        console.log(`❌ Skipped: ${productName} - $${productPrice} for ${location.city}, ${location.state} - Price is $0`);
+                       // console.log(`❌ Skipped: ${productName} - $${productPrice} for ${location.city}, ${location.state} - Price is $0`);
                     }
                 } catch (error) {
                     console.error(`⚠️ Error fetching ${product.name} at ${location.name}:`, error.response?.data || error.message);
@@ -116,7 +116,7 @@ const fetchKrogerData = async () => {
 const fetchKrogerProductData = async () => {
     try {
         const [results] = await db.query(`SELECT * FROM kroger_products`);
-        console.log('Kroger products fetched successfully:', results);
+        // console.log('Kroger products fetched successfully:', results);
         return results;
     } catch (error) {
         console.error('Failed to fetch Kroger data:', error.message);

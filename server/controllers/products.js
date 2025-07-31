@@ -96,16 +96,16 @@ async function getPrices(seriesID, category) {
         
         // 🧪 Log the last available data point from FRED
         if (observations.length > 0) {
-            console.log(`🧪 Last observation for ${category}:`, observations[observations.length - 1]);
+            // console.log(`🧪 Last observation for ${category}:`, observations[observations.length - 1]);
         } else {
-            console.log(`⚠️ No observations returned for ${category}`);
+            // console.log(`⚠️ No observations returned for ${category}`);
         }
 
         const newEntries = observations
             .filter(obs => {
                 const isNew = obs.value !== "." && obs.date > latestDate;
                 if (isNew) {
-                    console.log(`✅ Found new entry: ${obs.date} > ${latestDate}`);
+                    // console.log(`✅ Found new entry: ${obs.date} > ${latestDate}`);
                 }
                 return isNew;
             })
@@ -115,7 +115,7 @@ async function getPrices(seriesID, category) {
                 category: category,
             }));
 
-        console.log(`📊 New data for ${category}: ${newEntries.length} entries`);
+        // console.log(`📊 New data for ${category}: ${newEntries.length} entries`);
         return newEntries;
     } catch (error) {
         console.error(`❌ Error fetching data for ${category}:`, error.message);
@@ -129,7 +129,7 @@ async function getPrices(seriesID, category) {
  */
 async function insertFredData(data) {
     if (data.length === 0) {
-        console.log("⚠️ No new data to insert.");
+        // console.log("⚠️ No new data to insert.");
         return;
     }
 
@@ -145,7 +145,7 @@ async function insertFredData(data) {
         );
 
         await Promise.all(insertPromises);
-        console.log(`✅ Inserted ${data.length} new entries.`);
+        // console.log(`✅ Inserted ${data.length} new entries.`);
     } catch (error) {
         console.error("❌ Error inserting FRED data:", error.message);
         await logError(error.message, error.stack, 'insertFredData');

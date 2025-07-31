@@ -18,7 +18,7 @@ router.get('/fred', async (req, res) => {
     try {
         const data = await getFredData();
         res.json(data);  // Send JSON array directly
-        console.log('FRED data fetched successfully:', data);
+        // console.log('FRED data fetched successfully:', data);
     } catch (error) {
         console.error('Failed to fetch fred data:', error.message);
         res.status(500).json({ message: 'Failed to fetch fred data', error: error.message });
