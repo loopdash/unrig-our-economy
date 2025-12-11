@@ -15,9 +15,10 @@ import orangeArrow from "../assets/orange-arrow.svg";
 import egg from "../assets/egg2.png";
 import bread from "../assets/bread2.png";
 import coffee from "../assets/coffee2.png";
-import cow from "../assets/steak.png";
+import steak from "../assets/steak.png";
 import corn from "../assets/corn.webp";
 import pig from "../assets/pig.png";
+import cow from "../assets/cow.png";
 
 ChartJS.register(
   CategoryScale,
@@ -34,7 +35,7 @@ const categoryIcons = {
   bread: bread,
   beef: cow,
   coffee: coffee,
-  steaks: cow,
+  steaks: steak,
   pork: pig,
   corn: corn,
 };
@@ -83,7 +84,7 @@ function SingleFredDataGraph() {
   return (
     <div className="grid grid-cols-1 gap-6 w-full max-w-6xl mx-auto">
       {Object.entries(groupedData)
-        .filter(([category]) => ["egg", "beef", "coffee", "corn", "pork"].includes(category))
+        .filter(([category]) => ["egg", "beef", "coffee", "corn", "pork", "steaks"].includes(category))
         .map(([category, dataMap]) => {
           const dataset = {
             label: category,
