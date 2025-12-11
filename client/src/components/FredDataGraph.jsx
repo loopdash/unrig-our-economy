@@ -34,8 +34,11 @@ function FredDataGraph() {
     egg: "🥚",
     milk: "🥛",
     bread: "🍞",
-    beef: "🥩",
+    beef: "🐂",
     coffee: "☕",
+    steaks: "🥩",
+    pork: "🐷",
+    corn: "🌽",
   };
 
   const categoryColors = {
@@ -44,6 +47,9 @@ function FredDataGraph() {
     bread: "#D2B48C",
     beef: "#8B0000",
     coffee: "#4B2E2B",
+    steaks: "#B22222",
+    pork: "#FF69B4",
+    corn: "#FFD700",
   };
 
   // ✅ Fetch & Group Data on Load
