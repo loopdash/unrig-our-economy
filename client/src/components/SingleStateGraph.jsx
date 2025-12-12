@@ -27,7 +27,7 @@ const categoryIcons = {
   "Egg 12ct": "🥚",
   "Milk 1gal": "🥛",
   "Bread 20oz": "🍞",
-  "Beef 1lb": "🥩",
+  "Beef 1lb": "🐄",
   "Coffee 11 oz": "☕",
 };
 

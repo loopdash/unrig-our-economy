@@ -34,7 +34,7 @@ function FredDataGraph() {
     egg: "🥚",
     milk: "🥛",
     bread: "🍞",
-    beef: "🐂",
+    beef: "🐄",
     coffee: "☕",
     steaks: "🥩",
     pork: "🐷",
