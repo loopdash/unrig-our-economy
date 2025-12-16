@@ -68,6 +68,33 @@ function Home() {
 
       <section className="flex flex-col items-center space-y-4 pt-8 max-w-6xl justify-center mx-2 sm:mx-auto">
         <div
+          className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[black] rounded-xl shadow-lg p-12 space-y-3 min-h-fit rounded-3xl text-white mx-auto max-h-xl min-h-xl leading-tight mb-8"
+          style={{ backgroundColor: "black" }}
+        >
+          <h2 className="font-bold uppercase tracking-wider ">
+            The economy needs your attention
+          </h2>
+          <p className="mb-4 pb-4 font-normal text-[32px] leading-tight font-barlow">
+            Shoppers are seeing the price of key goods go up since January this
+            year.
+          </p>
+
+          <Button
+            href={"/search-by-state-fred"}
+            text={"See State-level grocery prices"}
+            color={"#E8EA58"}
+            textColor="black"
+            bgColor={"#E8EA58"}
+          />
+        </div>
+      </section>
+
+      <section className="flex flex-col items-center space-y-4 pt-4 max-w-6xl justify-center mx-2 sm:mx-auto">
+        <FredDataGraph />
+      </section>
+
+      <section className="flex flex-col items-center space-y-4 pt-8 max-w-6xl justify-center mx-2 sm:mx-auto">
+        <div
           className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[#f6f8ff] rounded-xl shadow-lg p-12 space-y-3 min-h-fit rounded-3xl text-white mx-auto max-h-xl min-h-xl leading-tight mb-8"
           style={{ backgroundColor: "#E8EA58" }}
         >
@@ -122,7 +149,6 @@ function Home() {
         </div>
       </section>
 
-
       {/* <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 pt-2 pb-8 mx-2 sm:mx-auto max-w-6xl">
         <div className="w-full sm:w-1/2">
           <SingleStateData state="CA" />
@@ -147,9 +173,7 @@ function Home() {
           />
         </div>
       </section> */}
-      <section className="flex flex-col items-center space-y-4 pt-4 max-w-6xl justify-center mx-2 sm:mx-auto">
-        <FredDataGraph />
-      </section>
+
       <div className="pt-8">
         <StaticCopy
           bg="#E8EA58"
