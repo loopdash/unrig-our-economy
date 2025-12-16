@@ -68,8 +68,8 @@ function Home() {
 
       <section className="flex flex-col items-center space-y-4 pt-8 max-w-6xl justify-center mx-2 sm:mx-auto">
         <div
-          className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[black] rounded-xl shadow-lg p-12 space-y-3 min-h-fit rounded-3xl text-white mx-auto max-h-xl min-h-xl leading-tight mb-8"
-          style={{ backgroundColor: "black" }}
+          className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[#E8EA58] rounded-xl shadow-lg p-12 space-y-3 min-h-fit rounded-3xl text-black mx-auto max-h-xl min-h-xl leading-tight mb-8"
+          style={{ backgroundColor: "#E8EA58" }}
         >
           <h2 className="font-bold uppercase tracking-wider ">
             The economy needs your attention
@@ -82,9 +82,9 @@ function Home() {
           <Button
             href={"#nationalGroceryTracker"}
             text={"See National Trends on Pork, Corn, Steak & More"}
-            color={"#E8EA58"}
-            textColor="black"
-            bgColor={"#E8EA58"}
+            color={"black"}
+            textColor="white"
+            bgColor={"black"}
           />
         </div>
       </section>
