@@ -80,8 +80,8 @@ function Home() {
           </p>
 
           <Button
-            href={"/search-by-state-fred"}
-            text={"See State-level grocery prices"}
+            href={"#nationalGroceryTracker"}
+            text={"See National Trends on Pork, Corn, Steak & More"}
             color={"#E8EA58"}
             textColor="black"
             bgColor={"#E8EA58"}

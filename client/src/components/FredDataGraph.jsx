@@ -31,6 +31,17 @@ function FredDataGraph() {
 
   // ✅ Define category icons
   const categoryIcons = {
+    egg: "🥚 Eggs",
+    milk: "🥛 Milk",
+    bread: "🍞 Bread",
+    beef: "🐄 Beef",
+    coffee: "☕ Coffee",
+    steaks: "🥩 Steak",
+    pork: "🐷 Pork",
+    corn: "🌽 Corn",
+  };
+
+    const categoryIconsLarge = {
     egg: "🥚",
     milk: "🥛",
     bread: "🍞",
@@ -112,7 +123,7 @@ function FredDataGraph() {
   }));
 
   return (
-    <div className="relative bg-[#FBFBFF] border-[#231F21] shadow-xl p-4 space-y-3 border-2 rounded-[24px]">
+    <div className="relative bg-[#FBFBFF] border-[#231F21] shadow-xl p-4 space-y-3 border-2 rounded-[24px]" id="nationalGroceryTracker">
       {/* Top Row - Title & Category Selector */}
       <div className="flex justify-between items-center">
         <div className="flex items-center justify-center space-x-2">
@@ -157,7 +168,7 @@ function FredDataGraph() {
                   onClick={() => toggleCategory(category)}
                 >
                   <span className="text-lg">
-                    {categoryIcons[category] || "🥚"}
+                    {categoryIcons[category] || "eggs"}
                   </span>
                 </button>
               ))}
@@ -216,7 +227,7 @@ function FredDataGraph() {
                   label: function (tooltipItem) {
                     const dataset = tooltipItem.dataset;
                     const category = dataset.label;
-                    const icon = categoryIcons[category] || "🥚";
+                    const icon = categoryIconsLarge[category] || "🥚";
                     const price = tooltipItem.raw?.toFixed(2);
                     return `${icon} ${
                       category.charAt(0).toUpperCase() + category.slice(1)
