@@ -71,12 +71,8 @@ function Home() {
           className="flex flex-col items-start justify-center rounded-[38px] w-full bg-[#E8EA58] rounded-xl shadow-lg p-12 space-y-3 min-h-fit rounded-3xl text-black mx-auto max-h-xl min-h-xl leading-tight mb-8"
           style={{ backgroundColor: "#E8EA58" }}
         >
-          <h2 className="font-bold uppercase tracking-wider ">
-            The economy needs your attention
-          </h2>
           <p className="mb-4 pb-4 font-normal text-[32px] leading-tight font-barlow">
-            Shoppers are seeing the price of key goods go up since January this
-            year.
+            This holiday season, shoppers are seeing prices go up.
           </p>
 
           <Button

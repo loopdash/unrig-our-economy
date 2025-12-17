@@ -41,7 +41,7 @@ function FredDataGraph() {
     corn: "🌽 Corn",
   };
 
-    const categoryIconsLarge = {
+  const categoryIconsLarge = {
     egg: "🥚",
     milk: "🥛",
     bread: "🍞",
@@ -123,7 +123,10 @@ function FredDataGraph() {
   }));
 
   return (
-    <div className="relative bg-[#FBFBFF] border-[#231F21] shadow-xl p-4 space-y-3 border-2 rounded-[24px]" id="nationalGroceryTracker">
+    <div
+      className="relative bg-[#FBFBFF] border-[#231F21] shadow-xl p-4 space-y-3 border-2 rounded-[24px]"
+      id="nationalGroceryTracker"
+    >
       {/* Top Row - Title & Category Selector */}
       <div className="flex justify-between items-center">
         <div className="flex items-center justify-center space-x-2">
@@ -200,7 +203,11 @@ function FredDataGraph() {
         >
           FRED (Federal Reserve Economic Data)
         </a>
-       
+      </h4>
+
+      <h4 className="text-sm max-w-[70%] font-bold">
+        Click on the shopping cart icon to track the price of eggs, beef, milk,
+        bread, coffee, pork, and corn.
       </h4>
 
       {/* ✅ Line Chart */}
