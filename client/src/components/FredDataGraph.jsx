@@ -26,7 +26,7 @@ ChartJS.register(
 
 function FredDataGraph() {
   const [groupedData, setGroupedData] = useState({});
-  const [selectedCategories, setSelectedCategories] = useState(["beef"]);
+  const [selectedCategories, setSelectedCategories] = useState(["steaks"]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   // ✅ Define category icons
@@ -99,8 +99,20 @@ function FredDataGraph() {
     ),
   ].sort((a, b) => new Date(a) - new Date(b));
 
+  const ALLOWED_CATEGORIES = [
+    "egg",
+    "milk",
+    "bread",
+    "coffee",
+    "steaks",
+    "pork",
+    "corn",
+  ];
+
   // ✅ Get available categories
-  const categories = Object.keys(groupedData);
+  const categories = Object.keys(groupedData).filter((category) =>
+    ALLOWED_CATEGORIES.includes(category)
+  );
 
   // ✅ Handle Category Toggle
   const toggleCategory = (category) => {
@@ -206,8 +218,8 @@ function FredDataGraph() {
       </h4>
 
       <h4 className="text-sm max-w-[70%] font-bold">
-        Click on the shopping cart icon to track the price of eggs, beef, milk,
-        bread, coffee, pork, and corn.
+        Click on the shopping cart icon to track the price of eggs, steak, beef,
+        milk, bread, coffee, pork, and corn.
       </h4>
 
       {/* ✅ Line Chart */}
