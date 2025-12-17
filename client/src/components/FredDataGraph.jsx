@@ -218,7 +218,7 @@ function FredDataGraph() {
       </h4>
 
       <h4 className="text-sm max-w-[70%] font-bold">
-        Click on the shopping cart icon to track the price of eggs, steak, beef,
+        Click on the shopping cart icon to track the price of eggs, steak,
         milk, bread, coffee, pork, and corn.
       </h4>
 
