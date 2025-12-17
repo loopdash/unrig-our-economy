@@ -60,10 +60,18 @@ const normalizeCategory = (cat) => {
 };
 
 const categoryIcons = {
+  egg12ct: "🥚 Eggs",
+  milk1gal: "🥛 Milk",
+  bread20oz: "🍞 Bread",
+  beef1lb: "🐄 Beef",
+  coffee11oz: "☕ Coffee",
+};
+
+const categoryIconsLarge = {
   egg12ct: "🥚",
   milk1gal: "🥛",
   bread20oz: "🍞",
-  beef1lb: "🥩",
+  beef1lb: "🐄",
   coffee11oz: "☕",
 };
 
@@ -227,7 +235,7 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
             <div key={category} className="flex items-center space-x-3">
               {/* 🥚 Emoji - bump size */}
               <span className="text-4xl">
-                {categoryIcons[normalizeCategory(category)] || "🥚"}
+                {categoryIconsLarge[normalizeCategory(category)] || "🥚"}
               </span>
 
               {/* +% Badge - bump size */}
@@ -334,7 +342,7 @@ function ProductAveragesGraph({ state, data, onEggPercentChange }) {
                       return null;
                     const category = dataset.label;
                     const icon =
-                      categoryIcons[normalizeCategory(category)] || "🥚";
+                      categoryIconsLarge[normalizeCategory(category)] || "🥚";
                     const price = tooltipItem.raw?.toFixed(2);
                     return `${icon} ${category}: $${price}`;
                   },

@@ -84,7 +84,7 @@ function SingleFredDataGraph() {
   return (
     <div className="grid grid-cols-1 gap-6 w-full max-w-6xl mx-auto">
       {Object.entries(groupedData)
-        .filter(([category]) => ["egg", "beef", "coffee", "corn", "pork", "steaks"].includes(category))
+        .filter(([category]) => ["egg",  "coffee", "corn", "pork", "steaks"].includes(category))
         .map(([category, dataMap]) => {
           const dataset = {
             label: category,

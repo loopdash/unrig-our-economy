@@ -34,7 +34,7 @@ const categoryIcons = {
   egg12ct: "🥚",
   milk1gal: "🥛",
   bread20oz: "🍞",
-  beef1lb: "🥩",
+  beef1lb: "🐄",
   coffee11oz: "☕",
 };
 

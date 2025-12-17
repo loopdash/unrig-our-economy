@@ -78,7 +78,7 @@ function HeaderCTA() {
   return (
     <div className="w-full h-auto gap-4 p-6 sm:p-10 md:p-10 max-w-6xl mx-auto leading-normal">
       <h1 className="font-barlow font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[75px] tracking-normal md:leading-tight">
-        The price of beef 🥩 in
+        The price of beef 🐄 in
         <span className="ml-2 mr-2">
           <select
             className="border-b-4 border-dashed border-[#5371FF] p-2 rounded bg-white text-[#231F21] mt-2"

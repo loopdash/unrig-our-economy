@@ -11,6 +11,7 @@ import SingleStateData from "../components/SingleStateGraph";
 import Subscribe from "../components/Subscribe";
 import RisingPricesSection from "../components/RisingPricesSection";
 import StaticCopy from "../components/StaticCopy";
+import SnowCanvas from "../components/SnowCanvas";
 
 function Home() {
   const [prices, setPrices] = useState({
@@ -65,6 +66,35 @@ function Home() {
         californiaPrice={prices.CA}
         virginiaPrice={prices.VA}
       />
+      <div className="holiday-snow-wrapper relative w-full rounded-[38px] overflow-hidden">
+        {/* Snow animation */}
+        <SnowCanvas />
+
+        <section className="relative flex flex-col items-center space-y-4 pt-8 max-w-6xl justify-center mx-2 sm:mx-auto">
+          {/* Content card */}
+          <div
+            className="relative z-10 flex flex-col items-start justify-center w-full rounded-[38px] shadow-lg p-12 space-y-4
+                bg-gradient-to-br from-[#1F3D2B] to-[#3E6B4F]
+
+                 border border-[#E6C7C2] text-[#2B2B2B] mx-auto mb-8"
+          >
+            <p className="mb-4 pb-4 font-normal text-white text-[32px] leading-tight font-barlow">
+              This holiday season, shoppers are seeing prices go up.
+            </p>
+
+            <Button
+              href={"#nationalGroceryTracker"}
+              text={"See National Trends on Pork, Corn, Steak & More"}
+              color={"#8B1E1E"}
+              textColor="white"
+              bgColor={"#8B1E1E"}
+            />
+          </div>
+        </section>
+      </div>
+      <section className="flex flex-col items-center space-y-4 pt-4 max-w-6xl justify-center mx-2 sm:mx-auto">
+        <FredDataGraph />
+      </section>
 
       <section className="flex flex-col items-center space-y-4 pt-8 max-w-6xl justify-center mx-2 sm:mx-auto">
         <div
@@ -122,7 +152,6 @@ function Home() {
         </div>
       </section>
 
-
       {/* <section className="flex flex-col sm:flex-row sm:items-stretch sm:space-x-4 space-y-4 sm:space-y-0 pt-2 pb-8 mx-2 sm:mx-auto max-w-6xl">
         <div className="w-full sm:w-1/2">
           <SingleStateData state="CA" />
@@ -147,9 +176,7 @@ function Home() {
           />
         </div>
       </section> */}
-      <section className="flex flex-col items-center space-y-4 pt-4 max-w-6xl justify-center mx-2 sm:mx-auto">
-        <FredDataGraph />
-      </section>
+
       <div className="pt-8">
         <StaticCopy
           bg="#E8EA58"
