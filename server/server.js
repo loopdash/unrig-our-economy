@@ -19,8 +19,8 @@ app.use("/api/products", require("./routes/products"));
 app.use("/api/errors", require("./routes/errors"));
 
 console.log("🔑 DB_USER:", process.env.DB_USER);
-console.log("🔑 ENV:", process.env.ENV);
-if (process.env.ENV === "production") {
+
+if (process.env.ENV !== "development") {
   // Cron job to run daily at 2:00 AM
   cron.schedule("0 2 * * *", async () => {
     console.log("🚀 Running daily Kroger product scrape...");
