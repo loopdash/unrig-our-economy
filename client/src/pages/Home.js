@@ -66,12 +66,12 @@ function Home() {
         californiaPrice={prices.CA}
         virginiaPrice={prices.VA}
       />
-      <div className="holiday-snow-wrapper relative w-full rounded-[38px] overflow-hidden">
-        {/* Snow animation */}
+      {/* Comment out seasonal bubble */}
+      {/* <div className="holiday-snow-wrapper relative w-full rounded-[38px] overflow-hidden">
         <SnowCanvas />
 
         <section className="relative flex flex-col items-center space-y-4 pt-8 max-w-6xl justify-center mx-2 sm:mx-auto">
-          {/* Content card */}
+
           <div
             className="relative z-10 flex flex-col items-start justify-center w-full rounded-[38px] shadow-lg p-12 space-y-4
                 bg-gradient-to-br from-[#1F3D2B] to-[#3E6B4F]
@@ -91,7 +91,7 @@ function Home() {
             />
           </div>
         </section>
-      </div>
+      </div> */}
       <section className="flex flex-col items-center space-y-4 pt-4 max-w-6xl justify-center mx-2 sm:mx-auto">
         <FredDataGraph />
       </section>
