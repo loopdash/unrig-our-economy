@@ -6,10 +6,8 @@ import SearchAnotherState from "../components/SearchAnotherState";
 import Subscribe from "../components/Subscribe";
 import SingleFredDataGraph from "../components/SingleFredDataGraph";
 import SingleStateCTA from "../components/SingleStateCTA";
-import StaticCopy from "../components/StaticCopy";
 import { useLocation } from "react-router-dom";
 import allRegionalData from "../assets/allRegionalData";
-import RegionalAveragesGraph from "../components/RegionalAveragesGraph";
 import Modal from "../components/Modal";
 // ✅ State Abbreviation Mapping
 const stateAbbreviations = {
@@ -321,32 +319,6 @@ function SearchByStateWithFred() {
                     in-store prices from Kroger and affiliated banners.
                   </p>
                 </div>
-              </div>
-            ) : hasRegionMatch && regionalData.length > 0 ? (
-              <div className="grid grid-cols-1 gap-6 w-full max-w-6xl">
-                <RegionalAveragesGraph
-                  state={searchQuery}
-                  data={regionalData}
-                />
-                {(() => {
-                  const regionKey =
-                    region === "West" ? "West (including HI)" : region;
-                  const matched = regionText.find(
-                    (r) => r.region === regionKey || r.region === region
-                  );
-                  return matched ? (
-                    <div className="px-6 mb-6">
-                      <div className="text-3xl font-bold text-[#231F21] mb-2">
-                        {matched.icon} {matched.region}
-                      </div>
-                      <p className="mb-4 pb-4 font-normal text-2xl leading-normal font-barlow text-[#231F21]">
-                        {matched.text}
-                      </p>
-                    </div>
-                  ) : null;
-                })()}
-
-                <SingleFredDataGraph />
               </div>
             ) : (
               <div className="grid grid-cols-1 gap-6 w-full max-w-6xl">
