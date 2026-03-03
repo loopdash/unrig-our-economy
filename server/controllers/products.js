@@ -171,9 +171,9 @@ const scrapeFredDataMonthly = async () => {
     { id: "APU0000709112", category: "milk" },
     { id: "APU0000702111", category: "bread" },
     { id: "APU0000717311", category: "coffee" },
-    { id: "APU0000FC3101", name: "steaks" }, // Steaks
-    { id: "APU0000FD4101", name: "pork" }, // Pork
-    { id: "APU0000714221", name: "corn" }, // Corn
+    { id: "APU0000FC3101", category: "steaks" }, // Steaks
+    { id: "APU0000FD4101", category: "pork" }, // Pork
+    { id: "APU0000714221", category: "corn" }, // Corn
   ];
 
   try {
